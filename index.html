@@ -290,6 +290,10 @@ body,.ov{background-color:var(--bg);background-image:radial-gradient(130% 60% at
 .sbox{background:var(--card);border-top:3px solid var(--main)}
 .otop{background:transparent}
 .hdr{padding-bottom:4px}
+.gt{min-height:104px;padding:12px 6px 10px;border-radius:22px;gap:3px;box-shadow:0 5px 0 var(--sh),0 8px 14px rgba(0,0,0,.16)}
+.gt .gi{font-size:36px}.gt .gn{font-size:16px}.gt small{font-size:11px}
+.gt.wide{min-height:68px;padding:8px 14px}.gt.wide .gi{font-size:32px}.gt.wide .gn{font-size:17px}
+.adslot{display:flex;align-items:center;justify-content:center;height:60px;margin:2px 0 10px;border:1.5px dashed var(--line);border-radius:14px;color:var(--mute);font-size:12px;letter-spacing:.08em;direction:ltr}
 </style>
 </head>
 <body>
@@ -6836,7 +6840,7 @@ function tile(c){
 function viewHome(){
   const L=lang();
   const due=dueItems().length,nx=nextCat();
-  let h=`<div class="hdr"><button class="langbtn" onclick="langSheet()"><span>${L.flag}</span><span>${L.name}</span><span>▾</span></button></div>`;
+  let h=`<div class="hdr"><button class="langbtn" onclick="langSheet()"><span>${L.flag}</span><span>${L.name}</span><span>▾</span></button></div><div class="adslot" id="adslot">Ad</div>`;
   if(GRP){
     const cs=CATS.filter(c=>c.group===GRP&&catOk(c)),gt=GROUPS.find(x=>x[0]===GRP)[1];
     return h+`<div class="gtop"><button class="gback" onclick="openGroup(null)">${BK()}</button><h2>${GICON[GRP]} ${gt}</h2></div>`+cs.map(tile).join("");
