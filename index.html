@@ -296,6 +296,40 @@ body,.ov{background-color:var(--bg);background-image:radial-gradient(130% 60% at
 .adslot{display:flex;align-items:center;justify-content:center;height:60px;margin:2px 0 10px;border:1.5px dashed var(--line);border-radius:14px;color:var(--mute);font-size:12px;letter-spacing:.08em;direction:ltr}
 body{padding-top:env(safe-area-inset-top,0px)}
 .ov{padding-top:env(safe-area-inset-top,0px)}
+
+/* translate tab */
+.trrow{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.trsel{flex:1;min-width:0;padding:11px 6px;font-size:15px;border:2px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink)}
+.trsw{flex:none;border:2px solid var(--line);background:var(--card);border-radius:12px;width:44px;height:44px;font-size:20px;color:var(--main)}
+.trin{width:100%;min-height:110px;padding:12px;font-size:18px;border:2px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);resize:vertical;margin-bottom:10px;font-family:inherit;display:block}
+.trout{font-size:20px;line-height:1.6;word-break:break-word;white-space:pre-wrap}
+.trbtns{display:flex;gap:8px;margin-top:12px}
+.trbtns button{flex:1;border:2px solid var(--line);background:var(--card);border-radius:12px;padding:10px 4px;font-size:14px;font-weight:700}
+.trh{display:flex;gap:6px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.trh:first-child{border-top:none}
+.trhm{flex:1;min-width:0;cursor:pointer}
+.trhs{font-size:15px;color:var(--mute);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.trho{font-size:17px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.trhk,.trhd{flex:none;border:none;background:none;font-size:20px;padding:6px}
+
+/* challenges */
+.chg{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:12px 0}
+.chl{aspect-ratio:1;border:2px solid var(--line);border-bottom-width:4px;border-radius:14px;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2px}
+.chl b{font-size:20px}.chl small{font-size:10px;min-height:12px;line-height:1}
+.chl.dn{border-color:var(--main);background:var(--okbg)}
+.chl.lk{opacity:.5}
+.chq{font-size:34px;font-weight:800;text-align:center;margin:18px 0 26px;line-height:1.35;word-break:break-word}
+.cho{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cho .opt{margin:0;min-height:80px;display:flex;align-items:center;justify-content:center;font-size:19px;word-break:break-word}
+.chbox{position:relative;touch-action:none;-webkit-user-select:none;user-select:none}
+.charr{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:5}
+.chbox .chq{position:relative;margin:18px 0 130px;padding:14px 8px;border:2px solid var(--line);border-radius:16px;background:var(--card);cursor:grab}
+.chdot{position:absolute;width:18px;height:18px;border-radius:50%;background:var(--main);left:50%;margin-left:-9px;pointer-events:none}
+.chq .chdot{bottom:-10px;animation:chp 1.4s infinite}
+.opt .chdot.t{top:-10px;background:#38bdf8}
+.cho .opt{position:relative}
+.cho .opt.hov{border-color:#38bdf8;transform:scale(1.04)}
+@keyframes chp{0%,100%{box-shadow:0 0 0 0 rgba(88,204,2,.6)}50%{box-shadow:0 0 0 9px rgba(88,204,2,0)}}
 </style>
 </head>
 <body>
@@ -6255,6 +6289,8 @@ try{
 }catch(e){}
 if(!LANGS.some(l=>l.id===S.lang))S.lang=1;
 if(!S.read)S.read={};
+if(!S.ch)S.ch={};
+if(!S.tr||!Array.isArray(S.tr.h))S.tr={from:"ar",to:"en",h:[]};
 if(![0,1,2].includes(S.ui))S.ui=0;
 if(!(S.theme>=0&&S.theme<5))S.theme=0;
 if(S.ui&&S.lang===S.ui)S.lang=LANGS.find(l=>l.id!==S.ui).id;
@@ -6262,6 +6298,7 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 
 /* ---------- لغة الواجهة والألوان ---------- */
 const TRD={"تعلّم": ["Learn", "Apprendre"], "1️⃣ من 0 إلى 99": ["1️⃣ From 0 to 99", "1️⃣ De 0 à 99"], "الرئيسية": ["Home", "Accueil"], "القاموس": ["Dictionary", "Dictionnaire"], "إنجازاتي": ["My progress", "Mes succès"], "الإعدادات": ["Settings", "Réglages"], "الأرقام": ["Numbers", "Nombres"], "الأساسيات": ["Basics", "Bases"], "حوارات قصيرة": ["Short dialogues", "Dialogues courts"], "الطعام والشراب": ["Food & drink", "Nourriture et boissons"], "السفر": ["Travel", "Voyage"], "أشياء أخرى": ["More topics", "Autres thèmes"], "تدرّب على النطق": ["Practice pronunciation", "Travailler la prononciation"], "انطق وسيصحّح لك التطبيق": ["Speak and the app will correct you", "Parlez, l'appli vous corrige"], "درسًا": ["lessons", "leçons"], "دروس": ["lessons", "leçons"], "الضمائر والملكية والإشارة": ["Pronouns & possessives", "Pronoms et possessifs"], "أنا، هو، لي، ملكي، هذا، نفسي، معي...": ["I, he, my, mine, this, myself, with me...", "je, il, mon, le mien, ce, moi-même, avec moi..."], "أفعال أساسية": ["Basic verbs", "Verbes de base"], "تصريف الأفعال": ["Verb conjugation", "Conjugaison"], "أنا أكون، أنا أملك، أنا أذهب، أنا أريد...": ["I am, I have, I go, I want...", "je suis, j'ai, je vais, je veux..."], "كلمات الاستفهام ونعم/لا": ["Question words & yes/no", "Mots interrogatifs et oui/non"], "التحيات": ["Greetings", "Salutations"], "جمل مفيدة للمحادثة": ["Useful phrases", "Phrases utiles"], "من 0 إلى 99": ["From 0 to 99", "De 0 à 99"], "الوحدات والعشرات": ["Units and tens", "Unités et dizaines"], "من 100 إلى 1000": ["From 100 to 1000", "De 100 à 1000"], "المئات وما بينها": ["Hundreds and in between", "Les centaines et entre-deux"], "اقرأ أي رقم": ["Read any number", "Lire un nombre"], "اكتب رقمًا حتى 999,999,999 واسمع نطقه بـ5 لغات": ["Type a number up to 999,999,999 and hear it in 5 languages", "Tapez un nombre jusqu'à 999 999 999 et écoutez-le en 5 langues"], "الفواكه": ["Fruits", "Fruits"], "الخضروات والأعشاب": ["Vegetables & herbs", "Légumes et herbes"], "اللحوم والأسماك": ["Meat & fish", "Viandes et poissons"], "الألبان والبيض": ["Dairy & eggs", "Produits laitiers et œufs"], "الخبز والحبوب": ["Bread & grains", "Pain et céréales"], "التوابل والصلصات": ["Spices & sauces", "Épices et sauces"], "الحلويات والمكسرات": ["Sweets & nuts", "Desserts et noix"], "المشروبات": ["Drinks", "Boissons"], "في المطعم": ["At the restaurant", "Au restaurant"], "المطار والطائرة": ["Airport & plane", "Aéroport et avion"], "الفندق والإقامة": ["Hotel & stay", "Hôtel et séjour"], "المواصلات": ["Transport", "Transports"], "الاتجاهات والأماكن": ["Directions & places", "Directions et lieux"], "المال والتسوق": ["Money & shopping", "Argent et achats"], "الوثائق والجمارك": ["Documents & customs", "Documents et douane"], "الطوارئ والصحة": ["Emergencies & health", "Urgences et santé"], "الألوان": ["Colors", "Couleurs"], "أيام الأسبوع والأشهر": ["Days & months", "Jours et mois"], "الوقت": ["Time", "Temps"], "العائلة والناس": ["Family & people", "Famille et gens"], "صفات شائعة": ["Common adjectives", "Adjectifs courants"], "الطقس والفصول": ["Weather & seasons", "Météo et saisons"], "أعضاء الجسم": ["Body parts", "Parties du corps"], "التعارف": ["Introductions", "Présentations"], "أول لقاء بين شخصين": ["A first meeting between two people", "Une première rencontre"], "طلب الطعام ودفع الحساب": ["Ordering food and paying", "Commander et payer"], "في المطار": ["At the airport", "À l'aéroport"], "تسجيل الوصول قبل الرحلة": ["Checking in before the flight", "Enregistrement avant le vol"], "في الفندق": ["At the hotel", "À l'hôtel"], "الوصول وتسجيل الدخول": ["Arriving and checking in", "Arrivée et enregistrement"], "في المتجر": ["At the shop", "Au magasin"], "السؤال عن السعر والمقاس والدفع": ["Asking about price, size and payment", "Prix, taille et paiement"], "في سيارة الأجرة": ["In a taxi", "En taxi"], "الذهاب إلى الفندق": ["Going to the hotel", "Aller à l'hôtel"], "السؤال عن الطريق": ["Asking for directions", "Demander son chemin"], "الوصول إلى المحطة": ["Getting to the station", "Aller à la gare"], "عند الطبيب": ["At the doctor", "Chez le médecin"], "وصف الألم وأخذ الدواء": ["Describing pain and taking medicine", "Décrire la douleur et prendre un médicament"], "في الصيدلية": ["At the pharmacy", "À la pharmacie"], "شراء دواء للزكام": ["Buying cold medicine", "Acheter un médicament contre le rhume"], "في البنك": ["At the bank", "À la banque"], "صرف العملة": ["Exchanging currency", "Changer de l'argent"], "في المقهى": ["At the café", "Au café"], "طلب القهوة والحلوى": ["Ordering coffee and dessert", "Commander café et dessert"], "في محطة القطار": ["At the train station", "À la gare"], "شراء تذكرة سفر": ["Buying a ticket", "Acheter un billet"], "عند الشرطة": ["At the police station", "Au commissariat"], "الإبلاغ عن ضياع حقيبة": ["Reporting a lost bag", "Signaler un bagage perdu"], "تأجير سيارة": ["Renting a car", "Louer une voiture"], "حجز سيارة ليومين": ["Booking a car for two days", "Réserver une voiture pour deux jours"], "مكالمة هاتفية": ["A phone call", "Un appel téléphonique"], "الاتصال بالفندق": ["Calling the hotel", "Appeler l'hôtel"], "وجبة سريعة": ["Fast food", "Restauration rapide"], "طلب وجبة برغر": ["Ordering a burger meal", "Commander un menu burger"], "على الشاطئ": ["At the beach", "À la plage"], "الاستجمام والسباحة": ["Relaxing and swimming", "Détente et baignade"], "طلب المساعدة": ["Asking for help", "Demander de l'aide"], "أنا ضائع في المدينة": ["I'm lost in the city", "Je suis perdu en ville"], "تغيير الحجز": ["Changing a booking", "Modifier une réservation"], "تعديل موعد الرحلة": ["Changing the flight date", "Modifier la date du vol"], "التعارف في العمل": ["Meeting at work", "Rencontre au travail"], "لقاء زميل جديد": ["Meeting a new colleague", "Rencontrer un nouveau collègue"], "الإنجليزية": ["English", "Anglais"], "الفرنسية": ["French", "Français"], "الإسبانية": ["Spanish", "Espagnol"], "الألمانية": ["German", "Allemand"], "الإيطالية": ["Italian", "Italien"], "عبارة": ["phrases", "phrases"], "عنصرًا": ["items", "éléments"], "متقنة": ["mastered", "maîtrisés"], "كلمة": ["words", "mots"], "مرّت بك": ["seen", "vus"], "متتالية": ["in a row", "d'affilée"], "نقطة": ["points", "points"], "نقطة للمستوى": ["points to level", "points pour le niveau"], "المستوى": ["Level", "Niveau"], "الأوسمة": ["Badges", "Badges"], "أي رقم هذا؟": ["Which number is this?", "Quel est ce nombre ?"], "ما معنى هذه الكلمة؟": ["What does this word mean?", "Que signifie ce mot ?"], "كيف يُكتب هذا الرقم؟": ["How is this number written?", "Comment écrit-on ce nombre ?"], "كيف تقول هذه الكلمة؟": ["How do you say this word?", "Comment dit-on ce mot ?"], "ما الردّ المناسب؟": ["What is the right reply?", "Quelle est la bonne réponse ?"], "ماذا سمعت؟": ["What did you hear?", "Qu'avez-vous entendu ?"], "اكتب الترجمة": ["Type the translation", "Écrivez la traduction"], "رتّب الكلمات لتكوين الجملة": ["Put the words in order to form the sentence", "Remettez les mots dans l'ordre"], "صِل بخط بين كل كلمة ومعناها": ["Draw a line between each word and its meaning", "Reliez chaque mot à son sens"], "اسحب بإصبعك من كلمة إلى معناها (أو اضغط الكلمة ثم معناها)": ["Drag from a word to its meaning (or tap the word, then its meaning)", "Glissez d'un mot à son sens (ou touchez le mot, puis son sens)"], "انطق هذه الكلمة بصوت عالٍ": ["Say this word out loud", "Dites ce mot à voix haute"], "تحقق": ["Check", "Vérifier"], "لا أعرف": ["I don't know", "Je ne sais pas"], "لا أستطيع التحدث الآن": ["I can't speak right now", "Je ne peux pas parler maintenant"], "متابعة": ["Continue", "Continuer"], "ممتاز": ["Excellent", "Excellent"], "رائع": ["Great", "Super"], "أحسنت": ["Well done", "Bien joué"], "صحيح": ["Correct", "Correct"], "عمل ممتاز": ["Excellent work", "Excellent travail"], "ليست الإجابة الصحيحة": ["Not the right answer", "Ce n'est pas la bonne réponse"], "الإجابة الصحيحة": ["Correct answer", "Bonne réponse"], "سمعت": ["You heard", "Vous avez entendu"], "قريب جدًا! الإملاء الصحيح": ["Very close! Correct spelling", "Très proche ! Orthographe correcte"], "هل تريد الخروج؟ سيضيع تقدّم هذا الدرس": ["Quit? You will lose this lesson's progress", "Quitter ? Vous perdrez la progression de cette leçon"], "خروج": ["Quit", "Quitter"], "متابعة التعلّم": ["Keep learning", "Continuer à apprendre"], "أحسنت، كرّر للتحسّن!": ["Well done, repeat to improve!", "Bien joué, recommencez pour progresser !"], "أداء مذهل": ["Amazing performance", "Performance incroyable"], "عمل رائع": ["Great work", "Beau travail"], "نقاط XP": ["XP points", "Points XP"], "الدقة": ["Accuracy", "Précision"], "درس آخر في هذا الموضوع": ["Another lesson on this topic", "Une autre leçon sur ce thème"], "→ السابق": ["← Previous", "← Précédent"], "التالي ←": ["Next →", "Suivant →"], "إنهاء": ["Finish", "Terminer"], "اضغط لإظهار الترجمة": ["Tap to show the translation", "Touchez pour voir la traduction"], "اكتب أي رقم حتى 999,999,999 واسمع نطقه بالـ5 لغات": ["Type any number up to 999,999,999 and hear it in 5 languages", "Tapez un nombre jusqu'à 999 999 999 et écoutez-le en 5 langues"], "اكتب رقمًا بين 0 و999,999,999": ["Type a number between 0 and 999,999,999", "Tapez un nombre entre 0 et 999 999 999"], "ابدأ التدريب": ["Start practice", "Commencer l'entraînement"], "بطاقات الدراسة": ["Study cards", "Cartes d'étude"], "قائمة الكلمات": ["Word list", "Liste de mots"], "اقرأ واستمع للحوار": ["Read and listen to the dialogue", "Lire et écouter le dialogue"], "تدريب على الحوار": ["Practice the dialogue", "S'entraîner sur le dialogue"], "بطاقات الجمل": ["Phrase cards", "Cartes de phrases"], "قائمة كل العبارات": ["List of all phrases", "Liste de toutes les phrases"], "استمع للحوار كاملا": ["Listen to the whole dialogue", "Écouter tout le dialogue"], "إخفاء الترجمة": ["Hide translation", "Masquer la traduction"], "إظهار الترجمة": ["Show translation", "Afficher la traduction"], "تدرّب على هذا الحوار": ["Practice this dialogue", "S'entraîner sur ce dialogue"], "اختر اللغة": ["Choose a language", "Choisir une langue"], "اختر موضوعًا، استمع للنطق الصحيح، ثم اضغط الميكروفون وانطق. سيعرض لك التطبيق ما سمعه وأي كلمة تحتاج تحسينًا": ["Pick a topic, listen to the correct pronunciation, then tap the microphone and speak. The app shows what it heard and which words need work", "Choisissez un thème, écoutez la bonne prononciation, puis touchez le micro et parlez. L'appli affiche ce qu'elle a entendu et les mots à améliorer"], "التعرف التلقائي على الصوت غير متاح في هذه النافذة. افتح التطبيق في متصفح Chrome ليعمل التصحيح التلقائي. يمكنك الآن التدرّب بتسجيل صوتك ومقارنته بالنطق الصحيح": ["Automatic speech recognition isn't available here. Open the app in Chrome for automatic correction. For now you can record yourself and compare with the correct pronunciation", "La reconnaissance vocale n'est pas disponible ici. Ouvrez l'application dans Chrome pour la correction automatique. Vous pouvez en attendant vous enregistrer et comparer"], "اضغط وانطق الجملة": ["Tap and say the phrase", "Touchez et dites la phrase"], "اضغط لتسجيل صوتك": ["Tap to record your voice", "Touchez pour vous enregistrer"], "تخطَّ": ["Skip", "Passer"], "جارٍ الاستماع": ["Listening", "Écoute en cours"], "جارٍ الاستماع... تكلّم الآن": ["Listening... speak now", "Écoute en cours... parlez maintenant"], "لم يُسمح باستخدام الميكروفون. فعّل الإذن من إعدادات المتصفح": ["Microphone access was denied. Enable it in your browser settings", "Accès au micro refusé. Activez-le dans les réglages du navigateur"], "لم أسمع شيئًا، حاول مرة أخرى": ["I didn't hear anything, try again", "Je n'ai rien entendu, réessayez"], "تعذّر التعرف على الصوت، حاول مجددًا": ["Couldn't recognize the speech, try again", "Reconnaissance impossible, réessayez"], "تعذّر التعرف على الصوت، حاول مجددًا أو تخطَّ": ["Couldn't recognize the speech, try again or skip", "Reconnaissance impossible, réessayez ou passez"], "التعرف على الصوت غير مدعوم هنا": ["Speech recognition isn't supported here", "La reconnaissance vocale n'est pas prise en charge ici"], "نطق ممتاز": ["Excellent pronunciation", "Excellente prononciation"], "قريب جدًا، حاول مرة أخرى": ["Very close, try again", "Très proche, réessayez"], "حاول مرة أخرى بوضوح أكثر": ["Try again, more clearly", "Réessayez, plus clairement"], "سمعتك تقول": ["I heard you say", "Je vous ai entendu dire"], "أعد المحاولة": ["Try again", "Réessayer"], "اضغط وانطق مرة أخرى": ["Tap and speak again", "Touchez et parlez encore"], "قارن صوتك بالنطق الصحيح": ["Compare your voice with the correct pronunciation", "Comparez votre voix à la bonne prononciation"], "استمع لصوتك ثم اضغط 🔊 للنطق الصحيح وقارن": ["Listen to yourself, then tap 🔊 for the correct pronunciation and compare", "Écoutez-vous, puis touchez 🔊 pour la bonne prononciation et comparez"], "سجّل مجددًا": ["Record again", "Réenregistrer"], "جارٍ التسجيل... اضغط مرة أخرى للإيقاف": ["Recording... tap again to stop", "Enregistrement... touchez pour arrêter"], "تعذّر الوصول إلى الميكروفون في هذه النافذة. افتح التطبيق في متصفح Chrome": ["Couldn't access the microphone here. Open the app in Chrome", "Micro inaccessible ici. Ouvrez l'application dans Chrome"], "متوسط نطقك": ["Your pronunciation average", "Votre prononciation moyenne"], "انتهت الجلسة": ["Session finished", "Session terminée"], "جلسة أخرى في الموضوع": ["Another session on this topic", "Une autre session sur ce thème"], "موضوع آخر": ["Another topic", "Un autre thème"], "المراجعة الذكية": ["Smart review", "Révision intelligente"], "ابحث بالعربية أو بأي لغة": ["Search in any language", "Rechercher dans n'importe quelle langue"], "اكتب كلمة (حرفان على الأقل) لتظهر ترجمتها بكل اللغات مع النطق": ["Type a word (at least 2 letters) to see its translation in all languages with pronunciation", "Tapez un mot (2 lettres minimum) pour voir sa traduction dans toutes les langues avec la prononciation"], "لا توجد نتائج": ["No results", "Aucun résultat"], "أيام متتالية": ["day streak", "jours d'affilée"], "كلمة تعلّمتها": ["words learned", "mots appris"], "دقة الإجابات": ["answer accuracy", "précision des réponses"], "آخر 7 أيام": ["Last 7 days", "7 derniers jours"], "تقدّمك في اللغات": ["Your progress by language", "Votre progression par langue"], "الخطوة الأولى": ["First step", "Premier pas"], "أكمل أول درس": ["Complete your first lesson", "Terminez votre première leçon"], "بلا أخطاء": ["No mistakes", "Sans faute"], "أكمل درسًا بدون أي خطأ": ["Finish a lesson with no mistakes", "Terminez une leçon sans erreur"], "3 أيام": ["3 days", "3 jours"], "سلسلة 3 أيام متتالية": ["A 3-day streak", "Une série de 3 jours"], "أسبوع كامل": ["A full week", "Une semaine complète"], "سلسلة 7 أيام": ["A 7-day streak", "Une série de 7 jours"], "شهر كامل": ["A full month", "Un mois complet"], "سلسلة 30 يومًا": ["A 30-day streak", "Une série de 30 jours"], "100 نقطة": ["100 points", "100 points"], "اجمع 100 XP": ["Earn 100 XP", "Gagnez 100 XP"], "500 نقطة": ["500 points", "500 points"], "اجمع 500 XP": ["Earn 500 XP", "Gagnez 500 XP"], "2000 نقطة": ["2000 points", "2000 points"], "اجمع 2000 XP": ["Earn 2000 XP", "Gagnez 2000 XP"], "25 كلمة": ["25 words", "25 mots"], "تعلّم 25 كلمة": ["Learn 25 words", "Apprenez 25 mots"], "100 كلمة": ["100 words", "100 mots"], "تعلّم 100 كلمة": ["Learn 100 words", "Apprenez 100 mots"], "300 كلمة": ["300 words", "300 mots"], "تعلّم 300 كلمة": ["Learn 300 words", "Apprenez 300 mots"], "متعدد اللغات": ["Polyglot", "Polyglotte"], "تدرّب على 3 لغات": ["Practice 3 languages", "Pratiquez 3 langues"], "إنجاز جديد": ["New achievement", "Nouveau succès"], "المؤثرات الصوتية": ["Sound effects", "Effets sonores"], "أصوات الإجابات والاهتزاز": ["Answer sounds and vibration", "Sons des réponses et vibration"], "لغة التطبيق": ["App language", "Langue de l'application"], "القوائم والمعاني تظهر بهذه اللغة": ["Menus and meanings appear in this language", "Les menus et les sens s'affichent dans cette langue"], "اللغة التي أتعلّمها": ["Language I'm learning", "Langue que j'apprends"], "اختر اللغة التي تريد تعلّمها": ["Choose the language you want to learn", "Choisissez la langue à apprendre"], "ألوان التطبيق": ["App colors", "Couleurs de l'application"], "اختر لونًا متدرجًا يعجبك": ["Pick a gradient you like", "Choisissez un dégradé"], "زمرد": ["Emerald", "Émeraude"], "محيط": ["Ocean", "Océan"], "غروب": ["Sunset", "Coucher de soleil"], "بنفسجي": ["Violet", "Violet"], "وردي": ["Rose", "Rose"], "نسخة احتياطية": ["Backup", "Sauvegarde"], "انسخ هذا النص واحتفظ به. يمكنك استيراده في أي جهاز لاستعادة تقدّمك": ["Copy this text and keep it. You can import it on any device to restore your progress", "Copiez ce texte et gardez-le. Vous pouvez l'importer sur n'importe quel appareil pour retrouver votre progression"], "نسخ": ["Copy", "Copier"], "استيراد": ["Import", "Importer"], "الصق هنا نسخة احتياطية للاستيراد": ["Paste a backup here to import it", "Collez ici une sauvegarde à importer"], "حذف كل التقدّم": ["Delete all progress", "Supprimer toute la progression"], "حذف كل التقدّم نهائيًا؟": ["Delete all progress permanently?", "Supprimer définitivement toute la progression ?"], "حذف": ["Delete", "Supprimer"], "إلغاء": ["Cancel", "Annuler"], "تعلّم · 5 لغات: الإنجليزية، الفرنسية، الإسبانية، الألمانية، الإيطالية": ["Learn · 5 languages: English, French, Spanish, German, Italian", "Apprendre · 5 langues : anglais, français, espagnol, allemand, italien"], "تم النسخ": ["Copied", "Copié"], "تم الاستيراد": ["Imported", "Importé"], "نص غير صالح": ["Invalid text", "Texte invalide"]};
+Object.assign(TRD,{"ترجمة":["Translate","Traduire"],"ترجم":["Translate","Traduire"],"جارٍ الترجمة...":["Translating...","Traduction..."],"اكتب النص هنا...":["Type your text here...","Saisissez votre texte ici..."],"تحتاج الترجمة إلى اتصال بالإنترنت، وقد تحتوي على أخطاء":["Translation needs an internet connection and may contain errors","La traduction nécessite Internet et peut contenir des erreurs"],"استماع":["Listen","Écouter"],"نسخ":["Copy","Copier"],"حفظ":["Save","Enregistrer"],"تم النسخ":["Copied","Copié"],"افتح التطبيق من الرابط في متصفح Safari أو Chrome لتعمل الترجمة":["Open the app from its link in Safari or Chrome for translation to work","Ouvrez l'app depuis son lien dans Safari ou Chrome pour traduire"],"المحفوظات":["Saved","Favoris"],"آخر الترجمات":["Recent translations","Traductions récentes"],"الترجمة تحتاج اتصالًا بالإنترنت":["Translation needs an internet connection","La traduction nécessite une connexion Internet"],"تعذّرت الترجمة، حاول مرة أخرى":["Translation failed, please try again","Échec de la traduction, réessayez"]});
 const RX=[[/^أخطأت في (\d+) — سنعيد هذه الكلمات لاحقًا$/,["You missed $1 — we'll repeat these words later","Vous avez fait $1 erreur(s) — nous reverrons ces mots plus tard"]]];
 const UIL=[{id:0,n:"العربية"},{id:1,n:"English"},{id:2,n:"Français"}];
 const THEMES=[{n:"زمرد",c:"#16a34a",g:["#22c55e","#0d9488"]},{n:"محيط",c:"#2563eb",g:["#38bdf8","#2563eb"]},{n:"غروب",c:"#f97316",g:["#fbbf24","#ec4899"]},{n:"بنفسجي",c:"#7c3aed",g:["#a78bfa","#d946ef"]},{n:"وردي",c:"#e11d74",g:["#fb7185","#be123c"]}];
@@ -6299,7 +6336,7 @@ new MutationObserver(ms=>{
   });
 }).observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:["placeholder"]});
 function buildNav(){
-  $("nav").innerHTML=[["home","🏠","الرئيسية"],["dict","🔎","القاموس"],["prof","🏆","إنجازاتي"],["set","⚙️","الإعدادات"]]
+  $("nav").innerHTML=[["home","🏠","الرئيسية"],["tr","🌐","ترجمة"],["dict","🔎","القاموس"],["prof","🏆","إنجازاتي"],["set","⚙️","الإعدادات"]]
     .map(([t,i,l])=>`<button data-t="${t}" onclick="setTab('${t}')"><span>${i}</span>${l}</button>`).join("");
 }
 function applyUI(){
@@ -6821,13 +6858,288 @@ function openReader(){
 /* ======================================================================
    الشاشات الرئيسية
    ====================================================================== */
+
+/* ======================== الترجمة (تحتاج إنترنت) ======================== */
+const TL=[
+  {c:"ar",n:["العربية","Arabic","Arabe"],f:"🇸🇦",v:"ar-SA",r:1},
+  {c:"en",n:["الإنجليزية","English","Anglais"],f:"🇬🇧",v:"en-US"},
+  {c:"es",n:["الإسبانية","Spanish","Espagnol"],f:"🇪🇸",v:"es-ES"},
+  {c:"de",n:["الألمانية","German","Allemand"],f:"🇩🇪",v:"de-DE"},
+  {c:"fr",n:["الفرنسية","French","Français"],f:"🇫🇷",v:"fr-FR"},
+  {c:"ru",n:["الروسية","Russian","Russe"],f:"🇷🇺",v:"ru-RU"},
+  {c:"tr",n:["التركية","Turkish","Turc"],f:"🇹🇷",v:"tr-TR"},
+  {c:"it",n:["الإيطالية","Italian","Italien"],f:"🇮🇹",v:"it-IT"},
+  {c:"ko",n:["الكورية","Korean","Coréen"],f:"🇰🇷",v:"ko-KR"},
+  {c:"ja",n:["اليابانية","Japanese","Japonais"],f:"🇯🇵",v:"ja-JP"},
+  {c:"zh-CN",n:["الصينية","Chinese","Chinois"],f:"🇨🇳",v:"zh-CN"}
+];
+const tlOf=c=>TL.find(l=>l.c===c)||TL[0];
+let TRS={src:"",out:"",busy:false};
+function trFetch(url){
+  const ac=new AbortController(),t=setTimeout(()=>ac.abort(),12000);
+  return fetch(url,{signal:ac.signal}).then(r=>{clearTimeout(t);if(!r.ok)throw new Error("http "+r.status);return r.json();},e=>{clearTimeout(t);throw e;});
+}
+const trDecode=s=>{const d=document.createElement("textarea");d.innerHTML=s;return d.value;};
+async function trMM(q,f,t){
+  const j=await trFetch("https://api.mymemory.translated.net/get?q="+encodeURIComponent(q)+"&langpair="+f+"|"+t);
+  const tx=j&&j.responseData&&j.responseData.translatedText;
+  if(!tx||+j.responseStatus!==200||/MYMEMORY WARNING|QUERY LENGTH|INVALID|PLEASE SELECT/i.test(tx))throw new Error("mm");
+  return trDecode(tx);
+}
+async function trGT(q,f,t){
+  const j=await trFetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl="+(tlOf(f).g||f)+"&tl="+(tlOf(t).g||t)+"&dt=t&q="+encodeURIComponent(q));
+  if(!j||!j[0])throw new Error("gt");
+  return j[0].map(x=>x&&x[0]||"").join("");
+}
+function trChunks(s,max){
+  const parts=s.match(/[^.!?؟۔\n]+[.!?؟۔]*\s*|\n/g)||[s],out=[];let cur="";
+  parts.forEach(p=>{
+    while(p.length>max){if(cur){out.push(cur);cur="";}out.push(p.slice(0,max));p=p.slice(max);}
+    if((cur+p).length>max){out.push(cur);cur=p;}else cur+=p;
+  });
+  if(cur)out.push(cur);
+  return out.filter(x=>x.trim());
+}
+async function trText(txt,f,t){
+  const res=[];
+  for(const ch of trChunks(txt,200)){
+    let o;
+    try{o=await trMM(ch,f,t);}catch(e){o=await trGT(ch,f,t);}
+    res.push(o);
+  }
+  return res.join(" ").replace(/\s+/g," ").trim();
+}
+function viewTr(){
+  const t=S.tr,u=S.ui;
+  const opt=v=>TL.map(l=>`<option value="${l.c}"${l.c===v?" selected":""}>${l.f} ${l.n[u]}</option>`).join("");
+  return `<h3 style="margin:6px 4px 12px">🌐 ترجمة</h3>
+  <div class="card"><div class="trrow"><select id="trf" class="trsel" data-keep>${opt(t.from)}</select><button class="trsw" id="trsw" aria-label="swap">⇄</button><select id="trt" class="trsel" data-keep>${opt(t.to)}</select></div>
+  <textarea id="tri" class="trin" data-keep maxlength="1000" dir="auto" placeholder="اكتب النص هنا..."></textarea>
+  <button class="btn" id="trgo">ترجم</button>
+  <p class="hint" style="margin:6px 0 0">تحتاج الترجمة إلى اتصال بالإنترنت، وقد تحتوي على أخطاء</p></div>
+  <div id="tro"></div><div id="trh"></div>`;
+}
+function trSay(text,code){
+  try{const u=new SpeechSynthesisUtterance(text);u.lang=tlOf(code).v;u.rate=.9;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}
+}
+function trCopy(text){
+  const ok=()=>toast("تم النسخ");
+  try{navigator.clipboard.writeText(text).then(ok,()=>trCopy2(text,ok));}catch(e){trCopy2(text,ok);}
+}
+function trCopy2(text,ok){
+  try{const a=document.createElement("textarea");a.value=text;document.body.appendChild(a);a.select();document.execCommand("copy");a.remove();ok();}catch(e){}
+}
+function trShow(){
+  const o=$("tro");if(!o)return;
+  if(!TRS.out){o.innerHTML="";return;}
+  const t=S.tr,rtl=!!tlOf(t.to).r;
+  const star=S.tr.h.find(x=>x.s===TRS.src&&x.f===t.from&&x.t===t.to&&x.k);
+  o.innerHTML=`<div class="card trres"><div class="trout" data-keep dir="${rtl?"rtl":"ltr"}" lang="${t.to}">${esc(TRS.out)}</div>
+  <div class="trbtns"><button id="trsp">🔊 <span>استماع</span></button><button id="trcp">📋 <span>نسخ</span></button><button id="trst">${star?"⭐":"☆"} <span>حفظ</span></button></div></div>`;
+  $("trsp").onclick=()=>trSay(TRS.out,t.to);
+  $("trcp").onclick=()=>trCopy(TRS.out);
+  $("trst").onclick=()=>{
+    const e=S.tr.h.find(x=>x.s===TRS.src&&x.f===t.from&&x.t===t.to);
+    if(e){e.k=!e.k;save();trShow();trHist();}
+  };
+}
+function trHist(){
+  const el=$("trh");if(!el)return;
+  const h=S.tr.h;
+  if(!h.length){el.innerHTML="";return;}
+  const row=(e,i)=>`<div class="trh" data-i="${i}"><div class="trhm"><div class="trhs" data-keep dir="auto">${esc(e.s)}</div><div class="trho" data-keep dir="auto">${esc(e.o)}</div><div class="mut" style="font-size:12px">${tlOf(e.f).f} → ${tlOf(e.t).f}</div></div><button class="trhk" data-k="${i}">${e.k?"⭐":"☆"}</button><button class="trhd" data-d="${i}">🗑</button></div>`;
+  const fav=h.map((e,i)=>e.k?row(e,i):"").join(""),rec=h.map((e,i)=>e.k?"":row(e,i)).join("");
+  el.innerHTML=(fav?`<h2>المحفوظات</h2><div class="card">${fav}</div>`:"")+(rec?`<h2>آخر الترجمات</h2><div class="card">${rec}</div>`:"");
+  el.querySelectorAll(".trhm").forEach(m=>m.onclick=()=>{
+    const e=S.tr.h[+m.parentNode.dataset.i];
+    S.tr.from=e.f;S.tr.to=e.t;TRS.src=e.s;TRS.out=e.o;save();renderMain();
+  });
+  el.querySelectorAll("[data-k]").forEach(b=>b.onclick=()=>{const e=S.tr.h[+b.dataset.k];e.k=!e.k;save();trShow();trHist();});
+  el.querySelectorAll("[data-d]").forEach(b=>b.onclick=()=>{S.tr.h.splice(+b.dataset.d,1);save();trHist();trShow();});
+}
+async function doTr(){
+  const inp=$("tri"),txt=inp.value.trim();
+  if(!txt||TRS.busy)return;
+  if(!navigator.onLine){toast("الترجمة تحتاج اتصالًا بالإنترنت");return;}
+  if(!/^https?:$/.test(location.protocol)){toast("افتح التطبيق من الرابط في متصفح Safari أو Chrome لتعمل الترجمة");return;}
+  const f=S.tr.from,t=S.tr.to,btn=$("trgo");
+  TRS.busy=true;btn.disabled=true;btn.textContent="جارٍ الترجمة...";
+  try{
+    const out=await trText(txt,f,t);
+    if(!out)throw new Error("empty");
+    TRS.src=txt;TRS.out=out;
+    const i=S.tr.h.findIndex(x=>x.s===txt&&x.f===f&&x.t===t);
+    let e=i>=0?S.tr.h.splice(i,1)[0]:{s:txt,f,t,k:false};
+    e.o=out;S.tr.h.unshift(e);
+    const rec=S.tr.h.filter(x=>!x.k);
+    if(rec.length>30){const drop=new Set(rec.slice(30));S.tr.h=S.tr.h.filter(x=>!drop.has(x));}
+    save();trShow();trHist();
+  }catch(err){toast("تعذّرت الترجمة، حاول مرة أخرى");}
+  TRS.busy=false;btn.disabled=false;btn.textContent="ترجم";
+}
+function bindTr(){
+  const t=S.tr,f=$("trf"),to=$("trt"),inp=$("tri");
+  inp.value=TRS.src;
+  f.onchange=()=>{t.from=f.value;if(t.to===t.from){t.to=t.from==="ar"?"en":"ar";to.value=t.to;}TRS.out="";save();trShow();};
+  to.onchange=()=>{t.to=to.value;if(t.from===t.to){t.from=t.to==="ar"?"en":"ar";f.value=t.from;}TRS.out="";save();trShow();};
+  $("trsw").onclick=()=>{[t.from,t.to]=[t.to,t.from];f.value=t.from;to.value=t.to;if(TRS.out){inp.value=TRS.out;TRS.src=TRS.out;}TRS.out="";save();trShow();};
+  inp.oninput=()=>{TRS.src=inp.value;};
+  inp.onkeydown=e=>{if(e.key==="Enter"&&(e.ctrlKey||e.metaKey)){e.preventDefault();doTr();}};
+  $("trgo").onclick=doTr;
+  trShow();trHist();
+}
+
+
+/* ============================ التحديات ============================ */
+const CH_LV=25,CH_Q=10,CH_PASS=7;
+const T3=(a,e,f)=>[a,e,f][S.ui];
+let CHP=null,CHS=null,CHTOK=0;
+function chPool(){
+  const key=S.lang+"_"+S.ui;
+  if(CHP&&CHP.key===key)return CHP.items;
+  const seen=new Set(),items=[];
+  CATS.forEach((c,ci)=>{
+    if(c.reader||c.gen||c.num)return;
+    (c.words||[]).forEach((w,wi)=>{
+      const t=String(w[S.lang]||"").trim(),q=String(src(w)||"").trim();
+      if(t.length<2||!q)return;
+      const k=cmp(t),kq="q:"+cmp(q);if(!k||seen.has(k)||seen.has(kq))return;seen.add(k);seen.add(kq);
+      items.push({q,t,d:t.length+7*(t.split(/\s+/).length-1)+.3*wi+.15*ci});
+    });
+  });
+  items.sort((a,b)=>a.d-b.d);
+  items.forEach((x,i)=>x.i=i);
+  CHP={key,items};return items;
+}
+const chShuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+function chBuild(L){
+  const it=chPool(),n=it.length;
+  /* each level owns its own band of the sorted pool: no item can appear in two levels */
+  const a=Math.floor((L-1)*n/CH_LV),b=Math.floor(L*n/CH_LV);
+  const picked=chShuf(it.slice(a,b)).slice(0,CH_Q).sort((x,y)=>x.d-y.d);
+  const ban=new Set(picked.map(x=>cmp(x.t))),used=new Set();
+  return picked.map(x=>{
+    let wr=null;
+    for(let k=0;k<200&&!wr;k++){
+      const j=Math.min(n-1,Math.max(0,x.i+Math.round((Math.random()-.5)*(k<100?60:400))));
+      const y=it[j];
+      if(y&&y.q!==x.q&&!ban.has(cmp(y.t))&&!used.has(cmp(y.t)))wr=y.t;
+    }
+    if(!wr)wr=it[(x.i+1)%n].t;
+    used.add(cmp(wr));
+    return {q:x.q,t:x.t,w:wr,r:Math.random()<.5?0:1};
+  });
+}
+const chBest=L=>((S.ch[S.lang]||{})[L])||0;
+const chOpen=L=>L===1||chBest(L-1)>=CH_PASS;
+const chStars=s=>s>=10?3:s>=9?2:s>=CH_PASS?1:0;
+function openChal(){openOv();chMap();}
+function chMap(){
+  CHTOK++;
+  let done=0,tiles="";
+  for(let L=1;L<=CH_LV;L++){
+    const b=chBest(L),open=chOpen(L),st=chStars(b);if(b>=CH_PASS)done++;
+    tiles+=`<button class="chl${open?"":" lk"}${b>=CH_PASS?" dn":""}" onclick="chStart(${L})"><b>${open?L:"🔒"}</b><small>${open?"⭐".repeat(st)||"·":""}</small></button>`;
+  }
+  const cur=Math.min(CH_LV,done+1);
+  ov().innerHTML=`<div class="wrap">${studyTop(T3("🎯 التحديات","🎯 Challenges","🎯 Défis"))}
+  <div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><b>${lang().flag} ${lang().name}</b><span class="mut">${done}/${CH_LV}</span></div>
+  <div class="pbar"><i style="width:${Math.round(done/CH_LV*100)}%"></i></div>
+  <div class="mut" style="font-size:13px">${T3("كل مستوى 10 أسئلة. اجتز المستوى بـ 7 صحيحة لفتح التالي. تبدأ بكلمات قصيرة وتنتهي بجمل طويلة.","Each level has 10 questions. Get 7 right to unlock the next one. It goes from short words to long sentences.","Chaque niveau compte 10 questions. Obtenez 7 bonnes réponses pour débloquer le suivant. Des mots courts aux longues phrases.")}</div></div>
+  <div class="chg">${tiles}</div>
+  <button class="btn" onclick="chStart(${cur})">▶ ${T3("تابع: المستوى","Continue: level","Continuer : niveau")} ${cur}</button></div>`;
+}
+function chStart(L){
+  if(!chOpen(L)){toast(T3("اجتز المستوى السابق بـ 7 من 10 لفتحه","Pass the previous level with 7 out of 10 to unlock it","Réussissez le niveau précédent (7/10) pour le débloquer"));return;}
+  CHS={L,qs:chBuild(L),i:0,sc:0,tok:++CHTOK};
+  chQ();
+}
+function chPt(el,box){const r=el.getBoundingClientRect(),o=box.getBoundingClientRect();return[r.left+r.width/2-o.left,r.top+r.height/2-o.top];}
+function chArrow(x1,y1,x2,y2,c){
+  const a=Math.atan2(y2-y1,x2-x1),h=18,bx=x2-Math.cos(a)*h*.7,by=y2-Math.sin(a)*h*.7;
+  const p1=[x2-h*Math.cos(a-.5),y2-h*Math.sin(a-.5)],p2=[x2-h*Math.cos(a+.5),y2-h*Math.sin(a+.5)];
+  return `<line x1="${x1}" y1="${y1}" x2="${bx}" y2="${by}" style="stroke:${c}" stroke-width="6" stroke-linecap="round"/><polygon points="${x2},${y2} ${p1} ${p2}" style="fill:${c}"/>`;
+}
+function chQ(){
+  const s=CHS,q=s.qs[s.i];s.lock=0;
+  const opts=q.r?[q.w,q.t]:[q.t,q.w];
+  ov().innerHTML=`<div class="wrap">
+  <div class="otop"><button class="xbtn" onclick="chMap()">${BK()}</button><b>${T3("المستوى","Level","Niveau")} ${s.L}</b><span class="mut" dir="ltr" style="margin-inline-start:auto">${s.i+1} / ${CH_Q}</span></div>
+  <div class="pbar"><i style="width:${Math.round(s.i/CH_Q*100)}%"></i></div>
+  <p class="hint" style="margin-top:22px">${T3("اسحب السهم من الكلمة إلى معناها الصحيح (أو اضغط الجواب)","Drag the arrow from the word to its correct match (or tap the answer)","Tirez la flèche du mot vers la bonne réponse (ou touchez-la)")}</p>
+  <div class="chbox" id="chbox"><svg class="charr" id="charr"></svg>
+  <div class="chq" id="chp" data-keep dir="${S.ui?"ltr":"rtl"}">${esc(q.q)}<i class="chdot" id="chd0"></i></div>
+  <div class="cho">${opts.map((o,k)=>`<button class="opt" data-k="${k}" data-keep dir="ltr" lang="${S.lang}">${esc(o)}<i class="chdot t"></i></button>`).join("")}</div></div></div>`;
+  const box=$("chbox"),svg=$("charr"),dot=$("chd0");
+  let drag=0;
+  const hov=(x,y)=>{const e=document.elementFromPoint(x,y),b=e&&e.closest&&e.closest(".cho .opt");box.querySelectorAll(".opt").forEach(o=>o.classList.toggle("hov",o===b));return b;};
+  box.addEventListener("pointerdown",e=>{
+    if(s.lock||!e.target.closest("#chp"))return;
+    drag=1;try{box.setPointerCapture(e.pointerId);}catch(_){}
+    e.preventDefault();
+  });
+  box.addEventListener("pointermove",e=>{
+    if(!drag||s.lock)return;
+    const[x1,y1]=chPt(dot,box),o=box.getBoundingClientRect();
+    hov(e.clientX,e.clientY);
+    svg.innerHTML=chArrow(x1,y1,e.clientX-o.left,e.clientY-o.top,"#38bdf8");
+  });
+  const end=e=>{
+    if(!drag)return;drag=0;
+    const b=hov(e.clientX,e.clientY);
+    box.querySelectorAll(".opt").forEach(o=>o.classList.remove("hov"));
+    if(b&&!s.lock)chAns(b,opts[+b.dataset.k]===q.t);else svg.innerHTML="";
+  };
+  box.addEventListener("pointerup",end);
+  box.addEventListener("pointercancel",()=>{drag=0;svg.innerHTML="";});
+  box.querySelectorAll(".cho .opt").forEach(b=>b.onclick=()=>{if(!s.lock)chAns(b,opts[+b.dataset.k]===q.t);});
+}
+function chAns(btn,ok){
+  const s=CHS,q=s.qs[s.i],tok=s.tok;
+  if(s.lock)return;s.lock=1;
+  const box=$("chbox"),svg=$("charr");
+  let right=btn;
+  document.querySelectorAll(".cho .opt").forEach(b=>{b.disabled=true;if(b.textContent===q.t){b.classList.add("right");right=b;}});
+  try{
+    const[x1,y1]=chPt($("chd0"),box);let h="";
+    if(!ok){const[xw,yw]=chPt(btn.querySelector(".chdot"),box);h+=chArrow(x1,y1,xw,yw,"#ef4444");}
+    const[xr,yr]=chPt(right.querySelector(".chdot"),box);h+=chArrow(x1,y1,xr,yr,"#22c55e");
+    svg.innerHTML=h;
+  }catch(e){}
+  if(ok){s.sc++;sfx.ok();vib(30);}else{btn.classList.add("wrong");sfx.bad();vib([60,40,60]);}
+  try{if(S.sound)say(q.t,S.lang);}catch(e){}
+  setTimeout(()=>{
+    if(!CHS||CHS.tok!==tok||CHTOK!==tok)return;
+    s.i++;if(s.i<CH_Q)chQ();else chEnd();
+  },ok?900:1700);
+}
+function chEnd(){
+  const s=CHS,L=s.L,sc=s.sc,pass=sc>=CH_PASS,st=chStars(sc);
+  const m=S.ch[S.lang]||(S.ch[S.lang]={});
+  const first=(m[L]||0)<CH_PASS&&pass;
+  if(sc>(m[L]||0))m[L]=sc;
+  S.tot.a+=CH_Q;S.tot.c+=sc;
+  addXP(sc*2+(first?15:0));save();
+  pass?sfx.win():sfx.bad();
+  ov().innerHTML=`<div class="wrap" style="text-align:center">${studyTop(T3("🎯 التحديات","🎯 Challenges","🎯 Défis"))}
+  <div style="font-size:64px;margin-top:20px">${pass?"🎉":"💪"}</div>
+  <h2 style="margin:8px 0">${pass?T3("أحسنت!","Well done!","Bravo !"):T3("حاول مرة أخرى","Try again","Réessayez")}</h2>
+  <div style="font-size:42px;font-weight:800">${sc} / ${CH_Q}</div>
+  <div style="font-size:34px;margin:8px 0">${[1,2,3].map(i=>i<=st?"⭐":"☆").join("")}</div>
+  <p class="mut">${pass?T3("المستوى "+L+" مكتمل","Level "+L+" complete","Niveau "+L+" terminé"):T3("تحتاج 7 إجابات صحيحة للنجاح","You need 7 correct answers to pass","Il faut 7 bonnes réponses pour réussir")}</p>
+  ${pass&&L<CH_LV?`<button class="btn" onclick="chStart(${L+1})">${T3("المستوى التالي","Next level","Niveau suivant")} ←</button>`:""}
+  <button class="btn ${pass&&L<CH_LV?"sec":""}" onclick="chStart(${L})">${T3("إعادة المحاولة","Retry","Réessayer")}</button>
+  <button class="btn sec" onclick="chMap()">${T3("كل المستويات","All levels","Tous les niveaux")}</button></div>`;
+}
+
 let TAB="home";
 function setTab(t){TAB=t;if(t==="home")GRP=null;renderMain();window.scrollTo(0,0);}
 function renderMain(){
-  const v={home:viewHome,dict:viewDict,prof:viewProf,set:viewSet}[TAB];
+  const v={home:viewHome,tr:viewTr,dict:viewDict,prof:viewProf,set:viewSet}[TAB];
   $("main").innerHTML=v();
   document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("on",b.dataset.t===TAB));
   if(TAB==="dict")bindDict();
+  if(TAB==="tr")bindTr();
 }
 function ring(p){
   const r=26,c=2*Math.PI*r;
@@ -6850,7 +7162,7 @@ function viewHome(){
   h+=`<div class="gg">`+GROUPS.map(([g,t],i)=>{
     const cs=CATS.filter(c=>c.group===g&&catOk(c));if(!cs.length)return"";
     return `<button class="gt c${i}" onclick="openGroup('${g}')"><span class="gi">${GICON[g]}</span><span class="gn">${t}</span><small>${cs.length} ${cs.length>10?"درسًا":"دروس"}</small></button>`;
-  }).join("")+`<button class="gt wide c7" onclick="openStories()"><span class="gi">📚</span><span class="gn">القصص</span><small>قصص قصيرة للقراءة والاستماع</small></button><button class="gt wide c6" onclick="openPron()"><span class="gi">🎤</span><span class="gn">تدرّب على النطق</span><small>انطق وسيصحّح لك التطبيق</small></button></div>`;
+  }).join("")+`<button class="gt wide c5" onclick="openChal()"><span class="gi">🎯</span><span class="gn">${T3("التحديات","Challenges","Défis")}</span><small>${T3("25 مستوى من الكلمات إلى الجمل","25 levels from words to sentences","25 niveaux, des mots aux phrases")}</small></button><button class="gt wide c7" onclick="openStories()"><span class="gi">📚</span><span class="gn">القصص</span><small>قصص قصيرة للقراءة والاستماع</small></button><button class="gt wide c6" onclick="openPron()"><span class="gi">🎤</span><span class="gn">تدرّب على النطق</span><small>انطق وسيصحّح لك التطبيق</small></button></div>`;
   return h;
 }
 function openGroup(g){GRP=g;renderMain();window.scrollTo(0,0);}
