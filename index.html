@@ -811,7 +811,7 @@ const CATS=[
 تذكرة|Ticket|Billet|Billete
 ذهاب فقط|One-way|Aller simple|Solo ida
 ذهاب وإياب|Round trip|Aller-retour|Ida y vuelta
-رحلة ترانزيت (توقف)|Connecting flight|Correspondance|Escala
+رحلة ترانزيت (توقف)|Connecting flight|Correspondance|Vuelo de conexión
 حقيبة ضائعة|Lost luggage|Bagage perdu|Equipaje perdido
 مضيفة طيران|Flight attendant|Hôtesse de l'air|Auxiliar de vuelo
 طيّار|Pilot|Pilote|Piloto
@@ -837,7 +837,7 @@ const CATS=[
 طابق|Floor|Étage|Planta
 ليلة|Night|Nuit|Noche
 الفطور مشمول|Breakfast included|Petit-déjeuner inclus|Desayuno incluido
-نُزل شبابي|Hostel|Auberge|Albergue
+نُزل شبابي|Hostel|Auberge de jeunesse|Albergue
 شقة|Apartment|Appartement|Apartamento
 لدي حجز|I have a reservation|J'ai une réservation|Tengo una reserva
 كم السعر لليلة؟|How much per night?|Combien par nuit ?|¿Cuánto cuesta por noche?
@@ -859,7 +859,7 @@ const CATS=[
 سائق|Driver|Chauffeur|Conductor
 استئجار سيارة|Rent a car|Louer une voiture|Alquilar un coche
 محطة وقود|Gas station|Station-service|Gasolinera
-وقود|Fuel|Essence|Gasolina
+وقود|Fuel|Carburant|Combustible
 موقف سيارات|Parking|Parking|Aparcamiento
 حركة المرور|Traffic|Circulation|Tráfico
 طريق|Road|Route|Carretera
@@ -906,8 +906,8 @@ const CATS=[
 {key:"money",group:"travel",icon:"💳",title:"المال والتسوق",words:P(`
 مال|Money|Argent|Dinero
 نقدًا|Cash|Espèces|Efectivo
-بطاقة بنكية|Credit card|Carte bancaire|Tarjeta de crédito
-صراف آلي|ATM|Distributeur|Cajero automático
+بطاقة بنكية|Bank card|Carte bancaire|Tarjeta bancaria
+صراف آلي|ATM|Distributeur de billets|Cajero automático
 صرف العملات|Currency exchange|Bureau de change|Cambio de divisas
 سعر|Price|Prix|Precio
 رخيص|Cheap|Bon marché|Barato
@@ -1084,7 +1084,7 @@ const CATS=[
 ثلج|Snow|Neige|Nieve
 رياح|Wind|Vent|Viento
 سحابة|Cloud|Nuage|Nube
-عاصفة|Storm|Orage|Tormenta
+عاصفة|Storm|Tempête|Tormenta
 درجة الحرارة|Temperature|Température|Temperatura
 مظلة|Umbrella|Parapluie|Paraguas
 الربيع|Spring|Printemps|Primavera
@@ -1254,7 +1254,7 @@ I don't understand|Ich verstehe nicht|Non capisco|Anlamıyorum
 I don't know|Ich weiß nicht|Non lo so|Bilmiyorum
 Can you repeat?|Kannst du das wiederholen?|Puoi ripetere?|Tekrar edebilir misin?
 Please speak slowly|Bitte sprechen Sie langsam|Parli lentamente, per favore|Lütfen yavaş konuşun
-No problem|kein Problem|nessun problema|sorun değil
+No problem|Kein Problem|Nessun problema|sorun değil
 I'm learning|Ich lerne|Sto imparando|Öğreniyorum
 How old are you?|Wie alt bist du?|Quanti anni hai?|Kaç yaşındasın?
 Can you help me?|Können Sie mir helfen?|Può aiutarmi?|Bana yardım edebilir misiniz?
@@ -1350,7 +1350,7 @@ Couscous|Couscous|couscous|kuskus
 Bulgur|Bulgur|bulgur|bulgur
 Croissant|Croissant|cornetto|kruvasan
 Biscuit|Keks|biscotto|bisküvi
-Cereal|Müsli|cereali|mısır gevreği
+Cereal|Cornflakes|cereali|mısır gevreği
 ## spice
 Salt|Salz|sale|tuz
 Black pepper|schwarzer Pfeffer|pepe nero|karabiber
@@ -1376,7 +1376,7 @@ Dessert|Nachtisch|dolce|tatlı
 Cake|Kuchen|torta|pasta
 Chocolate|Schokolade|cioccolato|çikolata
 Candy|Bonbon|caramella|şekerleme
-Pie|Torte|crostata|turta
+Pie|Obstkuchen|crostata|turta
 Pancake|Pfannkuchen|crêpe|krep
 Almond|Mandel|mandorla|badem
 Walnut|Walnuss|noce|ceviz
@@ -1395,7 +1395,7 @@ Coffee with milk|Milchkaffee|caffellatte|sütlü kahve
 Tea|Tee|tè|çay
 Mint tea|Pfefferminztee|tè alla menta|nane çayı
 Milk|Milch|latte|süt
-Soft drink|Limonade|bibita gassata|gazlı içecek
+Soft drink|Softdrink|bibita gassata|gazlı içecek
 Smoothie|Smoothie|frullato|smoothie
 Ice|Eis|ghiaccio|buz
 Glass|Glas|bicchiere|bardak
@@ -1496,7 +1496,7 @@ Timetable|Fahrplan|orario|tarife
 Driver|Fahrer|autista|şoför
 Rent a car|ein Auto mieten|noleggiare un'auto|araba kiralamak
 Gas station|Tankstelle|distributore di benzina|benzin istasyonu
-Fuel|Benzin|benzina|benzin
+Fuel|Kraftstoff|carburante|benzin
 Parking|Parkplatz|parcheggio|otopark
 Traffic|Verkehr|traffico|trafik
 Road|Straße|strada|yol
@@ -1541,7 +1541,7 @@ Can you show me on the map?|Können Sie es mir auf der Karte zeigen?|Può mostra
 ## money
 Money|Geld|soldi|para
 Cash|Bargeld|contanti|nakit
-Credit card|Kreditkarte|carta di credito|kredi kartı
+Bank card|Bankkarte|carta bancaria|kredi kartı
 ATM|Geldautomat|bancomat|ATM
 Currency exchange|Geldwechsel|cambio valuta|döviz bürosu
 Price|Preis|prezzo|fiyat
@@ -1710,7 +1710,7 @@ Rain|Regen|pioggia|yağmur
 Snow|Schnee|neve|kar
 Wind|Wind|vento|rüzgar
 Cloud|Wolke|nuvola|bulut
-Storm|Sturm|temporale|fırtına
+Storm|Sturm|tempesta|fırtına
 Temperature|Temperatur|temperatura|sıcaklık
 Umbrella|Regenschirm|ombrello|şemsiye
 Spring|Frühling|primavera|ilkbahar
@@ -1727,7 +1727,7 @@ Nose|Nase|naso|burun
 Mouth|Mund|bocca|ağız
 Teeth|Zähne|denti|dişler
 Hair|Haare|capelli|saç
-Throat|Hals|gola|boğaz
+Throat|Kehle|gola|boğaz
 Hand|Hand|mano|el
 Arm|Arm|braccio|kol
 Finger|Finger|dito|parmak
@@ -1767,7 +1767,7 @@ const MORE=`
 جاف|Dry|Sec|Seco|trocken|asciutto|kuru
 دافئ|Warm|Chaud|Cálido|warm|caldo|ılık
 منعش|Cool|Frais|Fresco|kühl|fresco|serin
-جديد تماما|Brand new|Tout neuf|Nuevo|brandneu|nuovissimo|yepyeni
+جديد تماما|Brand new|Tout neuf|Flamante|brandneu|nuovissimo|yepyeni
 حديث|Modern|Moderne|Moderno|modern|moderno|modern
 تقليدي|Traditional|Traditionnel|Tradicional|traditionell|tradizionale|geleneksel
 شاب|Young|Jeune|Joven|jung|giovane|genç
@@ -1820,13 +1820,13 @@ const MORE=`
 مرتاح|Relaxed|Détendu|Relajado|entspannt|rilassato|rahat
 محرج|Embarrassed|Gêné|Avergonzado|verlegen|imbarazzato|utanmış
 فخور|Proud|Fier|Orgulloso|stolz|orgoglioso|gururlu
-وحيد|Lonely|Seul|Solo|einsam|solo|yalnız
+وحيد|Lonely|Seul|Solitario|einsam|solitario|yalnız
 جائع|Hungry|Affamé|Hambriento|hungrig|affamato|aç
 شبعان|Full up|Rassasié|Lleno|satt|sazio|tok
 عطشان|Thirsty|Assoiffé|Sediento|durstig|assetato|susamış
 مريض|Ill|Malade|Enfermo|krank|malato|hasta
 سليم|Healthy|En bonne santé|Sano|gesund|sano|sağlıklı
-نعسان|Sleepy|Endormi|Somnoliento|schläfrig|assonnato|uykulu
+نعسان|Sleepy|Somnolent|Somnoliento|schläfrig|assonnato|uykulu
 مستيقظ|Awake|Éveillé|Despierto|wach|sveglio|uyanık
 لذيذ|Tasty|Savoureux|Sabroso|lecker|gustoso|lezzetli
 مالح|Salty|Salé|Salado|salzig|salato|tuzlu
@@ -1852,7 +1852,7 @@ const MORE=`
 مكتب التسجيل|Check-in desk|Comptoir d'enregistrement|Mostrador de facturación|Check-in-Schalter|banco check-in|check-in masası
 تسجيل الوصول عبر الإنترنت|Online check-in|Enregistrement en ligne|Facturación en línea|Online-Check-in|check-in online|online check-in
 وزن الحقيبة|Baggage weight|Poids du bagage|Peso del equipaje|Gepäckgewicht|peso del bagaglio|bagaj ağırlığı
-وزن زائد|Excess weight|Excédent de poids|Exceso de peso|Übergewicht|peso in eccesso|fazla ağırlık
+وزن زائد|Excess weight|Excédent de poids|Exceso de peso|Übergepäck|peso in eccesso|fazla ağırlık
 رسوم إضافية|Extra fee|Frais supplémentaires|Tarifa adicional|Zusatzgebühr|costo extra|ek ücret
 حقيبة مسجلة|Checked bag|Bagage en soute|Equipaje facturado|aufgegebenes Gepäck|bagaglio in stiva|kontrol edilen bagaj
 حقيبة مقصورة|Carry-on|Bagage cabine|Equipaje de mano|Handgepäck|bagaglio a mano|kabin bagajı
@@ -2023,7 +2023,7 @@ const MORE=`
 أحمر داكن|Dark red|Rouge foncé|Rojo oscuro|Dunkelrot|rosso scuro|koyu kırmızı
 أحمر فاتح|Light red|Rouge clair|Rojo claro|Hellrot|rosso chiaro|açık kırmızı
 قرمزي|Crimson|Cramoisi|Carmesí|Karmesinrot|cremisi|koyu kırmızı
-كستنائي|Maroon|Bordeaux|Granate|Dunkelrot|bordeaux|bordo
+كستنائي|Maroon|Châtaigne|Granate|Kastanienbraun|castano|bordo
 خمري|Burgundy|Bordeaux|Burdeos|Burgunderrot|borgogna|şarap rengi
 مرجاني|Coral|Corail|Coral|Koralle|corallo|mercan
 سلموني|Salmon|Saumon|Salmón|Lachsfarben|salmone|somon rengi
@@ -2046,7 +2046,7 @@ const MORE=`
 فحمي|Charcoal|Anthracite|Carbón|Anthrazit|antracite|antrasit
 فاتح|Light|Clair|Claro|hell|chiaro|açık
 غامق|Dark|Foncé|Oscuro|dunkel|scuro|koyu
-زاهٍ|Bright|Vif|Brillante|leuchtend|vivace|canlı
+زاهٍ|Bright|Vif|Vivo|leuchtend|vivace|canlı
 باهت|Pale|Pâle|Pálido|blass|pallido|soluk
 لامع|Shiny|Brillant|Brillante|glänzend|lucido|parlak
 مطفي|Matte|Mat|Mate|matt|opaco|mat
@@ -2064,78 +2064,78 @@ const MORE=`
 لوني المفضل الأزرق|My favourite colour is blue|Ma couleur préférée est le bleu|Mi color favorito es el azul|Meine Lieblingsfarbe ist Blau|Il mio colore preferito è il blu|En sevdiğim renk mavi
 
 ## c_be
-أنا أفعل|I do|fais|hago|mache|faccio|yaparım
-أنتَ تفعل|You do|fais|haces|machst|fai|yaparsın
-هو / هي يفعل|He / She does|fait|hace|macht|fa|yapar
-نحن نفعل|We do|faisons|hacemos|machen|facciamo|yaparız
-أنتم تفعلون|You do (plural)|faites|hacéis|macht|fate|yaparsınız
-هم يفعلون|They do|font|hacen|machen|fanno|yaparlar
-أنا آتي|I come|viens|vengo|komme|vengo|gelirim
-أنتَ تأتي|You come|viens|vienes|kommst|vieni|gelirsin
-هو / هي يأتي|He / She comes|vient|viene|kommt|viene|gelir
-نحن نأتي|We come|venons|venimos|kommen|veniamo|geliriz
-أنتم تأتون|You come (plural)|venez|venís|kommt|venite|gelirsiniz
-هم يأتون|They come|viennent|vienen|kommen|vengono|gelirler
-أنا أرى|I see|vois|veo|sehe|vedo|görürüm
-أنتَ ترى|You see|vois|ves|siehst|vedi|görürsün
-هو / هي يرى|He / She sees|voit|ve|sieht|vede|görür
-نحن نرى|We see|voyons|vemos|sehen|vediamo|görürüz
-أنتم ترون|You see (plural)|voyez|veis|seht|vedete|görürsünüz
-هم يرون|They see|voient|ven|sehen|vedono|görürler
-أنا أعرف|I know|sais|sé|weiß|so|bilirim
-أنتَ تعرف|You know|sais|sabes|weißt|sai|bilirsin
-هو / هي يعرف|He / She knows|sait|sabe|weiß|sa|bilir
-نحن نعرف|We know|savons|sabemos|wissen|sappiamo|biliriz
-أنتم تعرفون|You know (plural)|savez|sabéis|wisst|sapete|bilirsiniz
-هم يعرفون|They know|savent|saben|wissen|sanno|bilirler
-أنا أحب|I love|aime|amo|liebe|amo|severim
-أنتَ تحب|You love|aimes|amas|liebst|ami|seversin
-هو / هي يحب|He / She loves|aime|ama|liebt|ama|sever
-نحن نحب|We love|aimons|amamos|lieben|amiamo|severiz
-أنتم تحبون|You love (plural)|aimez|amáis|liebt|amate|seversiniz
-هم يحبون|They love|aiment|aman|lieben|amano|severler
-أنا آكل|I eat|mange|como|esse|mangio|yerim
-أنتَ تأكل|You eat|manges|comes|isst|mangi|yersin
-هو / هي يأكل|He / She eats|mange|come|isst|mangia|yer
-نحن نأكل|We eat|mangeons|comemos|essen|mangiamo|yeriz
-أنتم تأكلون|You eat (plural)|mangez|coméis|esst|mangiate|yersiniz
-هم يأكلون|They eat|mangent|comen|essen|mangiano|yerler
-أنا أتكلم|I speak|parle|hablo|spreche|parlo|konuşurum
-أنتَ تتكلم|You speak|parles|hablas|sprichst|parli|konuşursun
-هو / هي يتكلم|He / She speaks|parle|habla|spricht|parla|konuşur
-نحن نتكلم|We speak|parlons|hablamos|sprechen|parliamo|konuşuruz
-أنتم تتكلمون|You speak (plural)|parlez|habláis|sprecht|parlate|konuşursunuz
-هم يتكلمون|They speak|parlent|hablan|sprechen|parlano|konuşurlar
-أنا أحتاج|I need|ai besoin|necesito|brauche|ho bisogno|ihtiyacım var
-أنتَ تحتاج|You need|as besoin|necesitas|brauchst|hai bisogno|ihtiyacın var
-هو / هي يحتاج|He / She needs|a besoin|necesita|braucht|ha bisogno|ihtiyacı var
-نحن نحتاج|We need|avons besoin|necesitamos|brauchen|abbiamo bisogno|ihtiyacımız var
-أنتم تحتاجون|You need (plural)|avez besoin|necesitáis|braucht|avete bisogno|ihtiyacınız var
-هم يحتاجون|They need|ont besoin|necesitan|brauchen|hanno bisogno|ihtiyaçları var
-أنا أعمل|I work|travaille|trabajo|arbeite|lavoro|çalışırım
-أنتَ تعمل|You work|travailles|trabajas|arbeitest|lavori|çalışırsın
-هو / هي يعمل|He / She works|travaille|trabaja|arbeitet|lavora|çalışır
-نحن نعمل|We work|travaillons|trabajamos|arbeiten|lavoriamo|çalışırız
-أنتم تعملون|You work (plural)|travaillez|trabajáis|arbeitet|lavorate|çalışırsınız
-هم يعملون|They work|travaillent|trabajan|arbeiten|lavorano|çalışırlar
-أنا أشتري|I buy|achète|compro|kaufe|compro|satın alırım
-أنتَ تشتري|You buy|achètes|compras|kaufst|compri|satın alırsın
-هو / هي يشتري|He / She buys|achète|compra|kauft|compra|satın alır
-نحن نشتري|We buy|achetons|compramos|kaufen|compriamo|satın alırız
-أنتم تشترون|You buy (plural)|achetez|compráis|kauft|comprate|satın alırsınız
-هم يشترون|They buy|achètent|compran|kaufen|comprano|satın alırlar
-أنا أعيش|I live|vis|vivo|wohne|vivo|yaşarım
-أنتَ تعيش|You live|vis|vives|wohnst|vivi|yaşarsın
-هو / هي يعيش|He / She lives|vit|vive|wohnt|vive|yaşar
-نحن نعيش|We live|vivons|vivimos|wohnen|viviamo|yaşarız
-أنتم تعيشون|You live (plural)|vivez|vivís|wohnt|vivete|yaşarsınız
-هم يعيشون|They live|vivent|viven|wohnen|vivono|yaşarlar
-أنا أعطي|I give|donne|doy|gebe|do|veririm
-أنتَ تعطي|You give|donnes|das|gibst|dai|verirsin
-هو / هي يعطي|He / She gives|donne|da|gibt|dà|verir
-نحن نعطي|We give|donnons|damos|geben|diamo|veririz
-أنتم تعطون|You give (plural)|donnez|dais|gebt|date|verirsiniz
-هم يعطون|They give|donnent|dan|geben|danno|verirler
+أنا أفعل|I do|je fais|Yo hago|ich mache|io faccio|yaparım
+أنتَ تفعل|You do|tu fais|Tú haces|du machst|tu fai|yaparsın
+هو / هي يفعل|He / She does|il / elle fait|Él / Ella hace|er / sie macht|lui / lei fa|yapar
+نحن نفعل|We do|nous faisons|Nosotros hacemos|wir machen|noi facciamo|yaparız
+أنتم تفعلون|You do (plural)|vous faites|Vosotros hacéis|ihr macht|voi fate|yaparsınız
+هم يفعلون|They do|ils / elles font|Ellos hacen|sie machen|loro fanno|yaparlar
+أنا آتي|I come|je viens|Yo vengo|ich komme|io vengo|gelirim
+أنتَ تأتي|You come|tu viens|Tú vienes|du kommst|tu vieni|gelirsin
+هو / هي يأتي|He / She comes|il / elle vient|Él / Ella viene|er / sie kommt|lui / lei viene|gelir
+نحن نأتي|We come|nous venons|Nosotros venimos|wir kommen|noi veniamo|geliriz
+أنتم تأتون|You come (plural)|vous venez|Vosotros venís|ihr kommt|voi venite|gelirsiniz
+هم يأتون|They come|ils / elles viennent|Ellos vienen|sie kommen|loro vengono|gelirler
+أنا أرى|I see|je vois|Yo veo|ich sehe|io vedo|görürüm
+أنتَ ترى|You see|tu vois|Tú ves|du siehst|tu vedi|görürsün
+هو / هي يرى|He / She sees|il / elle voit|Él / Ella ve|er / sie sieht|lui / lei vede|görür
+نحن نرى|We see|nous voyons|Nosotros vemos|wir sehen|noi vediamo|görürüz
+أنتم ترون|You see (plural)|vous voyez|Vosotros veis|ihr seht|voi vedete|görürsünüz
+هم يرون|They see|ils / elles voient|Ellos ven|sie sehen|loro vedono|görürler
+أنا أعرف|I know|je sais|Yo sé|ich weiß|io so|bilirim
+أنتَ تعرف|You know|tu sais|Tú sabes|du weißt|tu sai|bilirsin
+هو / هي يعرف|He / She knows|il / elle sait|Él / Ella sabe|er / sie weiß|lui / lei sa|bilir
+نحن نعرف|We know|nous savons|Nosotros sabemos|wir wissen|noi sappiamo|biliriz
+أنتم تعرفون|You know (plural)|vous savez|Vosotros sabéis|ihr wisst|voi sapete|bilirsiniz
+هم يعرفون|They know|ils / elles savent|Ellos saben|sie wissen|loro sanno|bilirler
+أنا أحب|I love|j'aime|Yo amo|ich liebe|io amo|severim
+أنتَ تحب|You love|tu aimes|Tú amas|du liebst|tu ami|seversin
+هو / هي يحب|He / She loves|il / elle aime|Él / Ella ama|er / sie liebt|lui / lei ama|sever
+نحن نحب|We love|nous aimons|Nosotros amamos|wir lieben|noi amiamo|severiz
+أنتم تحبون|You love (plural)|vous aimez|Vosotros amáis|ihr liebt|voi amate|seversiniz
+هم يحبون|They love|ils / elles aiment|Ellos aman|sie lieben|loro amano|severler
+أنا آكل|I eat|je mange|Yo como|ich esse|io mangio|yerim
+أنتَ تأكل|You eat|tu manges|Tú comes|du isst|tu mangi|yersin
+هو / هي يأكل|He / She eats|il / elle mange|Él / Ella come|er / sie isst|lui / lei mangia|yer
+نحن نأكل|We eat|nous mangeons|Nosotros comemos|wir essen|noi mangiamo|yeriz
+أنتم تأكلون|You eat (plural)|vous mangez|Vosotros coméis|ihr esst|voi mangiate|yersiniz
+هم يأكلون|They eat|ils / elles mangent|Ellos comen|sie essen|loro mangiano|yerler
+أنا أتكلم|I speak|je parle|Yo hablo|ich spreche|io parlo|konuşurum
+أنتَ تتكلم|You speak|tu parles|Tú hablas|du sprichst|tu parli|konuşursun
+هو / هي يتكلم|He / She speaks|il / elle parle|Él / Ella habla|er / sie spricht|lui / lei parla|konuşur
+نحن نتكلم|We speak|nous parlons|Nosotros hablamos|wir sprechen|noi parliamo|konuşuruz
+أنتم تتكلمون|You speak (plural)|vous parlez|Vosotros habláis|ihr sprecht|voi parlate|konuşursunuz
+هم يتكلمون|They speak|ils / elles parlent|Ellos hablan|sie sprechen|loro parlano|konuşurlar
+أنا أحتاج|I need|j'ai besoin|Yo necesito|ich brauche|io ho bisogno|ihtiyacım var
+أنتَ تحتاج|You need|tu as besoin|Tú necesitas|du brauchst|tu hai bisogno|ihtiyacın var
+هو / هي يحتاج|He / She needs|il / elle a besoin|Él / Ella necesita|er / sie braucht|lui / lei ha bisogno|ihtiyacı var
+نحن نحتاج|We need|nous avons besoin|Nosotros necesitamos|wir brauchen|noi abbiamo bisogno|ihtiyacımız var
+أنتم تحتاجون|You need (plural)|vous avez besoin|Vosotros necesitáis|ihr braucht|voi avete bisogno|ihtiyacınız var
+هم يحتاجون|They need|ils / elles ont besoin|Ellos necesitan|sie brauchen|loro hanno bisogno|ihtiyaçları var
+أنا أعمل|I work|je travaille|Yo trabajo|ich arbeite|io lavoro|çalışırım
+أنتَ تعمل|You work|tu travailles|Tú trabajas|du arbeitest|tu lavori|çalışırsın
+هو / هي يعمل|He / She works|il / elle travaille|Él / Ella trabaja|er / sie arbeitet|lui / lei lavora|çalışır
+نحن نعمل|We work|nous travaillons|Nosotros trabajamos|wir arbeiten|noi lavoriamo|çalışırız
+أنتم تعملون|You work (plural)|vous travaillez|Vosotros trabajáis|ihr arbeitet|voi lavorate|çalışırsınız
+هم يعملون|They work|ils / elles travaillent|Ellos trabajan|sie arbeiten|loro lavorano|çalışırlar
+أنا أشتري|I buy|j'achète|Yo compro|ich kaufe|io compro|satın alırım
+أنتَ تشتري|You buy|tu achètes|Tú compras|du kaufst|tu compri|satın alırsın
+هو / هي يشتري|He / She buys|il / elle achète|Él / Ella compra|er / sie kauft|lui / lei compra|satın alır
+نحن نشتري|We buy|nous achetons|Nosotros compramos|wir kaufen|noi compriamo|satın alırız
+أنتم تشترون|You buy (plural)|vous achetez|Vosotros compráis|ihr kauft|voi comprate|satın alırsınız
+هم يشترون|They buy|ils / elles achètent|Ellos compran|sie kaufen|loro comprano|satın alırlar
+أنا أعيش|I live|je vis|Yo vivo|ich wohne|io vivo|yaşarım
+أنتَ تعيش|You live|tu vis|Tú vives|du wohnst|tu vivi|yaşarsın
+هو / هي يعيش|He / She lives|il / elle vit|Él / Ella vive|er / sie wohnt|lui / lei vive|yaşar
+نحن نعيش|We live|nous vivons|Nosotros vivimos|wir wohnen|noi viviamo|yaşarız
+أنتم تعيشون|You live (plural)|vous vivez|Vosotros vivís|ihr wohnt|voi vivete|yaşarsınız
+هم يعيشون|They live|ils / elles vivent|Ellos viven|sie wohnen|loro vivono|yaşarlar
+أنا أعطي|I give|je donne|Yo doy|ich gebe|io do|veririm
+أنتَ تعطي|You give|tu donnes|Tú das|du gibst|tu dai|verirsin
+هو / هي يعطي|He / She gives|il / elle donne|Él / Ella da|er / sie gibt|lui / lei dà|verir
+نحن نعطي|We give|nous donnons|Nosotros damos|wir geben|noi diamo|veririz
+أنتم تعطون|You give (plural)|vous donnez|Vosotros dais|ihr gebt|voi date|verirsiniz
+هم يعطون|They give|ils / elles donnent|Ellos dan|sie geben|loro danno|verirler
 
 ## d_air
 أين مكتب تسجيل الوصول؟|Where is the check-in desk?|Où est le comptoir d'enregistrement ?|¿Dónde está el mostrador de facturación?|Wo ist der Check-in-Schalter?|Dov'è il banco del check-in?|Check-in gişesi nerede?
@@ -2151,7 +2151,7 @@ const MORE=`
 هل يمكنني تغيير حجزي؟|Can I change my booking?|Puis-je modifier ma réservation ?|¿Puedo cambiar mi reserva?|Kann ich meine Buchung ändern?|Posso cambiare la mia prenotazione?|Rezervasyonumu değiştirebilir miyim?
 أريد مقعدا بجانب النافذة|I'd like a window seat|Je voudrais une place côté hublot|Quisiera un asiento de ventanilla|Ich möchte einen Fensterplatz|Vorrei un posto vicino al finestrino|Cam kenarı bir koltuk istiyorum
 أريد مقعدا بجانب الممر|I'd like an aisle seat|Je voudrais une place côté couloir|Quisiera un asiento de pasillo|Ich möchte einen Gangplatz|Vorrei un posto corridoio|Koridor tarafı bir koltuk istiyorum
-هل يمكننا الجلوس معا؟|Can we sit together?|Pouvons-nous être assis ensemble ?|¿Podemos sentarnos juntos?|Können wir zusammen sitzen?|Possiamo sederci vicini?|Yan yana oturabilir miyiz?
+هل يمكننا الجلوس معا؟|Can we sit together?|Pouvons-nous nous asseoir ensemble ?|¿Podemos sentarnos juntos?|Können wir zusammen sitzen?|Possiamo sederci vicini?|Yan yana oturabilir miyiz?
 كم عدد الحقائب المسموح بها؟|How many bags are allowed?|Combien de bagages sont autorisés ?|¿Cuántas maletas se permiten?|Wie viele Gepäckstücke sind erlaubt?|Quanti bagagli sono ammessi?|Kaç bavul hakkımız var?
 ما الوزن المسموح به؟|What's the weight limit?|Quelle est la limite de poids ?|¿Cuál es el límite de peso?|Wie hoch ist das Gewichtslimit?|Qual è il limite di peso?|Ağırlık sınırı nedir?
 حقيبتي أثقل من المسموح|My bag is overweight|Mon bagage est trop lourd|Mi maleta pesa demasiado|Mein Gepäck ist zu schwer|Il mio bagaglio è troppo pesante|Bavulum fazla ağır
@@ -2566,7 +2566,7 @@ const MORE=`
 هل لديك إخوة؟|Do you have siblings?|Avez-vous des frères et sœurs ?|¿Tienes hermanos?|Hast du Geschwister?|Hai fratelli o sorelle?|Kardeşiniz var mı?
 لدي أخ وأخت|I have a brother and a sister|J'ai un frère et une sœur|Tengo un hermano y una hermana|Ich habe einen Bruder und eine Schwester|Ho un fratello e una sorella|Bir erkek ve bir kız kardeşim var
 أنا وحيد لأهلي|I'm an only child|Je suis fils unique|Soy hijo único|Ich bin Einzelkind|Sono figlio unico|Ailenin tek çocuğuyum
-كم عدد أفراد أسرتك؟|How many people are in your family?|Combien de personnes y a-t-il dans votre famille ?|¿Cuántas personas hay en tu familia?|Wie viele Personen hat deine Familie?|Quante persone ci sono nella tua famiglia?|Ailenizde kaç kişi var?
+كم عدد أفراد أسرتك؟|How many people are in your family?|Combien de personnes y a-t-il dans votre famille ?|¿Cuántas personas hay en tu familia?|Wie viele Mitglieder hat deine Familie?|Quante persone ci sono nella tua famiglia?|Ailenizde kaç kişi var?
 عائلتي كبيرة|My family is big|Ma famille est nombreuse|Mi familia es grande|Meine Familie ist groß|La mia famiglia è numerosa|Ailem kalabalık
 ماذا تحب أن تفعل في وقت فراغك؟|What do you like to do in your free time?|Que aimez-vous faire pendant votre temps libre ?|¿Qué te gusta hacer en tu tiempo libre?|Was machst du gern in deiner Freizeit?|Che cosa ti piace fare nel tempo libero?|Boş zamanlarınızda ne yapmayı seversiniz?
 هوايتي هي القراءة|My hobby is reading|Mon passe-temps est la lecture|Mi pasatiempo es leer|Mein Hobby ist Lesen|Il mio hobby è la lettura|Hobim kitap okumak
@@ -2586,7 +2586,7 @@ const MORE=`
 لم أفهم ما قلت|I didn't understand what you said|Je n'ai pas compris ce que vous avez dit|No entendí lo que dijiste|Ich habe nicht verstanden, was du gesagt hast|Non ho capito quello che hai detto|Ne dediğinizi anlamadım
 ماذا تعني هذه الكلمة؟|What does this word mean?|Que signifie ce mot ?|¿Qué significa esta palabra?|Was bedeutet dieses Wort?|Che cosa significa questa parola?|Bu kelime ne demek?
 كيف أقول ذلك بالإنجليزية؟|How do I say that in English?|Comment dit-on cela en anglais ?|¿Cómo se dice eso en inglés?|Wie sagt man das auf Englisch?|Come si dice in inglese?|Bunu İngilizce nasıl söylerim?
-لغتك جيدة جدا|Your language is very good|Votre langue est très bonne|Tu idioma es muy bueno|Dein Sprachniveau ist sehr gut|La tua lingua è molto buona|Dil seviyeniz çok iyi
+لغتك جيدة جدا|Your language skills are very good|Vous parlez très bien|Hablas muy bien|Dein Sprachniveau ist sehr gut|Parli molto bene|Dil seviyeniz çok iyi
 هل تعيش هنا منذ زمن طويل؟|Have you lived here for a long time?|Habitez-vous ici depuis longtemps ?|¿Hace mucho que vives aquí?|Wohnst du schon lange hier?|Abiti qui da molto tempo?|Uzun zamandır burada mı yaşıyorsunuz?
 هل تحب المدينة؟|Do you like the city?|Aimez-vous la ville ?|¿Te gusta la ciudad?|Gefällt dir die Stadt?|Ti piace la città?|Şehri sevdiniz mi?
 المدينة جميلة جدا|The city is very beautiful|La ville est très belle|La ciudad es muy bonita|Die Stadt ist sehr schön|La città è molto bella|Şehir çok güzel
@@ -2663,8 +2663,8 @@ const MORE=`
 متى تنتهي صلاحية هذا الدواء؟|When does this medicine expire?|Quand ce médicament expire-t-il ?|¿Cuándo caduca este medicamento?|Wann läuft dieses Medikament ab?|Quando scade questo farmaco?|Bu ilacın son kullanma tarihi ne zaman?
 كم عدد الأقراص في العلبة؟|How many tablets are in the box?|Combien de comprimés y a-t-il dans la boîte ?|¿Cuántas pastillas hay en la caja?|Wie viele Tabletten sind in der Packung?|Quante compresse ci sono nella scatola?|Kutuda kaç tablet var?
 أحتاج علبة واحدة|I need one box|J'ai besoin d'une boîte|Necesito una caja|Ich brauche eine Packung|Mi serve una scatola|Bir kutu lazım
-أحتاج شريطا واحدا|I need one strip|J'ai besoin d'une plaquette|Necesito una tira|Ich brauche einen Blister|Mi serve una confezione|Bir şerit lazım
-أحتاج شرابا للأطفال|I need a syrup for children|J'ai besoin d'un sirop pour enfants|Necesito un jarabe para niños|Ich brauche einen Hustensaft für Kinder|Ho bisogno di uno sciroppo per bambini|Çocuklar için şurup lazım
+أحتاج شريطا واحدا|I need one strip|J'ai besoin d'une plaquette|Necesito una tira|Ich brauche einen Blister|Mi serve un blister|Bir şerit lazım
+أحتاج شرابا للأطفال|I need a syrup for children|J'ai besoin d'un sirop pour enfants|Necesito un jarabe para niños|Ich brauche einen Sirup für Kinder|Ho bisogno di uno sciroppo per bambini|Çocuklar için şurup lazım
 أحتاج قطرة للعين|I need eye drops|J'ai besoin de gouttes pour les yeux|Necesito gotas para los ojos|Ich brauche Augentropfen|Ho bisogno di gocce per gli occhi|Göz damlası lazım
 أحتاج قطرة للأنف|I need nose drops|J'ai besoin de gouttes pour le nez|Necesito gotas para la nariz|Ich brauche Nasentropfen|Ho bisogno di gocce per il naso|Burun damlası lazım
 أحتاج بخاخا للأنف|I need a nasal spray|J'ai besoin d'un spray nasal|Necesito un spray nasal|Ich brauche ein Nasenspray|Ho bisogno di uno spray nasale|Burun spreyi lazım
@@ -2735,7 +2735,7 @@ const MORE=`
 هل هذا الطعام حلال؟|Is this food halal?|Cette nourriture est-elle halal ?|¿Esta comida es halal?|Ist dieses Essen halal?|Questo cibo è halal?|Bu yemek helal mi?
 هل يحتوي على لحم الخنزير؟|Does it contain pork?|Contient-il du porc ?|¿Lleva cerdo?|Enthält es Schweinefleisch?|Contiene carne di maiale?|İçinde domuz eti var mı?
 هل يحتوي على الكحول؟|Does it contain alcohol?|Contient-il de l'alcool ?|¿Lleva alcohol?|Enthält es Alkohol?|Contiene alcol?|İçinde alkol var mı?
-عندي حساسية من المكسرات|I'm allergic to nuts|Je suis allergique aux noix|Soy alérgico a los frutos secos|Ich bin allergisch gegen Nüsse|Sono allergico alla frutta secca|Fındık ve cevizlere alerjim var
+عندي حساسية من المكسرات|I'm allergic to nuts|Je suis allergique aux fruits à coque|Soy alérgico a los frutos secos|Ich bin allergisch gegen Nüsse|Sono allergico alla frutta secca|Fındık ve cevizlere alerjim var
 عندي حساسية من الحليب|I'm allergic to milk|Je suis allergique au lait|Soy alérgico a la leche|Ich bin allergisch gegen Milch|Sono allergico al latte|Süte alerjim var
 بدون ملح من فضلك|No salt, please|Sans sel, s'il vous plaît|Sin sal, por favor|Ohne Salz, bitte|Senza sale, per favore|Tuzsuz lütfen
 بدون بصل|Without onions|Sans oignons|Sin cebolla|Ohne Zwiebeln|Senza cipolla|Soğansız
@@ -2801,7 +2801,7 @@ const MORE=`
 هل يمكنني الحصول على الفاتورة؟|Can I have the receipt?|Puis-je avoir le reçu ?|¿Puedo tener el recibo?|Kann ich die Quittung haben?|Posso avere la ricevuta?|Fiş alabilir miyim?
 يبدو أن هناك خطأ في الحساب|There seems to be a mistake in the bill|Il semble y avoir une erreur dans l'addition|Parece que hay un error en la cuenta|Es scheint einen Fehler in der Rechnung zu geben|Sembra che ci sia un errore nel conto|Hesapta bir hata var gibi
 هذا لك، احتفظ بالباقي|Keep the change|Gardez la monnaie|Quédese con el cambio|Der Rest ist für Sie|Tenga il resto|Üstü kalsın
-هذه بقشيش|This is a tip for you|Voici un pourboire pour vous|Esto es una propina para usted|Das ist ein Trinkgeld für Sie|Questa è una mancia per lei|Bu sizin için bahşiş
+هذا بقشيش|This is a tip for you|Voici un pourboire pour vous|Esto es una propina para usted|Das ist ein Trinkgeld für Sie|Questa è una mancia per lei|Bu sizin için bahşiş
 أين دورة المياه؟|Where is the restroom?|Où sont les toilettes ?|¿Dónde está el baño?|Wo ist die Toilette?|Dov'è il bagno?|Tuvalet nerede?
 هل يوجد مكان للصلاة؟|Is there a place to pray?|Y a-t-il un endroit pour prier ?|¿Hay algún lugar para rezar?|Gibt es einen Ort zum Beten?|C'è un posto per pregare?|Namaz kılacak bir yer var mı?
 هل لديكم واي فاي؟|Do you have Wi-Fi?|Avez-vous le Wi-Fi ?|¿Tienen wifi?|Haben Sie WLAN?|Avete il Wi-Fi?|Wi-Fi'nız var mı?
@@ -2852,7 +2852,7 @@ const MORE=`
 أحب هذا اللون|I like this color|J'aime cette couleur|Me gusta este color|Ich mag diese Farbe|Mi piace questo colore|Bu rengi beğendim
 هل هذا من القطن؟|Is this made of cotton?|Est-ce en coton ?|¿Es de algodón?|Ist das aus Baumwolle?|È di cotone?|Bu pamuklu mu?
 هل هذا من الجلد الطبيعي؟|Is this real leather?|Est-ce du vrai cuir ?|¿Es cuero auténtico?|Ist das echtes Leder?|È vera pelle?|Bu gerçek deri mi?
-هل يمكن غسله بالماء؟|Is it machine washable?|Est-ce lavable en machine ?|¿Se puede lavar a máquina?|Ist das waschmaschinenfest?|È lavabile in lavatrice?|Makinede yıkanır mı?
+هل يمكن غسله بالماء؟|Can it be washed with water?|Peut-on le laver à l'eau ?|¿Se puede lavar con agua?|Kann man es mit Wasser waschen?|Si può lavare con l'acqua?|Makinede yıkanır mı?
 هل هذا أصلي؟|Is this original?|Est-ce un original ?|¿Es original?|Ist das echt?|È originale?|Bu orijinal mi?
 أين أجد الملابس النسائية؟|Where can I find women's clothing?|Où trouver les vêtements pour femmes ?|¿Dónde encuentro ropa de mujer?|Wo finde ich Damenbekleidung?|Dove trovo l'abbigliamento da donna?|Kadın giyimi nerede?
 أين أجد الملابس الرجالية؟|Where can I find men's clothing?|Où trouver les vêtements pour hommes ?|¿Dónde encuentro ropa de hombre?|Wo finde ich Herrenbekleidung?|Dove trovo l'abbigliamento da uomo?|Erkek giyimi nerede?
@@ -2879,7 +2879,7 @@ const MORE=`
 هل الدفع نقدا فقط؟|Is it cash only?|C'est uniquement en espèces ?|¿Es solo en efectivo?|Nur Barzahlung?|Solo contanti?|Sadece nakit mi?
 لا أملك فكة|I don't have change|Je n'ai pas de monnaie|No tengo cambio|Ich habe kein Kleingeld|Non ho spiccioli|Bozuk param yok
 هل يمكنك أن تعطيني الباقي؟|Can you give me my change?|Pouvez-vous me rendre la monnaie ?|¿Puede darme el cambio?|Können Sie mir das Wechselgeld geben?|Può darmi il resto?|Para üstünü verebilir misiniz?
-أعطيتني الباقي ناقصا|You gave me the wrong change|Vous m'avez rendu la mauvaise monnaie|Me ha dado mal el cambio|Sie haben mir falsch herausgegeben|Mi ha dato il resto sbagliato|Para üstünü yanlış verdiniz
+أعطيتني الباقي ناقصا|You gave me too little change|Vous m'avez rendu trop peu de monnaie|Me ha dado de menos en el cambio|Sie haben mir zu wenig herausgegeben|Mi ha dato troppo poco resto|Para üstünü yanlış verdiniz
 هل يمكنني الحصول على الفاتورة؟|Can I have the receipt?|Puis-je avoir le ticket de caisse ?|¿Puedo tener el recibo?|Kann ich den Kassenbon haben?|Posso avere lo scontrino?|Fiş alabilir miyim?
 هل يمكنني إرجاع هذا؟|Can I return this?|Puis-je rendre ceci ?|¿Puedo devolver esto?|Kann ich das zurückgeben?|Posso restituire questo?|Bunu iade edebilir miyim?
 أريد استرداد المبلغ|I'd like a refund|Je voudrais un remboursement|Quisiera un reembolso|Ich möchte eine Rückerstattung|Vorrei un rimborso|Para iadesi istiyorum
@@ -2976,7 +2976,7 @@ const MORE=`
 هل يمكننا التوقف عند الصراف الآلي؟|Can we stop at an ATM?|Pouvons-nous nous arrêter à un distributeur ?|¿Podemos parar en un cajero automático?|Können wir an einem Geldautomaten halten?|Possiamo fermarci a un bancomat?|ATM'de durabilir miyiz?
 أنا سائح|I'm a tourist|Je suis touriste|Soy turista|Ich bin Tourist|Sono un turista|Ben turistim
 ما هي الأماكن التي تنصح بزيارتها؟|Which places do you recommend visiting?|Quels endroits me conseillez-vous de visiter ?|¿Qué lugares me recomienda visitar?|Welche Orte empfehlen Sie zu besuchen?|Quali posti mi consiglia di visitare?|Hangi yerleri gezmemi önerirsiniz?
-هل يمكنك أن تكون مرشدي لنصف يوم؟|Can you be my guide for half a day?|Pouvez-vous être mon guide pour une demi-journée ?|¿Puede ser mi guía durante medio día?|Können Sie für einen halben Tag mein Führer sein?|Può farmi da guida per mezza giornata?|Yarım gün rehberim olabilir misiniz?
+هل يمكنك أن تكون مرشدي لنصف يوم؟|Can you be my guide for half a day?|Pouvez-vous être mon guide pour une demi-journée ?|¿Puede ser mi guía durante medio día?|Können Sie für einen halben Tag mein Stadtführer sein?|Può farmi da guida per mezza giornata?|Yarım gün rehberim olabilir misiniz?
 كم الأجرة لمدة ساعتين؟|How much for two hours?|Combien pour deux heures ?|¿Cuánto cuesta por dos horas?|Wie viel kostet es für zwei Stunden?|Quanto costa per due ore?|İki saat için ne kadar?
 لقد وصلنا|We've arrived|Nous sommes arrivés|Hemos llegado|Wir sind angekommen|Siamo arrivati|Geldik
 هذا هو المكان الصحيح|This is the right place|C'est le bon endroit|Este es el lugar correcto|Das ist der richtige Ort|Questo è il posto giusto|Doğru yer burası
@@ -2995,7 +2995,7 @@ const MORE=`
 هل يمكنك إيقاف الموسيقى؟|Can you turn off the music?|Pouvez-vous éteindre la musique ?|¿Puede apagar la música?|Können Sie die Musik ausschalten?|Può spegnere la musica?|Müziği kapatabilir misiniz?
 هل يمكنك رفع الصوت قليلا؟|Can you turn the volume up a little?|Pouvez-vous monter un peu le son ?|¿Puede subir un poco el volumen?|Können Sie die Lautstärke etwas erhöhen?|Può alzare un po' il volume?|Sesi biraz açabilir misiniz?
 هل يمكنني شحن هاتفي في السيارة؟|Can I charge my phone in the car?|Puis-je recharger mon téléphone dans la voiture ?|¿Puedo cargar mi teléfono en el coche?|Kann ich mein Handy im Auto aufladen?|Posso caricare il telefono in macchina?|Telefonumu arabada şarj edebilir miyim?
-أشعر بالدوار|I feel dizzy|J'ai le vertige|Me siento mareado|Mir ist schwindelig|Mi gira la testa|Başım dönüyor
+أشعر بالدوار|I feel dizzy|J'ai la tête qui tourne|Me siento mareado|Mir ist schwindelig|Mi gira la testa|Başım dönüyor
 هل يمكنك التوقف قليلا؟|Can you stop for a moment?|Pouvez-vous vous arrêter un instant ?|¿Puede parar un momento?|Können Sie kurz anhalten?|Può fermarsi un momento?|Bir an durabilir misiniz?
 هل تعرف مطعما جيدا قريبا؟|Do you know a good restaurant nearby?|Connaissez-vous un bon restaurant près d'ici ?|¿Conoce algún buen restaurante cerca?|Kennen Sie ein gutes Restaurant in der Nähe?|Conosce un buon ristorante qui vicino?|Yakınlarda iyi bir restoran biliyor musunuz?
 أين أقرب محطة وقود؟|Where is the nearest gas station?|Où est la station-service la plus proche ?|¿Dónde está la gasolinera más cercana?|Wo ist die nächste Tankstelle?|Dov'è il distributore più vicino?|En yakın benzin istasyonu nerede?
@@ -3113,17 +3113,17 @@ const MORE=`
 حليب الصويا|Soy milk|Lait de soja|Leche de soja|Sojamilch|latte di soia|soya sütü
 حليب الشوكولاتة|Chocolate milk|Lait chocolaté|Leche con chocolate|Schokomilch|latte al cioccolato|çikolatalı süt
 لبن|Buttermilk|Lait ribot|Suero de leche|Buttermilch|latticello|ayran
-لبنة|Strained yogurt|Yaourt égoutté|Yogur colado|Quark|yogurt greco|süzme yoğurt
+لبنة|Strained yogurt|Yaourt égoutté|Yogur colado|Labneh|yogurt colato|süzme yoğurt
 زبادي يوناني|Greek yogurt|Yaourt grec|Yogur griego|griechischer Joghurt|yogurt greco|Yunan yoğurdu
 زبدة الفول السوداني|Peanut butter|Beurre de cacahuète|Mantequilla de cacahuete|Erdnussbutter|burro di arachidi|fıstık ezmesi
 سمن|Ghee|Ghee|Ghee|Ghee|ghi|sade yağ
 مارجرين|Margarine|Margarine|Margarina|Margarine|margarina|margarin
-كريمة الطبخ|Cooking cream|Crème de cuisson|Nata de cocinar|Kochsahne|panna da cucina|yemeklik krema
+كريمة الطبخ|Cooking cream|Crème de cuisson|Nata para cocinar|Kochsahne|panna da cucina|yemeklik krema
 كريمة مخفوقة|Whipped cream|Chantilly|Nata montada|Schlagsahne|panna montata|krem şanti
 قشطة|Clotted cream|Crème épaisse|Nata espesa|Streichrahm|panna rappresa|kaymak
 جبن أبيض|White cheese|Fromage blanc|Queso blanco|Weißkäse|formaggio bianco|beyaz peynir
 جبن أصفر|Yellow cheese|Fromage jaune|Queso amarillo|Gelbkäse|formaggio giallo|kaşar peyniri
-جبن مثلثات|Processed cheese|Fromage fondu|Queso fundido|Schmelzkäse|formaggio fuso|üçgen peynir
+جبن مثلثات|Processed cheese|Fromage fondu|Queso procesado|Schmelzkäse|formaggio fuso|üçgen peynir
 جبن كريمي|Cream cheese|Fromage à tartiner|Queso crema|Frischkäse|formaggio spalmabile|krem peynir
 جبن الموزاريلا|Mozzarella|Mozzarella|Mozzarella|Mozzarella|mozzarella|mozzarella
 جبن الشيدر|Cheddar|Cheddar|Cheddar|Cheddar|cheddar|çedar
@@ -3144,7 +3144,7 @@ const MORE=`
 قشرة البيض|Eggshell|Coquille d'œuf|Cáscara de huevo|Eierschale|guscio d'uovo|yumurta kabuğu
 بيض بلدي|Free-range eggs|Œufs fermiers|Huevos camperos|Freilandeier|uova ruspanti|köy yumurtası
 بيض السمان|Quail eggs|Œufs de caille|Huevos de codorniz|Wachteleier|uova di quaglia|bıldırcın yumurtası
-مثلجات|Gelato|Glace|Helado|Eis|gelato|dondurma
+مثلجات|Frozen desserts|Desserts glacés|Postres helados|Eisspezialitäten|dolci gelati|dondurma
 مصل اللبن|Whey|Petit-lait|Suero|Molke|siero di latte|peynir altı suyu
 كفير|Kefir|Kéfir|Kéfir|Kefir|kefir|kefir
 حليب رائب|Curdled milk|Lait caillé|Leche cuajada|Dickmilch|latte cagliato|kesilmiş süt
@@ -3203,7 +3203,7 @@ const MORE=`
 عيد العمال|Labour Day|Fête du Travail|Día del Trabajo|Tag der Arbeit|Festa dei lavoratori|İşçi Bayramı
 عيد الاستقلال|Independence Day|Fête de l'indépendance|Día de la Independencia|Unabhängigkeitstag|Festa dell'indipendenza|Bağımsızlık Günü
 عيد العرش|Throne Day|Fête du Trône|Fiesta del Trono|Thronfest|Festa del Trono|Taht Günü
-ذكرى|Anniversary|Anniversaire de mariage|Aniversario|Jahrestag|anniversario|yıldönümü
+ذكرى|Anniversary|Date anniversaire|Aniversario|Jahrestag|anniversario|yıldönümü
 موعد|Appointment|Rendez-vous|Cita|Termin|appuntamento|randevu
 موعد نهائي|Deadline|Date limite|Fecha límite|Frist|scadenza|son tarih
 الأول|First|Premier|Primero|erste|primo|birinci
@@ -3253,7 +3253,7 @@ const MORE=`
 رمز بريدي|Postcode|Code postal|Código postal|Postleitzahl|codice postale|posta kodu
 مكتب البريد|Post office|Bureau de poste|Oficina de correos|Postamt|ufficio postale|postane
 مكتب السياحة|Tourist office|Office du tourisme|Oficina de turismo|Touristeninformation|ufficio turistico|turizm bürosu
-دليل سياحي|Tour guide|Guide touristique|Guía turístico|Reiseführer|guida turistica|rehber
+دليل سياحي|Tour guide|Guide touristique|Guía turístico|Reiseleiter|guida turistica|rehber
 مركز التسوق|Shopping centre|Centre commercial|Centro comercial|Einkaufszentrum|centro commerciale|alışveriş merkezi
 السوق القديم|Old market|Vieux marché|Mercado antiguo|alter Markt|mercato vecchio|eski çarşı
 مطعم|Restaurant|Restaurant|Restaurante|Restaurant|ristorante|restoran
@@ -3404,7 +3404,7 @@ const MORE=`
 عصير فراولة|Strawberry juice|Jus de fraise|Zumo de fresa|Erdbeersaft|succo di fragola|çilek suyu
 عصير طازج|Fresh juice|Jus frais|Zumo natural|frischer Saft|spremuta|taze meyve suyu
 عصير معلب|Bottled juice|Jus en bouteille|Zumo envasado|Flaschensaft|succo in bottiglia|şişe meyve suyu
-شراب مركّز|Syrup drink|Sirop|Refresco|Sirup|sciroppo|şurup
+شراب مركّز|Syrup drink|Sirop|Concentrado|Sirup|sciroppo|şurup
 كوكا كولا|Cola|Cola|Cola|Cola|cola|kola
 مشروب طاقة|Energy drink|Boisson énergisante|Bebida energética|Energydrink|bevanda energetica|enerji içeceği
 مشروب رياضي|Sports drink|Boisson sportive|Bebida deportiva|Sportgetränk|bevanda sportiva|spor içeceği
@@ -3524,7 +3524,7 @@ const MORE=`
 جراحة|Surgery|Chirurgie|Cirugía|Operation|intervento chirurgico|ameliyat
 تشخيص|Diagnosis|Diagnostic|Diagnóstico|Diagnose|diagnosi|teşhis
 علاج|Treatment|Traitement|Tratamiento|Behandlung|cura|tedavi
-وصفة|Prescription note|Ordonnance|Receta|Rezept|ricetta|reçete
+وصفة|Prescription|Ordonnance|Receta|Rezept|ricetta|reçete
 أقراص|Tablets|Comprimés|Pastillas|Tabletten|compresse|haplar
 شراب دواء|Syrup|Sirop|Jarabe|Sirup|sciroppo|şurup
 مرهم|Ointment|Pommade|Pomada|Salbe|pomata|merhem
@@ -3599,25 +3599,25 @@ const MORE=`
 زميل دراسة|Classmate|Camarade de classe|Compañero de clase|Klassenkamerad|compagno di classe|sınıf arkadaşı
 جار|Neighbour|Voisin|Vecino|Nachbar|vicino|komşu
 ضيف|Guest|Invité|Invitado|Gast|ospite|konuk
-مضيف|Host|Hôte|Anfitrión|Gastgeber|ospite|ev sahibi
+مضيف|Host|Hôte|Anfitrión|Gastgeber|padrone di casa|ev sahibi
 غريب|Stranger|Inconnu|Desconocido|Fremder|sconosciuto|yabancı
 شخص|Person|Personne|Persona|Person|persona|kişi
 ناس|People|Gens|Gente|Leute|gente|insanlar
 ولد|Boy|Garçon|Chico|Junge|ragazzo|erkek çocuk
 بنت|Girl|Fille|Chica|Mädchen|ragazza|kız çocuk
 شاب|Young man|Jeune homme|Joven|junger Mann|giovane|genç
-شابة|Young woman|Jeune femme|Joven mujer|junge Frau|giovane donna|genç kadın
+شابة|Young woman|Jeune femme|Mujer joven|junge Frau|giovane donna|genç kadın
 مراهق|Teenager|Adolescent|Adolescente|Teenager|adolescente|genç
 بالغ|Adult|Adulte|Adulto|Erwachsener|adulto|yetişkin
-مسن|Elderly person|Personne âgée|Anciano|älterer Mensch|anziano|yaşlı
+مسن|Elderly person|Personne âgée|Persona mayor|älterer Mensch|anziano|yaşlı
 رجل عجوز|Old man|Vieil homme|Anciano|alter Mann|vecchio|yaşlı adam
 عجوز|Old woman|Vieille femme|Anciana|alte Frau|vecchia|yaşlı kadın
 ولادة|Birth|Naissance|Nacimiento|Geburt|nascita|doğum
 عمر|Age|Âge|Edad|Alter|età|yaş
 كم عمرك؟|How old are you?|Quel âge avez-vous ?|¿Cuántos años tiene?|Wie alt sind Sie?|Quanti anni ha?|Kaç yaşındasınız?
 عمري ثلاثون سنة|I am thirty years old|J'ai trente ans|Tengo treinta años|Ich bin dreißig Jahre alt|Ho trent'anni|Otuz yaşındayım
-ذكر|Male|Homme|Hombre|männlich|maschio|erkek
-أنثى|Female|Femme|Mujer|weiblich|femmina|kadın
+ذكر|Male|Masculin|Masculino|männlich|maschio|erkek
+أنثى|Female|Féminin|Femenino|weiblich|femmina|kadın
 سيد|Mr|Monsieur|Señor|Herr|signore|Bay
 سيدة|Mrs|Madame|Señora|Frau|signora|Bayan
 هذا أبي|This is my father|Voici mon père|Este es mi padre|Das ist mein Vater|Questo è mio padre|Bu benim babam
@@ -3642,7 +3642,7 @@ const MORE=`
 مشمش مجفف|Dried apricot|Abricot sec|Orejón|getrocknete Aprikose|albicocca secca|kuru kayısı
 برقوق مجفف|Prune|Pruneau|Ciruela pasa|Backpflaume|prugna secca|kuru erik
 تين مجفف|Dried fig|Figue sèche|Higo seco|getrocknete Feige|fico secco|kuru incir
-فواكه مجففة|Dried fruit|Fruits secs|Frutos secos deshidratados|Trockenfrüchte|frutta secca|kuru meyve
+فواكه مجففة|Dried fruit|Fruits séchés|Fruta deshidratada|Trockenfrüchte|frutta essiccata|kuru meyve
 ليمون أخضر|Lime|Citron vert|Lima|Limette|lime|misket limonu
 ليمون حامض|Sour lemon|Citron acide|Limón ácido|saure Zitrone|limone acido|ekşi limon
 برتقال دموي|Blood orange|Orange sanguine|Naranja sanguina|Blutorange|arancia rossa|kan portakalı
@@ -3674,7 +3674,7 @@ const MORE=`
 تفاح أخضر|Green apple|Pomme verte|Manzana verde|grüner Apfel|mela verde|yeşil elma
 تفاح أحمر|Red apple|Pomme rouge|Manzana roja|roter Apfel|mela rossa|kırmızı elma
 موز صغير|Baby banana|Mini-banane|Plátano pequeño|Babybanane|banana piccola|mini muz
-موز الجنة|Plantain|Banane plantain|Plátano macho|Kochbanane|platano|pişirmelik muz
+موز الجنة|Plantain|Banane plantain|Plátano macho|Kochbanane|banana da cottura|pişirmelik muz
 بطيخ أصفر|Yellow watermelon|Pastèque jaune|Sandía amarilla|gelbe Wassermelone|anguria gialla|sarı karpuz
 شمام العسل|Honeydew|Melon miel|Melón dulce|Honigmelone|melone bianco|bal kavunu
 فاكهة الصبار|Cactus fruit|Fruit du cactus|Fruta de cactus|Kaktusfrucht|frutto di cactus|kaktüs meyvesi
@@ -3688,7 +3688,7 @@ const MORE=`
 سلطة فواكه|Fruit salad|Salade de fruits|Macedonia|Obstsalat|macedonia|meyve salatası
 قشرة|Peel|Peau|Cáscara|Schale|buccia|kabuk
 نواة|Pit|Noyau|Hueso|Kern|nocciolo|çekirdek
-بذرة|Seed|Pépin|Semilla|Kern|seme|tohum
+بذرة|Seed|Pépin|Semilla|Samen|seme|tohum
 لب الفاكهة|Pulp|Pulpe|Pulpa|Fruchtfleisch|polpa|meyve eti
 ناضج|Ripe|Mûr|Maduro|reif|maturo|olgun
 غير ناضج|Unripe|Pas mûr|Verde|unreif|acerbo|ham
@@ -3715,7 +3715,7 @@ const MORE=`
 خبز التوست|Sliced bread|Pain de mie|Pan de molde|Toastbrot|pane in cassetta|dilimli ekmek
 باغيت|Baguette|Baguette|Baguette|Baguette|baguette|baget
 خبز عربي|Pita bread|Pain pita|Pan de pita|Fladenbrot|pane pita|pide
-خبز التنور|Flatbread|Pain plat|Pan plano|Flachbrot|pane azzimo|lavaş
+خبز التنور|Flatbread|Pain plat|Pan plano|Flachbrot|pane piatto|lavaş
 رغيف|Loaf|Miche|Hogaza|Laib|pagnotta|somun
 خبز محلى|Sweet bread|Pain sucré|Pan dulce|Süßbrot|pane dolce|tatlı ekmek
 خبز بالثوم|Garlic bread|Pain à l'ail|Pan de ajo|Knoblauchbrot|pane all'aglio|sarımsaklı ekmek
@@ -3736,13 +3736,13 @@ const MORE=`
 أرز مصري|Short-grain rice|Riz rond|Arroz de grano corto|Rundkornreis|riso a grano corto|kısa taneli pirinç
 أرز بري|Wild rice|Riz sauvage|Arroz salvaje|Wildreis|riso selvatico|yabani pirinç
 سباغيتي|Spaghetti|Spaghetti|Espaguetis|Spaghetti|spaghetti|spagetti
-مكرونة قصيرة|Penne|Penne|Penne|Penne|penne|kısa makarna
+مكرونة قصيرة|Short pasta|Pâtes courtes|Pasta corta|Kurze Nudeln|pasta corta|kısa makarna
 شعيرية|Vermicelli|Vermicelles|Fideos|Fadennudeln|vermicelli|şehriye
 نودلز|Noodles|Nouilles|Fideos orientales|Nudeln|noodles|erişte
 لازانيا|Lasagna|Lasagnes|Lasaña|Lasagne|lasagne|lazanya
 قمح|Wheat|Blé|Trigo|Weizen|grano|buğday
 شعير|Barley|Orge|Cebada|Gerste|orzo|arpa
-ذرة صفراء|Cornmeal|Semoule de maïs|Harina de maíz|Maismehl|farina di mais|mısır unu
+ذرة صفراء|Yellow corn|Maïs jaune|Maíz amarillo|Gelber Mais|mais giallo|mısır unu
 جاودار|Rye|Seigle|Centeno|Roggen|segale|çavdar
 دخن|Millet|Millet|Mijo|Hirse|miglio|darı
 كينوا|Quinoa|Quinoa|Quinoa|Quinoa|quinoa|kinoa
@@ -3755,7 +3755,7 @@ const MORE=`
 بذور الشيا|Chia seeds|Graines de chia|Semillas de chía|Chiasamen|semi di chia|chia tohumu
 بذور السمسم|Sesame seeds|Graines de sésame|Semillas de sésamo|Sesamsamen|semi di sesamo|susam
 بذور دوار الشمس|Sunflower seeds|Graines de tournesol|Pipas de girasol|Sonnenblumenkerne|semi di girasole|ay çekirdeği
-غرانولا|Granola|Granola|Granola|Müsli|granola|granola
+غرانولا|Granola|Granola|Granola|Granola|granola|granola
 كورن فليكس|Corn flakes|Corn flakes|Copos de maíz|Cornflakes|corn flakes|mısır gevreği
 فشار|Popcorn|Pop-corn|Palomitas|Popcorn|popcorn|patlamış mısır
 بسكويت مالح|Cracker|Cracker|Galleta salada|Cracker|cracker|kraker
@@ -3890,7 +3890,7 @@ const MORE=`
 معجون أسنان|Toothpaste|Dentifrice|Pasta de dientes|Zahnpasta|dentifricio|diş macunu
 فرشاة أسنان|Toothbrush|Brosse à dents|Cepillo de dientes|Zahnbürste|spazzolino|diş fırçası
 ورق التواليت|Toilet paper|Papier toilette|Papel higiénico|Toilettenpapier|carta igienica|tuvalet kağıdı
-مرحاض|Toilet|Toilettes|Inodoro|Toilette|water|tuvalet
+مرحاض|Toilet|Toilettes|Inodoro|Toilette|WC|tuvalet
 مغسلة|Sink|Lavabo|Lavabo|Waschbecken|lavandino|lavabo
 ماء ساخن|Hot water|Eau chaude|Agua caliente|heißes Wasser|acqua calda|sıcak su
 مسبح|Swimming pool|Piscine|Piscina|Schwimmbad|piscina|yüzme havuzu
@@ -3925,7 +3925,7 @@ const MORE=`
 مخيم|Campsite|Camping|Camping|Campingplatz|campeggio|kamp alanı
 خيمة|Tent|Tente|Tienda de campaña|Zelt|tenda|çadır
 كوخ|Cabin|Chalet|Cabaña|Hütte|capanna|kulübe
-مضيف|Host|Hôte|Anfitrión|Gastgeber|ospite|ev sahibi
+مضيف|Host|Hôte|Anfitrión|Gastgeber|padrone di casa|ev sahibi
 ضيف|Guest|Client|Huésped|Gast|ospite|misafir
 لا يعمل|It doesn't work|Ça ne marche pas|No funciona|Es funktioniert nicht|Non funziona|çalışmıyor
 لا يوجد ماء ساخن|There's no hot water|Il n'y a pas d'eau chaude|No hay agua caliente|Es gibt kein heißes Wasser|Non c'è acqua calda|sıcak su yok
@@ -3965,9 +3965,9 @@ const MORE=`
 لحم مجفف|Dried meat|Viande séchée|Carne seca|Trockenfleisch|carne secca|kurutulmuş et
 لحم مقدد|Bacon|Bacon|Beicon|Speck|pancetta|pastırma
 مرتديلا|Mortadella|Mortadelle|Mortadela|Mortadella|mortadella|mortadella
-سجق|Spicy sausage|Saucisse épicée|Chorizo|Bratwurst|salsiccia|sucuk
+سجق|Spicy sausage|Saucisse épicée|Chorizo|Scharfe Wurst|salsiccia piccante|sucuk
 هوت دوغ|Hot dog|Hot-dog|Perrito caliente|Hotdog|hot dog|sosisli
-جامبون|Ham|Jambon|Jamón|Schinken|prosciutto|jambon
+جامبون|Ham|Jambon|Jamón|Schinken|prosciutto cotto|jambon
 نخاع|Bone marrow|Moelle|Tuétano|Knochenmark|midollo|ilik
 عظم|Bone|Os|Hueso|Knochen|osso|kemik
 دهن|Fat|Gras|Grasa|Fett|grasso|yağ
@@ -3978,7 +3978,7 @@ const MORE=`
 مخ|Brain|Cervelle|Sesos|Hirn|cervello|beyin
 كرشة|Tripe|Tripes|Callos|Kutteln|trippa|işkembe
 رأس|Head|Tête|Cabeza|Kopf|testa|kelle
-كوارع|Trotter|Pied|Pata|Haxe|zampone|paça
+كوارع|Trotter|Pied|Pata|Haxe|zampetto|paça
 سمك السلمون المدخن|Smoked salmon|Saumon fumé|Salmón ahumado|Räucherlachs|salmone affumicato|füme somon
 سمك أبيض|White fish|Poisson blanc|Pescado blanco|Weißfisch|pesce bianco|beyaz balık
 سمك السيف|Swordfish|Espadon|Pez espada|Schwertfisch|pesce spada|kılıç balığı
@@ -3997,9 +3997,9 @@ const MORE=`
 شبوط|Carp|Carpe|Carpa|Karpfen|carpa|sazan
 أنقليس|Eel|Anguille|Anguila|Aal|anguilla|yılan balığı
 سمك الرمح|Pike|Brochet|Lucio|Hecht|luccio|turna
-جمبري كبير|Prawn|Gambas|Langostino|Garnele|gambero|büyük karides
+جمبري كبير|Prawn|Gambas|Langostino|Riesengarnele|mazzancolla|büyük karides
 كركند|Lobster|Homard|Langosta|Hummer|aragosta|ıstakoz
-سرطان البحر|Crab meat|Chair de crabe|Carne de cangrejo|Krabbenfleisch|polpa di granchio|yengeç eti
+سرطان البحر|Sea crab|Crabe de mer|Cangrejo de mar|Meereskrabbe|granchio di mare|yengeç eti
 محار|Oyster|Huître|Ostra|Auster|ostrica|istiridye
 بلح البحر|Mussels|Moules|Mejillones|Muscheln|cozze|midye
 أم الخلول|Clams|Palourdes|Almejas|Venusmuscheln|vongole|deniz tarağı
@@ -4021,19 +4021,19 @@ const MORE=`
 حلال|Halal|Halal|Halal|Halal|halal|helal
 جزار|Butcher|Boucher|Carnicero|Metzger|macellaio|kasap
 محل جزارة|Butcher shop|Boucherie|Carnicería|Metzgerei|macelleria|kasap dükkanı
-سوق السمك|Fish market|Poissonnerie|Pescadería|Fischmarkt|pescheria|balık pazarı
+سوق السمك|Fish market|Marché aux poissons|Mercado de pescado|Fischmarkt|mercato del pesce|balık pazarı
 شريحة|Slice|Tranche|Loncha|Scheibe|fetta|dilim
 قطعة|Cut|Morceau|Corte|Stück|taglio|parça
 
 ## money
 عملة|Currency|Monnaie|Moneda|Währung|valuta|para birimi
-عملة معدنية|Coin|Pièce|Moneda suelta|Münze|moneta|bozuk para
+عملة معدنية|Coin|Pièce|Moneda|Münze|moneta|bozuk para
 ورقة نقدية|Banknote|Billet|Billete|Geldschein|banconota|banknot
 دولار|Dollar|Dollar|Dólar|Dollar|dollaro|dolar
 يورو|Euro|Euro|Euro|Euro|euro|euro
 جنيه إسترليني|Pound|Livre sterling|Libra|Pfund|sterlina|sterlin
 درهم|Dirham|Dirham|Dírham|Dirham|dirham|dirhem
-ليرة|Lira|Livre|Lira|Lira|lira|lira
+ليرة|Lira|Lire|Lira|Lira|lira|lira
 سعر الصرف|Exchange rate|Taux de change|Tipo de cambio|Wechselkurs|tasso di cambio|döviz kuru
 أريد صرف النقود|I want to change money|Je veux changer de l'argent|Quiero cambiar dinero|Ich möchte Geld wechseln|Vorrei cambiare dei soldi|Para bozdurmak istiyorum
 عمولة|Commission|Commission|Comisión|Gebühr|commissione|komisyon
@@ -4140,7 +4140,7 @@ const MORE=`
 تكلم بصوت أعلى|Speak louder|Parlez plus fort|Hable más alto|Sprechen Sie lauter|Parli più forte|Daha yüksek sesle konuşun
 ما هذا؟|What is this?|Qu'est-ce que c'est ?|¿Qué es esto?|Was ist das?|Che cos'è questo?|Bu nedir?
 ما اسم هذا؟|What is this called?|Comment ça s'appelle ?|¿Cómo se llama esto?|Wie heißt das?|Come si chiama?|Bunun adı ne?
-أين أنت؟|Where are you?|Où êtes-vous ?|¿Dónde está?|Wo sind Sie?|Dov'è?|Neredesiniz?
+أين أنت؟|Where are you?|Où êtes-vous ?|¿Dónde está?|Wo sind Sie?|Dove sei?|Neredesiniz?
 أين دورة المياه؟|Where is the toilet?|Où sont les toilettes ?|¿Dónde está el baño?|Wo ist die Toilette?|Dov'è il bagno?|Tuvalet nerede?
 كم الساعة الآن؟|What time is it now?|Quelle heure est-il ?|¿Qué hora es?|Wie spät ist es?|Che ore sono?|Saat kaç?
 كم السعر؟|How much does it cost?|Combien ça coûte ?|¿Cuánto cuesta?|Wie viel kostet es?|Quanto costa?|Ne kadar?
@@ -4373,7 +4373,7 @@ const MORE=`
 الطبق الخاص|Special|Spécialité|Especialidad|Spezialität|specialità|özel yemek
 قائمة ثابتة|Set menu|Menu fixe|Menú del día|Menü|menu fisso|sabit menü
 بوفيه مفتوح|Buffet|Buffet|Bufé|Buffet|buffet|açık büfe
-وجبة خفيفة|Snack|Snack|Aperitivo|Snack|spuntino|atıştırmalık
+وجبة خفيفة|Snack|Snack|Tentempié|Snack|spuntino|atıştırmalık
 وجبة|Meal|Repas|Comida|Mahlzeit|pasto|yemek
 حلويات|Dessert course|Dessert|Postre|Nachtisch|dolce|tatlı
 سلطة|Salad|Salade|Ensalada|Salat|insalata|salata
@@ -4411,7 +4411,7 @@ const MORE=`
 نصف حصة|Half portion|Demi-portion|Media ración|halbe Portion|mezza porzione|yarım porsiyon
 حصة|Portion|Portion|Ración|Portion|porzione|porsiyon
 للأخذ|Takeaway|À emporter|Para llevar|zum Mitnehmen|da asporto|paket
-للأكل هنا|Eat in|Sur place|Para comer aquí|zum Hier essen|da mangiare qui|burada yiyeceğim
+للأكل هنا|Eat in|Sur place|Para comer aquí|Hier essen|da mangiare qui|burada yiyeceğim
 توصيل|Delivery|Livraison|Entrega a domicilio|Lieferung|consegna|teslimat
 نباتي|Vegetarian|Végétarien|Vegetariano|vegetarisch|vegetariano|vejetaryen
 أنا نباتي|I'm vegetarian|Je suis végétarien|Soy vegetariano|Ich bin Vegetarier|Sono vegetariano|Vejetaryenim
@@ -4422,7 +4422,7 @@ const MORE=`
 ناضج جيدا|Well done|Bien cuit|Muy hecho|durchgebraten|ben cotto|iyi pişmiş
 متوسط الاستواء|Medium|À point|Al punto|medium|a puntino|orta pişmiş
 قليل الاستواء|Rare|Saignant|Poco hecho|blutig|al sangue|az pişmiş
-لدي حساسية من المكسرات|I'm allergic to nuts|Je suis allergique aux noix|Soy alérgico a los frutos secos|Ich bin allergisch gegen Nüsse|Sono allergico alla frutta secca|Kuruyemişe alerjim var
+لدي حساسية من المكسرات|I'm allergic to nuts|Je suis allergique aux fruits à coque|Soy alérgico a los frutos secos|Ich bin allergisch gegen Nüsse|Sono allergico alla frutta secca|Kuruyemişe alerjim var
 هل هذا خالٍ من الغلوتين؟|Is it gluten-free?|Est-ce sans gluten ?|¿Es sin gluten?|Ist es glutenfrei?|È senza glutine?|Glütensiz mi?
 الطعام بارد|The food is cold|La nourriture est froide|La comida está fría|Das Essen ist kalt|Il cibo è freddo|Yemek soğuk
 هذا ليس ما طلبته|This is not what I ordered|Ce n'est pas ce que j'ai commandé|Esto no es lo que pedí|Das habe ich nicht bestellt|Non è quello che ho ordinato|Bunu sipariş etmedim
@@ -4465,7 +4465,7 @@ const MORE=`
 بهارات مشكلة|Mixed spices|Épices mélangées|Especias mixtas|Gewürzmischung|spezie miste|karışık baharat
 كاري|Curry|Curry|Curry|Curry|curry|köri
 زعتر وسمسم|Zaatar|Zaatar|Zaatar|Zaatar|zaatar|zahter
-فلفل مدخن|Smoked paprika|Paprika fumé|Pimentón ahumado|geräucherte Paprika|paprika affumicata|füme kırmızı biber
+فلفل مدخن|Smoked paprika|Paprika fumé|Pimentón ahumado|geräuchertes Paprikapulver|paprika affumicata|füme kırmızı biber
 بودرة الثوم|Garlic powder|Ail en poudre|Ajo en polvo|Knoblauchpulver|aglio in polvere|sarımsak tozu
 بودرة البصل|Onion powder|Oignon en poudre|Cebolla en polvo|Zwiebelpulver|cipolla in polvere|soğan tozu
 مرق|Broth|Bouillon|Caldo|Brühe|brodo|et suyu
@@ -4511,7 +4511,7 @@ const MORE=`
 بيكنج باودر|Baking powder|Levure chimique|Levadura química|Backpulver|lievito in polvere|kabartma tozu
 صودا الخبز|Baking soda|Bicarbonate|Bicarbonato|Natron|bicarbonato|karbonat
 ماء الزهر|Orange blossom water|Eau de fleur d'oranger|Agua de azahar|Orangenblütenwasser|acqua di fior d'arancio|portakal çiçeği suyu
-مستكة|Mastic|Mastic|Mástique|Mastix|mastice|sakız
+مستكة|Mastic|Mastic|Almáciga|Mastix|mastice|sakız
 ملح الليمون|Citric acid|Acide citrique|Ácido cítrico|Zitronensäure|acido citrico|limon tuzu
 نكهة|Flavor|Saveur|Sabor|Geschmack|sapore|lezzet
 بهار|Seasoning|Assaisonnement|Condimento|Gewürz|condimento|baharat
@@ -4616,7 +4616,7 @@ const MORE=`
 إلا ربع|Quarter to|Moins le quart|Menos cuarto|Viertel vor|meno un quarto|çeyrek var
 في الساعة|At|À|A las|um|alle|saatinde
 فجر|Dawn|Aube|Amanecer|Morgendämmerung|alba|şafak
-شروق الشمس|Sunrise|Lever du soleil|Salida del sol|Sonnenaufgang|alba del sole|gün doğumu
+شروق الشمس|Sunrise|Lever du soleil|Salida del sol|Sonnenaufgang|sorgere del sole|gün doğumu
 ظهر|Noon|Midi|Mediodía|Mittag|mezzogiorno|öğle
 عصر|Late afternoon|Fin d'après-midi|Media tarde|später Nachmittag|tardo pomeriggio|ikindi
 غروب|Sunset|Coucher du soleil|Puesta de sol|Sonnenuntergang|tramonto|gün batımı
@@ -4748,7 +4748,7 @@ const MORE=`
 سحب السيارة|Towing|Remorquage|Remolque|Abschleppen|rimorchio|çekici
 حادث سير|Car accident|Accident de la route|Accidente de tráfico|Verkehrsunfall|incidente stradale|trafik kazası
 مخالفة|Fine|Amende|Multa|Strafzettel|multa|ceza
-إشارة المرور|Traffic light|Feu rouge|Semáforo|Ampel|semaforo|trafik ışığı
+إشارة المرور|Traffic light|Feu de signalisation|Semáforo|Ampel|semaforo|trafik ışığı
 علامة قف|Stop sign|Panneau stop|Señal de stop|Stoppschild|segnale di stop|dur işareti
 ممنوع الوقوف|No parking|Stationnement interdit|Prohibido aparcar|Parken verboten|divieto di sosta|park yapılmaz
 اتجاه واحد|One way|Sens unique|Sentido único|Einbahnstraße|senso unico|tek yön
@@ -4763,7 +4763,7 @@ const MORE=`
 ## veg
 بطاطا حلوة|Sweet potato|Patate douce|Batata|Süßkartoffel|patata dolce|tatlı patates
 كرفس|Celery|Céleri|Apio|Sellerie|sedano|kereviz
-لفت|Turnip|Navet|Nabo|Steckrübe|rapa|şalgam
+لفت|Turnip|Navet|Nabo|Speiserübe|rapa|şalgam
 كراث|Leek|Poireau|Puerro|Lauch|porro|pırasa
 بصل أخضر|Spring onion|Oignon vert|Cebolleta|Frühlingszwiebel|cipollotto|taze soğan
 شالوت|Shallot|Échalote|Chalota|Schalotte|scalogno|arpacık soğan
@@ -4788,7 +4788,7 @@ const MORE=`
 بقلة|Purslane|Pourpier|Verdolaga|Portulak|portulaca|semizotu
 ملوخية|Jute mallow|Corète potagère|Molokhia|Jutemalve|corcoro|molohiya
 رشاد|Watercress|Cresson|Berro|Brunnenkresse|crescione|su teresi
-فلفل حار|Hot pepper|Piment|Chile|scharfe Paprika|peperoncino|acı biber
+فلفل حار|Hot pepper|Piment|Chile|Chili|peperoncino|acı biber
 فلفل أخضر|Green pepper|Poivron vert|Pimiento verde|grüne Paprika|peperone verde|yeşil biber
 فلفل أحمر|Red pepper|Poivron rouge|Pimiento rojo|rote Paprika|peperone rosso|kırmızı biber
 فلفل أصفر|Yellow pepper|Poivron jaune|Pimiento amarillo|gelbe Paprika|peperone giallo|sarı biber
@@ -5059,7 +5059,7 @@ const MORE=`
 هل لديكم فطور؟|Do you serve breakfast?|Servez-vous le petit-déjeuner ?|¿Sirven desayuno?|Servieren Sie Frühstück?|Servite la colazione?|-
 أريد شطيرة جبن.|I'd like a cheese sandwich.|Je voudrais un sandwich au fromage.|Quisiera un bocadillo de queso.|Ich möchte ein Käsesandwich.|Vorrei un panino al formaggio.|-
 هل لديكم سلطة خفيفة؟|Do you have a light salad?|Avez-vous une salade légère ?|¿Tienen una ensalada ligera?|Haben Sie einen leichten Salat?|Avete un'insalata leggera?|-
-هل يحتوي هذا على مكسرات؟|Does this contain nuts?|Contient-il des noix ?|¿Esto lleva frutos secos?|Enthält das Nüsse?|Contiene noci?|-
+هل يحتوي هذا على مكسرات؟|Does this contain nuts?|Contient-il des fruits à coque ?|¿Esto lleva frutos secos?|Enthält das Nüsse?|Contiene frutta a guscio?|-
 لدي حساسية من الغلوتين.|I'm allergic to gluten.|Je suis allergique au gluten.|Soy alérgico al gluten.|Ich bin allergisch gegen Gluten.|Sono allergico al glutine.|-
 أنا نباتي.|I'm vegetarian.|Je suis végétarien.|Soy vegetariano.|Ich bin Vegetarier.|Sono vegetariano.|-
 هل هذا حلو جدا؟|Is this very sweet?|Est-ce très sucré ?|¿Esto es muy dulce?|Ist das sehr süß?|È molto dolce?|-
@@ -5088,7 +5088,7 @@ const MORE=`
 أعتقد أن هناك خطأ في الحساب.|I think there's a mistake in the bill.|Je crois qu'il y a une erreur dans l'addition.|Creo que hay un error en la cuenta.|Ich glaube, die Rechnung stimmt nicht.|Credo che ci sia un errore nel conto.|-
 هل يمكنني الحصول على إيصال؟|Could I have a receipt?|Puis-je avoir un reçu ?|¿Me da un recibo?|Könnte ich eine Quittung haben?|Potrei avere uno scontrino?|-
 أريد قهوة لآخذها معي.|I'd like a coffee to go.|Je voudrais un café à emporter.|Quisiera un café para llevar.|Ich möchte einen Kaffee zum Mitnehmen.|Vorrei un caffè da portare via.|-
-هل هذا للأكل هنا أم للأخذ؟|Is it for here or to go?|C'est pour ici ou à emporter ?|¿Es para tomar aquí o para llevar?|Ist das zum Hier-Essen oder zum Mitnehmen?|È per qui o da portare via?|-
+هل هذا للأكل هنا أم للأخذ؟|Is it for here or to go?|C'est pour ici ou à emporter ?|¿Es para tomar aquí o para llevar?|Essen Sie hier oder nehmen Sie es mit?|È per qui o da portare via?|-
 هل يمكنك وضعه في كيس؟|Could you put it in a bag?|Pouvez-vous le mettre dans un sac ?|¿Puede ponerlo en una bolsa?|Könnten Sie es in eine Tüte packen?|Può metterlo in un sacchetto?|-
 هل يمكنني طلب كوبين؟|Can I order two cups?|Puis-je commander deux tasses ?|¿Puedo pedir dos tazas?|Kann ich zwei Tassen bestellen?|Posso ordinare due tazze?|-
 حجم صغير من فضلك.|A small size, please.|Une petite taille, s'il vous plaît.|Tamaño pequeño, por favor.|Eine kleine Größe, bitte.|Formato piccolo, per favore.|-
@@ -5157,7 +5157,7 @@ const MORE=`
 هل يمكنني شحن هاتفي هنا؟|Can I charge my phone here?|Puis-je recharger mon téléphone ici ?|¿Puedo cargar el móvil aquí?|Kann ich hier mein Handy laden?|Posso caricare il telefono qui?|-
 هذه عربة الهدوء.|This is the quiet carriage.|C'est la voiture silencieuse.|Este es el vagón silencioso.|Das ist der Ruhewagen.|Questa è la carrozza silenziosa.|-
 أين عربة رقم ثلاثة؟|Where is carriage number three?|Où est la voiture numéro trois ?|¿Dónde está el vagón número tres?|Wo ist Wagen Nummer drei?|Dov'è la carrozza numero tre?|-
-تذكرتي من فضلك.|Your ticket, please.|Votre billet, s'il vous plaît.|Su billete, por favor.|Ihre Fahrkarte, bitte.|Il suo biglietto, per favore.|-
+تذكرتك من فضلك.|Your ticket, please.|Votre billet, s'il vous plaît.|Su billete, por favor.|Ihre Fahrkarte, bitte.|Il suo biglietto, per favore.|-
 تفضل، هذه تذكرتي.|Here you are, this is my ticket.|Voici mon billet.|Aquí tiene, este es mi billete.|Bitte schön, das ist meine Fahrkarte.|Ecco, questo è il mio biglietto.|-
 لقد نسيت أن أختم تذكرتي.|I forgot to validate my ticket.|J'ai oublié de composter mon billet.|Olvidé validar mi billete.|Ich habe vergessen, meine Fahrkarte zu entwerten.|Ho dimenticato di convalidare il biglietto.|-
 أين أختم التذكرة؟|Where do I validate the ticket?|Où composter le billet ?|¿Dónde valido el billete?|Wo entwerte ich die Fahrkarte?|Dove convalido il biglietto?|-
@@ -5240,7 +5240,7 @@ const MORE=`
 هل يمكنك أن تتكلم ببطء؟|Could you speak slowly?|Pouvez-vous parler lentement ?|¿Puede hablar despacio?|Könnten Sie langsam sprechen?|Può parlare lentamente?|-
 هل يمكنني الحصول على نسخة من التقرير؟|Can I get a copy of the report?|Puis-je avoir une copie du rapport ?|¿Puedo tener una copia del informe?|Kann ich eine Kopie des Berichts bekommen?|Posso avere una copia del rapporto?|-
 أحتاج التقرير لشركة التأمين.|I need the report for my insurance company.|J'ai besoin du rapport pour mon assurance.|Necesito el informe para mi aseguradora.|Ich brauche den Bericht für meine Versicherung.|Mi serve il rapporto per la mia assicurazione.|-
-ما رقم البلاغ؟|What is the report number?|Quel est le numéro du dossier ?|¿Cuál es el número de la denuncia?|Wie lautet die Aktenzeichen-Nummer?|Qual è il numero della denuncia?|-
+ما رقم البلاغ؟|What is the report number?|Quel est le numéro du dossier ?|¿Cuál es el número de la denuncia?|Wie lautet das Aktenzeichen?|Qual è il numero della denuncia?|-
 سنتصل بك إذا وجدناها.|We'll call you if we find it.|Nous vous appellerons si nous le retrouvons.|Le llamaremos si lo encontramos.|Wir rufen Sie an, falls wir sie finden.|La chiameremo se la troviamo.|-
 هل هناك مكتب للمفقودات؟|Is there a lost property office?|Y a-t-il un bureau des objets trouvés ?|¿Hay una oficina de objetos perdidos?|Gibt es ein Fundbüro?|C'è un ufficio oggetti smarriti?|-
 أين مكتب المفقودات؟|Where is the lost property office?|Où est le bureau des objets trouvés ?|¿Dónde está la oficina de objetos perdidos?|Wo ist das Fundbüro?|Dov'è l'ufficio oggetti smarriti?|-
@@ -5270,7 +5270,7 @@ const MORE=`
 اتصل بالشرطة من فضلك.|Please call the police.|Appelez la police, s'il vous plaît.|Llame a la policía, por favor.|Rufen Sie bitte die Polizei.|Chiami la polizia, per favore.|-
 هذا لا يخصّني.|This is not mine.|Ce n'est pas à moi.|Esto no es mío.|Das gehört mir nicht.|Questo non è mio.|-
 وجدت هذه المحفظة في الشارع.|I found this wallet in the street.|J'ai trouvé ce portefeuille dans la rue.|Encontré esta cartera en la calle.|Ich habe diese Geldbörse auf der Straße gefunden.|Ho trovato questo portafoglio per strada.|-
-أريد تسليمها إلى صاحبها.|I want to return it to its owner.|Je veux la rendre à son propriétaire.|Quiero devolverla a su dueño.|Ich möchte sie dem Besitzer zurückgeben.|Voglio restituirlo al proprietario.|-
+أريد تسليمها إلى صاحبها.|I want to return it to its owner.|Je veux le rendre à son propriétaire.|Quiero devolverla a su dueño.|Ich möchte sie dem Besitzer zurückgeben.|Voglio restituirlo al proprietario.|-
 هل يمكنني تقديم شكوى؟|Can I file a complaint?|Puis-je porter plainte ?|¿Puedo presentar una queja?|Kann ich eine Beschwerde einreichen?|Posso presentare un reclamo?|-
 لم أفعل شيئا خاطئا.|I didn't do anything wrong.|Je n'ai rien fait de mal.|No hice nada malo.|Ich habe nichts Falsches getan.|Non ho fatto nulla di male.|-
 هذا سوء فهم.|This is a misunderstanding.|C'est un malentendu.|Esto es un malentendido.|Das ist ein Missverständnis.|È un malinteso.|-
@@ -5302,16 +5302,16 @@ const MORE=`
 هل لديكم سيارة دفع رباعي؟|Do you have an SUV?|Avez-vous un SUV ?|¿Tienen un todoterreno?|Haben Sie einen Geländewagen?|Avete un SUV?|-
 هل لديكم سيارة كهربائية؟|Do you have an electric car?|Avez-vous une voiture électrique ?|¿Tienen un coche eléctrico?|Haben Sie ein Elektroauto?|Avete un'auto elettrica?|-
 أريد سيارة أوتوماتيكية.|I want an automatic car.|Je veux une voiture automatique.|Quiero un coche automático.|Ich möchte ein Automatikauto.|Voglio un'auto automatica.|-
-أستطيع قيادة السيارة اليدوية.|I can drive a manual car.|Je sais conduire une voiture manuelle.|Sé conducir un coche manual.|Ich kann ein Schaltgetriebe fahren.|So guidare un'auto manuale.|-
+أستطيع قيادة السيارة اليدوية.|I can drive a manual car.|Je sais conduire une voiture manuelle.|Sé conducir un coche manual.|Ich kann ein Auto mit Schaltgetriebe fahren.|So guidare un'auto manuale.|-
 كم السعر لليوم الواحد؟|How much is it per day?|Combien coûte-t-elle par jour ?|¿Cuánto cuesta por día?|Wie viel kostet es pro Tag?|Quanto costa al giorno?|-
 هل هذا السعر شامل التأمين؟|Does this price include insurance?|Ce prix inclut-il l'assurance ?|¿Este precio incluye el seguro?|Ist die Versicherung im Preis inbegriffen?|Questo prezzo include l'assicurazione?|-
 أريد تأمينا شاملا.|I'd like full insurance.|Je voudrais une assurance tous risques.|Quisiera un seguro a todo riesgo.|Ich möchte eine Vollkaskoversicherung.|Vorrei un'assicurazione completa.|-
-ما مبلغ الضمان؟|How much is the deposit?|Quel est le montant de la caution ?|¿Cuánto es la fianza?|Wie hoch ist die Kaution?|Quanto è la cauzione?|-
+ما مبلغ الضمان؟|How much is the deposit?|Quel est le montant de la caution ?|¿Cuánto es la fianza?|Wie hoch ist die Kaution?|Quant'è la cauzione?|-
 هل يمكنني الدفع ببطاقة ائتمان؟|Can I pay with a credit card?|Puis-je payer par carte de crédit ?|¿Puedo pagar con tarjeta de crédito?|Kann ich mit Kreditkarte zahlen?|Posso pagare con carta di credito?|-
 هل هناك رسوم إضافية؟|Are there any extra fees?|Y a-t-il des frais supplémentaires ?|¿Hay cargos adicionales?|Gibt es zusätzliche Gebühren?|Ci sono costi aggiuntivi?|-
 هل الكيلومترات غير محدودة؟|Is the mileage unlimited?|Le kilométrage est-il illimité ?|¿El kilometraje es ilimitado?|Ist die Kilometerzahl unbegrenzt?|Il chilometraggio è illimitato?|-
 كم كيلومترا يمكنني أن أقود؟|How many kilometers can I drive?|Combien de kilomètres puis-je rouler ?|¿Cuántos kilómetros puedo recorrer?|Wie viele Kilometer darf ich fahren?|Quanti chilometri posso percorrere?|-
-أحتاج رخصة قيادة وجواز سفر.|You need a driving license and a passport.|Il faut un permis de conduire et un passeport.|Se necesita carné de conducir y pasaporte.|Sie brauchen einen Führerschein und einen Reisepass.|Servono la patente e il passaporto.|-
+تحتاج إلى رخصة قيادة وجواز سفر.|You need a driving license and a passport.|Il faut un permis de conduire et un passeport.|Se necesita carné de conducir y pasaporte.|Sie brauchen einen Führerschein und einen Reisepass.|Servono la patente e il passaporto.|-
 هذه رخصتي الدولية.|Here is my international license.|Voici mon permis international.|Aquí está mi carné internacional.|Hier ist mein internationaler Führerschein.|Ecco la mia patente internazionale.|-
 هل رخصتي صالحة هنا؟|Is my license valid here?|Mon permis est-il valable ici ?|¿Es válido mi carné aquí?|Ist mein Führerschein hier gültig?|La mia patente è valida qui?|-
 كم عمرك؟ يجب أن تكون فوق الخامسة والعشرين.|How old are you? You must be over twenty-five.|Quel âge avez-vous ? Il faut avoir plus de vingt-cinq ans.|¿Cuántos años tiene? Debe ser mayor de veinticinco.|Wie alt sind Sie? Sie müssen über fünfundzwanzig sein.|Quanti anni ha? Deve avere più di venticinque anni.|-
@@ -5324,7 +5324,7 @@ const MORE=`
 هذه هي المفاتيح.|Here are the keys.|Voici les clés.|Aquí están las llaves.|Hier sind die Schlüssel.|Ecco le chiavi.|-
 هل الخزان ممتلئ؟|Is the tank full?|Le réservoir est-il plein ?|¿Está lleno el depósito?|Ist der Tank voll?|Il serbatoio è pieno?|-
 هل يجب أن أعيدها بخزان ممتلئ؟|Do I have to return it with a full tank?|Dois-je la rendre avec le plein ?|¿Debo devolverla con el depósito lleno?|Muss ich es vollgetankt zurückgeben?|Devo restituirla col serbatoio pieno?|-
-أي نوع من الوقود تستخدم؟|What type of fuel does it use?|Quel carburant utilise-t-elle ?|¿Qué tipo de combustible usa?|Welchen Kraftstoff braucht es?|Che tipo di carburante usa?|-
+أي نوع من الوقود تستخدم؟|What type of fuel does it use?|Quel carburant utilise-t-elle ?|¿Qué tipo de combustible usa?|Welchen Kraftstoff braucht das Auto?|Che tipo di carburante usa?|-
 تستخدم البنزين.|It uses petrol.|Elle roule à l'essence.|Usa gasolina.|Es fährt mit Benzin.|Va a benzina.|-
 تستخدم الديزل.|It runs on diesel.|Elle roule au diesel.|Funciona con diésel.|Es fährt mit Diesel.|Va a diesel.|-
 أين أقرب محطة وقود؟|Where is the nearest gas station?|Où est la station-service la plus proche ?|¿Dónde está la gasolinera más cercana?|Wo ist die nächste Tankstelle?|Dov'è il distributore più vicino?|-
@@ -5388,7 +5388,7 @@ const MORE=`
 هل الإطارات في حالة جيدة؟|Are the tires in good condition?|Les pneus sont-ils en bon état ?|¿Están bien las ruedas?|Sind die Reifen in gutem Zustand?|Le gomme sono in buone condizioni?|-
 هل يمكنني الحصول على خريطة؟|Could I have a map?|Puis-je avoir une carte ?|¿Me da un mapa?|Könnte ich eine Karte haben?|Potrei avere una mappa?|-
 شكرا، أنا جاهز للانطلاق.|Thanks, I'm ready to go.|Merci, je suis prêt à partir.|Gracias, estoy listo para salir.|Danke, ich bin startklar.|Grazie, sono pronto a partire.|-
-وفّقك الله في رحلتك!|Have a wonderful trip!|Excellent voyage !|¡Que tenga un viaje estupendo!|Eine wunderbare Reise!|Buon viaggio!|-
+وفّقك الله في رحلتك!|Have a wonderful trip!|Très bon voyage !|¡Que tenga un viaje estupendo!|Eine wunderbare Reise!|Buon viaggio!|-
 ## d_phone
 ألو، من المتحدث؟|Hello, who is speaking?|Allô, qui est à l'appareil ?|Hola, ¿con quién hablo?|Hallo, wer spricht da?|Pronto, chi parla?|-
 أنا أتصل من الغرفة رقم مئتين وخمسة.|I'm calling from room two hundred and five.|J'appelle de la chambre deux cent cinq.|Llamo desde la habitación doscientos cinco.|Ich rufe aus Zimmer zweihundertfünf an.|Chiamo dalla camera duecentocinque.|-
@@ -5425,7 +5425,7 @@ const MORE=`
 كم تبعد عن المطار؟|How far are you from the airport?|À quelle distance êtes-vous de l'aéroport ?|¿A qué distancia están del aeropuerto?|Wie weit sind Sie vom Flughafen entfernt?|Quanto siete lontani dall'aeroporto?|-
 هل هناك خدمة نقل مجانية؟|Is there a free shuttle service?|Y a-t-il une navette gratuite ?|¿Hay servicio de transporte gratuito?|Gibt es einen kostenlosen Shuttle-Service?|C'è un servizio navetta gratuito?|-
 متى موعد تسجيل الدخول؟|What time is check-in?|À quelle heure est l'enregistrement ?|¿A qué hora es el check-in?|Um wie viel Uhr ist der Check-in?|A che ora è il check-in?|-
-هل يمكنني تسجيل الدخول مبكرا؟|Can I check in early?|Puis-je arriver plus tôt ?|¿Puedo hacer el check-in antes?|Kann ich früher einchecken?|Posso fare il check-in prima?|-
+هل يمكنني تسجيل الدخول مبكرا؟|Can I check in early?|Puis-je m'enregistrer plus tôt ?|¿Puedo hacer el check-in antes?|Kann ich früher einchecken?|Posso fare il check-in prima?|-
 أين يقع الفندق بالضبط؟|Where exactly is the hotel?|Où se trouve exactement l'hôtel ?|¿Dónde está exactamente el hotel?|Wo genau befindet sich das Hotel?|Dov'è esattamente l'hotel?|-
 هل يمكنك إرسال العنوان إلى هاتفي؟|Could you send the address to my phone?|Pouvez-vous envoyer l'adresse sur mon téléphone ?|¿Puede enviar la dirección a mi móvil?|Könnten Sie die Adresse an mein Handy schicken?|Può inviare l'indirizzo al mio telefono?|-
 هل يمكنك إرسال رسالة نصية؟|Could you send a text message?|Pouvez-vous envoyer un SMS ?|¿Puede enviar un mensaje de texto?|Könnten Sie eine SMS schicken?|Può mandare un messaggio?|-
@@ -5444,7 +5444,7 @@ const MORE=`
 هل يمكنني طلب خدمة الغرف؟|Can I order room service?|Puis-je commander le service en chambre ?|¿Puedo pedir servicio de habitaciones?|Kann ich den Zimmerservice bestellen?|Posso ordinare il servizio in camera?|-
 أريد إفطارا في الغرفة.|I'd like breakfast in my room.|Je voudrais le petit-déjeuner dans ma chambre.|Quisiera el desayuno en la habitación.|Ich möchte das Frühstück aufs Zimmer.|Vorrei la colazione in camera.|-
 هل يمكنني الحصول على مكالمة إيقاظ؟|Could I have a wake-up call?|Puis-je avoir un réveil téléphonique ?|¿Me pueden dar una llamada de despertador?|Könnte ich einen Weckruf haben?|Potrei avere una sveglia telefonica?|-
-أيقظوني في السابعة صباحا.|Wake me up at seven in the morning.|Réveillez-moi à sept heures du matin.|Despiértenme a las siete de la mañana.|Wecken Sie mich um sieben Uhr morgens.|Mi svegliate alle sette del mattino.|-
+أيقظوني في السابعة صباحا.|Wake me up at seven in the morning.|Réveillez-moi à sept heures du matin.|Despiértenme a las siete de la mañana.|Wecken Sie mich um sieben Uhr morgens.|Mi svegli alle sette del mattino.|-
 أريد حجز طاولة في المطعم.|I'd like to book a table at the restaurant.|Je voudrais réserver une table au restaurant.|Quisiera reservar una mesa en el restaurante.|Ich möchte einen Tisch im Restaurant reservieren.|Vorrei prenotare un tavolo al ristorante.|-
 لأربعة أشخاص عند الثامنة.|For four people at eight o'clock.|Pour quatre personnes à vingt heures.|Para cuatro personas a las ocho.|Für vier Personen um acht Uhr.|Per quattro persone alle otto.|-
 هل لديكم طاولة شاغرة الليلة؟|Do you have a table free tonight?|Avez-vous une table libre ce soir ?|¿Tienen una mesa libre esta noche?|Haben Sie heute Abend einen Tisch frei?|Avete un tavolo libero stasera?|-
@@ -5474,7 +5474,7 @@ const MORE=`
 هل هذا الرقم مجاني؟|Is this number toll-free?|Ce numéro est-il gratuit ?|¿Es gratuito este número?|Ist diese Nummer kostenlos?|È un numero verde?|-
 كم تكلفة المكالمة الدولية؟|How much does an international call cost?|Combien coûte un appel international ?|¿Cuánto cuesta una llamada internacional?|Wie viel kostet ein Auslandsgespräch?|Quanto costa una chiamata internazionale?|-
 كيف أتصل بالخارج من الغرفة؟|How do I call abroad from the room?|Comment appeler l'étranger depuis la chambre ?|¿Cómo llamo al extranjero desde la habitación?|Wie rufe ich vom Zimmer aus ins Ausland an?|Come chiamo all'estero dalla camera?|-
-أحتاج إلى بطاقة اتصال.|I need a SIM card.|J'ai besoin d'une carte SIM.|Necesito una tarjeta SIM.|Ich brauche eine SIM-Karte.|Mi serve una SIM.|-
+أحتاج إلى شريحة هاتف.|I need a SIM card.|J'ai besoin d'une carte SIM.|Necesito una tarjeta SIM.|Ich brauche eine SIM-Karte.|Mi serve una SIM.|-
 أين أشتري رصيدا للهاتف؟|Where can I buy phone credit?|Où puis-je acheter du crédit téléphonique ?|¿Dónde compro saldo para el móvil?|Wo kann ich Handyguthaben kaufen?|Dove compro la ricarica telefonica?|-
 بطارية هاتفي منخفضة.|My phone battery is low.|La batterie de mon téléphone est faible.|Mi móvil tiene poca batería.|Mein Akku ist fast leer.|La batteria del telefono è scarica.|-
 هل لديكم شاحن هاتف؟|Do you have a phone charger?|Avez-vous un chargeur de téléphone ?|¿Tienen un cargador de móvil?|Haben Sie ein Handyladegerät?|Avete un caricabatterie?|-
@@ -5529,7 +5529,7 @@ const MORE=`
 كولا كبيرة من فضلك.|A large cola, please.|Un grand cola, s'il vous plaît.|Una cola grande, por favor.|Eine große Cola, bitte.|Una cola grande, per favore.|-
 هل لديكم عصير؟|Do you have juice?|Avez-vous du jus ?|¿Tienen zumo?|Haben Sie Saft?|Avete del succo?|-
 أريد ماء من فضلك.|I'd like some water, please.|Je voudrais de l'eau, s'il vous plaît.|Quisiera agua, por favor.|Ich möchte Wasser, bitte.|Vorrei dell'acqua, per favore.|-
-هل يمكنني إعادة ملء الكوب؟|Can I get a refill?|Puis-je avoir un refill ?|¿Puedo rellenar el vaso?|Kann ich nachfüllen?|Posso fare il refill?|-
+هل يمكنني إعادة ملء الكوب؟|Can I get a refill?|Puis-je faire remplir mon verre ?|¿Puedo rellenar el vaso?|Kann ich nachfüllen?|Posso riempire di nuovo il bicchiere?|-
 أريد ميلك شيك بالشوكولاتة.|I'd like a chocolate milkshake.|Je voudrais un milkshake au chocolat.|Quisiera un batido de chocolate.|Ich möchte einen Schokoladen-Milchshake.|Vorrei un frappè al cioccolato.|-
 هل لديكم قهوة؟|Do you have coffee?|Avez-vous du café ?|¿Tienen café?|Haben Sie Kaffee?|Avete il caffè?|-
 أريد آيس كريم بالفانيليا.|I'd like vanilla ice cream.|Je voudrais une glace à la vanille.|Quisiera helado de vainilla.|Ich möchte Vanilleeis.|Vorrei il gelato alla vaniglia.|-
@@ -5738,7 +5738,7 @@ const MORE=`
 أي حافلة تذهب إلى الفندق؟|Which bus goes to the hotel?|Quel bus va à l'hôtel ?|¿Qué autobús va al hotel?|Welcher Bus fährt zum Hotel?|Quale autobus va all'hotel?|-
 أين محطة الحافلات؟|Where is the bus stop?|Où est l'arrêt de bus ?|¿Dónde está la parada de autobús?|Wo ist die Bushaltestelle?|Dov'è la fermata dell'autobus?|-
 أين محطة المترو؟|Where is the metro station?|Où est la station de métro ?|¿Dónde está la estación de metro?|Wo ist die U-Bahn-Station?|Dov'è la stazione della metro?|-
-هل يمكنك أن توصلني بسيارتك؟|Could you give me a lift?|Pouvez-vous me déposer en voiture ?|¿Puede llevarme en su coche?|Könnten Sie mich mitnehmen?|Può darmi un passaggio?|-
+هل يمكنك أن توصلني بسيارتك؟|Could you give me a lift?|Pouvez-vous m'emmener en voiture ?|¿Puede llevarme en su coche?|Könnten Sie mich mitnehmen?|Può darmi un passaggio?|-
 سأدفع لك مقابل ذلك.|I'll pay you for it.|Je vous paierai pour ça.|Le pagaré por ello.|Ich bezahle Sie dafür.|La pagherò per questo.|-
 لقد نسيت حقيبتي في المقهى.|I left my bag in the café.|J'ai oublié mon sac au café.|Dejé mi bolso en el café.|Ich habe meine Tasche im Café vergessen.|Ho dimenticato la borsa al bar.|-
 هل يمكنك أن تأتي معي؟|Could you come with me?|Pouvez-vous venir avec moi ?|¿Puede venir conmigo?|Könnten Sie mit mir kommen?|Può venire con me?|-
@@ -5988,7 +5988,7 @@ B|وماذا تريدون أن تشربوا؟|And what would you like to drink?|
 A|ماء من فضلك. ثم الحساب لاحقا.|Water, please. And the bill later.|De l'eau, s'il vous plaît. Et l'addition plus tard.|Agua, por favor. Y la cuenta después.|Wasser, bitte. Und später die Rechnung.|Acqua, per favore. E il conto dopo.|Su lütfen. Hesabı sonra alacağım.
 B|حاضر، سيصلكم الطعام قريبا.|Certainly, your food will arrive soon.|Très bien, votre repas arrive bientôt.|Muy bien, su comida llegará pronto.|Sehr gerne, Ihr Essen kommt gleich.|Certamente, il cibo arriva subito.|Tabii, yemekleriniz birazdan gelecek.
 ## air|✈️|في المطار|تسجيل الوصول قبل الرحلة
-A|صباح الخير، أريد تسجيل الوصول لرحلتي.|Good morning, I'd like to check in for my flight.|Bonjour, je voudrais enregistrer mon vol.|Buenos días, quiero facturar para mi vuelo.|Guten Morgen, ich möchte für meinen Flug einchecken.|Buongiorno, vorrei fare il check-in per il mio volo.|Günaydın, uçuşum için check-in yapmak istiyorum.
+A|صباح الخير، أريد تسجيل الوصول لرحلتي.|Good morning, I'd like to check in for my flight.|Bonjour, je voudrais m'enregistrer pour mon vol.|Buenos días, quiero facturar para mi vuelo.|Guten Morgen, ich möchte für meinen Flug einchecken.|Buongiorno, vorrei fare il check-in per il mio volo.|Günaydın, uçuşum için check-in yapmak istiyorum.
 B|بالتأكيد. هل يمكنني رؤية جواز سفرك؟|Certainly. May I see your passport?|Bien sûr. Puis-je voir votre passeport ?|Claro. ¿Puedo ver su pasaporte?|Gern. Darf ich Ihren Reisepass sehen?|Certo. Posso vedere il suo passaporto?|Tabii. Pasaportunuzu görebilir miyim?
 A|تفضل. معي حقيبة واحدة للشحن.|Here you are. I have one bag to check in.|Voilà. J'ai une valise à enregistrer.|Aquí tiene. Tengo una maleta para facturar.|Bitte sehr. Ich habe einen Koffer aufzugeben.|Ecco. Ho una valigia da imbarcare.|Buyurun. Bir bavulum var.
 B|ضعها على الميزان من فضلك.|Please put it on the scale.|Posez-la sur la balance, s'il vous plaît.|Póngala en la báscula, por favor.|Stellen Sie ihn bitte auf die Waage.|La metta sulla bilancia, per favore.|Lütfen teraziye koyun.
@@ -6009,7 +6009,7 @@ B|في الطابق الثالث. إقامة سعيدة!|On the third floor. Enj
 A|مرحبا، كم سعر هذا القميص؟|Hello, how much is this shirt?|Bonjour, combien coûte cette chemise ?|Hola, ¿cuánto cuesta esta camisa?|Hallo, wie viel kostet dieses Hemd?|Buongiorno, quanto costa questa camicia?|Merhaba, bu gömlek ne kadar?
 B|إنه بخمسين يورو.|It's fifty euros.|Il coûte cinquante euros.|Cuesta cincuenta euros.|Es kostet fünfzig Euro.|Costa cinquanta euro.|Elli avro.
 A|هل لديكم مقاس أكبر؟|Do you have a bigger size?|Avez-vous une taille au-dessus ?|¿Tienen una talla más grande?|Haben Sie eine Nummer größer?|Avete una taglia più grande?|Bir beden büyüğü var mı?
-B|نعم، سأحضره لك. هل تريده بلون آخر؟|Yes, I'll bring it. Would you like another colour?|Oui, je vous l'apporte. Voulez-vous une autre couleur ?|Sí, se lo traigo. ¿Lo quiere en otro color?|Ja, ich bringe ihn. Möchten Sie eine andere Farbe?|Sì, glielo porto. Lo vuole in un altro colore?|Evet, getireyim. Başka renk ister misiniz?
+B|نعم، سأحضره لك. هل تريده بلون آخر؟|Yes, I'll bring it. Would you like another colour?|Oui, je vous l'apporte. Voulez-vous une autre couleur ?|Sí, se lo traigo. ¿Lo quiere en otro color?|Ja, ich bringe es Ihnen. Möchten Sie eine andere Farbe?|Sì, glielo porto. Lo vuole in un altro colore?|Evet, getireyim. Başka renk ister misiniz?
 A|لا، الأزرق جيد. أين غرفة القياس؟|No, blue is fine. Where is the fitting room?|Non, le bleu me convient. Où est la cabine d'essayage ?|No, el azul está bien. ¿Dónde está el probador?|Nein, Blau ist gut. Wo ist die Umkleidekabine?|No, il blu va bene. Dov'è il camerino?|Hayır, mavi iyi. Deneme kabini nerede?
 B|هناك، بجانب الباب.|Over there, next to the door.|Là-bas, à côté de la porte.|Allí, junto a la puerta.|Dort drüben, neben der Tür.|Laggiù, accanto alla porta.|Orada, kapının yanında.
 A|يناسبني. هل يمكنك تخفيض السعر قليلا؟|It fits me. Can you lower the price a little?|Il me va bien. Pouvez-vous baisser un peu le prix ?|Me queda bien. ¿Puede bajar un poco el precio?|Er passt mir. Können Sie den Preis etwas senken?|Mi va bene. Può abbassare un po' il prezzo?|Bana uyuyor. Fiyatı biraz düşürebilir misiniz?
@@ -6090,7 +6090,7 @@ B|سنساعدك. سنتصل بك إذا وجدناها.|We'll help you. We'll c
 A|مرحبا، أريد استئجار سيارة ليومين.|Hello, I'd like to rent a car for two days.|Bonjour, je voudrais louer une voiture pour deux jours.|Hola, quiero alquilar un coche para dos días.|Hallo, ich möchte ein Auto für zwei Tage mieten.|Buongiorno, vorrei noleggiare un'auto per due giorni.|Merhaba, iki günlüğüne araba kiralamak istiyorum.
 B|بالتأكيد. هل لديك رخصة قيادة؟|Certainly. Do you have a driving licence?|Bien sûr. Avez-vous un permis de conduire ?|Claro. ¿Tiene carné de conducir?|Gern. Haben Sie einen Führerschein?|Certo. Ha la patente?|Tabii. Ehliyetiniz var mı?
 A|نعم، هذه رخصتي الدولية.|Yes, this is my international licence.|Oui, voici mon permis international.|Sí, este es mi permiso internacional.|Ja, das ist mein internationaler Führerschein.|Sì, questa è la mia patente internazionale.|Evet, bu benim uluslararası ehliyetim.
-B|هل تفضل سيارة أوتوماتيكية أم يدوية؟|Do you prefer an automatic or a manual?|Préférez-vous une automatique ou une manuelle ?|¿Prefiere automático o manual?|Möchten Sie ein Automatik- oder ein Schaltgetriebe?|Preferisce automatica o manuale?|Otomatik mi, manuel mi tercih edersiniz?
+B|هل تفضل سيارة أوتوماتيكية أم يدوية؟|Do you prefer an automatic or a manual?|Préférez-vous une automatique ou une manuelle ?|¿Prefiere automático o manual?|Möchten Sie ein Auto mit Automatik oder mit Schaltgetriebe?|Preferisce automatica o manuale?|Otomatik mi, manuel mi tercih edersiniz?
 A|أوتوماتيكية. هل التأمين مشمول؟|Automatic. Is insurance included?|Automatique. L'assurance est-elle incluse ?|Automático. ¿El seguro está incluido?|Automatik. Ist die Versicherung inbegriffen?|Automatica. L'assicurazione è inclusa?|Otomatik. Sigorta dahil mi?
 B|نعم، والخزان ممتلئ. أعده ممتلئا.|Yes, and the tank is full. Return it full.|Oui, et le réservoir est plein. Rendez-la pleine.|Sí, y el depósito está lleno. Devuélvalo lleno.|Ja, und der Tank ist voll. Geben Sie ihn voll zurück.|Sì, e il serbatoio è pieno. La riporti piena.|Evet, depo dolu. Dolu olarak teslim edin.
 A|وأين أعيد السيارة؟|And where do I return the car?|Et où dois-je rendre la voiture ?|¿Y dónde devuelvo el coche?|Und wo gebe ich das Auto zurück?|E dove riporto l'auto?|Arabayı nereye teslim edeceğim?
@@ -6108,7 +6108,7 @@ B|حسنا، مع السلامة.|All right, goodbye.|Très bien, au revoir.|De 
 A|مرحبا، أريد برغر ووجبة بطاطس.|Hello, I'd like a burger and fries.|Bonjour, je voudrais un burger et des frites.|Hola, quiero una hamburguesa y patatas fritas.|Hallo, ich möchte einen Burger und Pommes.|Salve, vorrei un hamburger e patatine.|Merhaba, bir hamburger ve patates kızartması istiyorum.
 B|هل تريد مشروبا مع الوجبة؟|Would you like a drink with that?|Voulez-vous une boisson avec ça ?|¿Quiere una bebida con eso?|Möchten Sie ein Getränk dazu?|Vuole una bibita con questo?|Yanında içecek ister misiniz?
 A|نعم، عصير برتقال من فضلك.|Yes, an orange juice, please.|Oui, un jus d'orange, s'il vous plaît.|Sí, un zumo de naranja, por favor.|Ja, einen Orangensaft, bitte.|Sì, un succo d'arancia, per favore.|Evet, bir portakal suyu lütfen.
-B|هل تأكل هنا أم تأخذها معك؟|Eating in or taking away?|Sur place ou à emporter ?|¿Para comer aquí o para llevar?|Zum Hier essen oder zum Mitnehmen?|Per mangiare qui o da portare via?|Burada mı yiyeceksiniz, paket mi?
+B|هل تأكل هنا أم تأخذها معك؟|Eating in or taking away?|Sur place ou à emporter ?|¿Para comer aquí o para llevar?|Essen Sie hier oder nehmen Sie es mit?|Per mangiare qui o da portare via?|Burada mı yiyeceksiniz, paket mi?
 A|للأخذ من فضلك. بدون بصل.|To take away, please. Without onions.|À emporter, s'il vous plaît. Sans oignons.|Para llevar, por favor. Sin cebolla.|Zum Mitnehmen, bitte. Ohne Zwiebeln.|Da portare via, per favore. Senza cipolla.|Paket lütfen. Soğansız olsun.
 B|حاضر. المجموع ثلاثون درهما.|Certainly. The total is thirty dirhams.|Très bien. Le total est de trente dirhams.|Muy bien. Son treinta dírhams en total.|Gern. Das macht dreißig Dirham.|Certo. Il totale è trenta dirham.|Tabii. Toplam otuz dirhem.
 A|هل تقبلون الدفع بالبطاقة؟|Do you accept card payment?|Acceptez-vous le paiement par carte ?|¿Aceptan pago con tarjeta?|Akzeptieren Sie Kartenzahlung?|Accettate pagamenti con carta?|Kartla ödeme kabul ediyor musunuz?
@@ -6142,7 +6142,7 @@ A|لا بأس، أوافق.|That's fine, I agree.|Ça va, je suis d'accord.|Est�
 B|تم التغيير. ستصلك رسالة تأكيد.|It's done. You'll receive a confirmation message.|C'est fait. Vous recevrez un message de confirmation.|Hecho. Recibirá un mensaje de confirmación.|Erledigt. Sie erhalten eine Bestätigungsnachricht.|Fatto. Riceverà un messaggio di conferma.|İşlem tamam. Onay mesajı alacaksınız.
 ## work|💼|التعارف في العمل|لقاء زميل جديد
 A|صباح الخير، أنا الموظف الجديد.|Good morning, I'm the new employee.|Bonjour, je suis le nouvel employé.|Buenos días, soy el nuevo empleado.|Guten Morgen, ich bin der neue Mitarbeiter.|Buongiorno, sono il nuovo dipendente.|Günaydın, ben yeni çalışanım.
-B|أهلا بك! اسمي ليلى وأنا مديرة القسم.|Welcome! My name is Layla and I'm the department manager.|Bienvenue ! Je m'appelle Leïla et je suis la responsable du service.|¡Bienvenido! Me llamo Layla y soy la jefa del departamento.|Willkommen! Ich heiße Layla und bin die Abteilungsleiterin.|Benvenuto! Mi chiamo Layla e sono la responsabile del reparto.|Hoş geldiniz! Adım Leyla, bölüm müdürüyüm.
+B|أهلا بك! اسمي ليلى وأنا مديرة القسم.|Welcome! My name is Layla and I'm the department manager.|Bienvenue ! Je m'appelle Layla et je suis la responsable du service.|¡Bienvenido! Me llamo Layla y soy la jefa del departamento.|Willkommen! Ich heiße Layla und bin die Abteilungsleiterin.|Benvenuto! Mi chiamo Layla e sono la responsabile del reparto.|Hoş geldiniz! Adım Leyla, bölüm müdürüyüm.
 A|سررت بمعرفتك. متى يبدأ الاجتماع؟|Pleased to meet you. When does the meeting start?|Enchanté. Quand commence la réunion ?|Encantado. ¿Cuándo empieza la reunión?|Freut mich. Wann beginnt die Besprechung?|Piacere. Quando inizia la riunione?|Memnun oldum. Toplantı ne zaman başlıyor?
 B|في الساعة التاسعة والنصف.|At half past nine.|À neuf heures et demie.|A las nueve y media.|Um halb zehn.|Alle nove e mezza.|Dokuz buçukta.
 A|وأين مكتبي؟|And where is my desk?|Et où est mon bureau ?|¿Y dónde está mi escritorio?|Und wo ist mein Schreibtisch?|E dov'è la mia scrivania?|Peki masam nerede?
@@ -6261,7 +6261,7 @@ if(S.ui&&S.lang===S.ui)S.lang=LANGS.find(l=>l.id!==S.ui).id;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 
 /* ---------- لغة الواجهة والألوان ---------- */
-const TRD={"تعلّم": ["Learn", "Apprendre"], "الرئيسية": ["Home", "Accueil"], "القاموس": ["Dictionary", "Dictionnaire"], "إنجازاتي": ["My progress", "Mes succès"], "الإعدادات": ["Settings", "Réglages"], "الأرقام": ["Numbers", "Nombres"], "الأساسيات": ["Basics", "Bases"], "حوارات قصيرة": ["Short dialogues", "Dialogues courts"], "الطعام والشراب": ["Food & drink", "Nourriture et boissons"], "السفر": ["Travel", "Voyage"], "أشياء أخرى": ["More topics", "Autres thèmes"], "تدرّب على النطق": ["Practice pronunciation", "Travailler la prononciation"], "انطق وسيصحّح لك التطبيق": ["Speak and the app will correct you", "Parlez, l'appli vous corrige"], "درسًا": ["lessons", "leçons"], "دروس": ["lessons", "leçons"], "الضمائر والملكية والإشارة": ["Pronouns & possessives", "Pronoms et possessifs"], "أنا، هو، لي، ملكي، هذا، نفسي، معي...": ["I, he, my, mine, this, myself, with me...", "je, il, mon, le mien, ce, moi-même, avec moi..."], "أفعال أساسية": ["Basic verbs", "Verbes de base"], "تصريف الأفعال": ["Verb conjugation", "Conjugaison"], "أنا أكون، أنا أملك، أنا أذهب، أنا أريد...": ["I am, I have, I go, I want...", "je suis, j'ai, je vais, je veux..."], "كلمات الاستفهام ونعم/لا": ["Question words & yes/no", "Mots interrogatifs et oui/non"], "التحيات": ["Greetings", "Salutations"], "جمل مفيدة للمحادثة": ["Useful phrases", "Phrases utiles"], "من 0 إلى 99": ["From 0 to 99", "De 0 à 99"], "الوحدات والعشرات": ["Units and tens", "Unités et dizaines"], "من 100 إلى 1000": ["From 100 to 1000", "De 100 à 1000"], "المئات وما بينها": ["Hundreds and in between", "Les centaines et entre-deux"], "اقرأ أي رقم": ["Read any number", "Lire un nombre"], "اكتب رقمًا حتى 999,999,999 واسمع نطقه بـ5 لغات": ["Type a number up to 999,999,999 and hear it in 5 languages", "Tapez un nombre jusqu'à 999 999 999 et écoutez-le en 5 langues"], "الفواكه": ["Fruits", "Fruits"], "الخضروات والأعشاب": ["Vegetables & herbs", "Légumes et herbes"], "اللحوم والأسماك": ["Meat & fish", "Viandes et poissons"], "الألبان والبيض": ["Dairy & eggs", "Produits laitiers et œufs"], "الخبز والحبوب": ["Bread & grains", "Pain et céréales"], "التوابل والصلصات": ["Spices & sauces", "Épices et sauces"], "الحلويات والمكسرات": ["Sweets & nuts", "Desserts et noix"], "المشروبات": ["Drinks", "Boissons"], "في المطعم": ["At the restaurant", "Au restaurant"], "المطار والطائرة": ["Airport & plane", "Aéroport et avion"], "الفندق والإقامة": ["Hotel & stay", "Hôtel et séjour"], "المواصلات": ["Transport", "Transports"], "الاتجاهات والأماكن": ["Directions & places", "Directions et lieux"], "المال والتسوق": ["Money & shopping", "Argent et achats"], "الوثائق والجمارك": ["Documents & customs", "Documents et douane"], "الطوارئ والصحة": ["Emergencies & health", "Urgences et santé"], "الألوان": ["Colors", "Couleurs"], "أيام الأسبوع والأشهر": ["Days & months", "Jours et mois"], "الوقت": ["Time", "Temps"], "العائلة والناس": ["Family & people", "Famille et gens"], "صفات شائعة": ["Common adjectives", "Adjectifs courants"], "الطقس والفصول": ["Weather & seasons", "Météo et saisons"], "أعضاء الجسم": ["Body parts", "Parties du corps"], "التعارف": ["Introductions", "Présentations"], "أول لقاء بين شخصين": ["A first meeting between two people", "Une première rencontre"], "طلب الطعام ودفع الحساب": ["Ordering food and paying", "Commander et payer"], "في المطار": ["At the airport", "À l'aéroport"], "تسجيل الوصول قبل الرحلة": ["Checking in before the flight", "Enregistrement avant le vol"], "في الفندق": ["At the hotel", "À l'hôtel"], "الوصول وتسجيل الدخول": ["Arriving and checking in", "Arrivée et enregistrement"], "في المتجر": ["At the shop", "Au magasin"], "السؤال عن السعر والمقاس والدفع": ["Asking about price, size and payment", "Prix, taille et paiement"], "في سيارة الأجرة": ["In a taxi", "En taxi"], "الذهاب إلى الفندق": ["Going to the hotel", "Aller à l'hôtel"], "السؤال عن الطريق": ["Asking for directions", "Demander son chemin"], "الوصول إلى المحطة": ["Getting to the station", "Aller à la gare"], "عند الطبيب": ["At the doctor", "Chez le médecin"], "وصف الألم وأخذ الدواء": ["Describing pain and taking medicine", "Décrire la douleur et prendre un médicament"], "في الصيدلية": ["At the pharmacy", "À la pharmacie"], "شراء دواء للزكام": ["Buying cold medicine", "Acheter un médicament contre le rhume"], "في البنك": ["At the bank", "À la banque"], "صرف العملة": ["Exchanging currency", "Changer de l'argent"], "في المقهى": ["At the café", "Au café"], "طلب القهوة والحلوى": ["Ordering coffee and dessert", "Commander café et dessert"], "في محطة القطار": ["At the train station", "À la gare"], "شراء تذكرة سفر": ["Buying a ticket", "Acheter un billet"], "عند الشرطة": ["At the police station", "Au commissariat"], "الإبلاغ عن ضياع حقيبة": ["Reporting a lost bag", "Signaler un bagage perdu"], "تأجير سيارة": ["Renting a car", "Louer une voiture"], "حجز سيارة ليومين": ["Booking a car for two days", "Réserver une voiture pour deux jours"], "مكالمة هاتفية": ["A phone call", "Un appel téléphonique"], "الاتصال بالفندق": ["Calling the hotel", "Appeler l'hôtel"], "وجبة سريعة": ["Fast food", "Restauration rapide"], "طلب وجبة برغر": ["Ordering a burger meal", "Commander un menu burger"], "على الشاطئ": ["At the beach", "À la plage"], "الاستجمام والسباحة": ["Relaxing and swimming", "Détente et baignade"], "طلب المساعدة": ["Asking for help", "Demander de l'aide"], "أنا ضائع في المدينة": ["I'm lost in the city", "Je suis perdu en ville"], "تغيير الحجز": ["Changing a booking", "Modifier une réservation"], "تعديل موعد الرحلة": ["Changing the flight date", "Modifier la date du vol"], "التعارف في العمل": ["Meeting at work", "Rencontre au travail"], "لقاء زميل جديد": ["Meeting a new colleague", "Rencontrer un nouveau collègue"], "الإنجليزية": ["English", "Anglais"], "الفرنسية": ["French", "Français"], "الإسبانية": ["Spanish", "Espagnol"], "الألمانية": ["German", "Allemand"], "الإيطالية": ["Italian", "Italien"], "عبارة": ["phrases", "phrases"], "عنصرًا": ["items", "éléments"], "متقنة": ["mastered", "maîtrisés"], "كلمة": ["words", "mots"], "مرّت بك": ["seen", "vus"], "متتالية": ["in a row", "d'affilée"], "نقطة": ["points", "points"], "نقطة للمستوى": ["points to level", "points pour le niveau"], "المستوى": ["Level", "Niveau"], "الأوسمة": ["Badges", "Badges"], "أي رقم هذا؟": ["Which number is this?", "Quel est ce nombre ?"], "ما معنى هذه الكلمة؟": ["What does this word mean?", "Que signifie ce mot ?"], "كيف يُكتب هذا الرقم؟": ["How is this number written?", "Comment écrit-on ce nombre ?"], "كيف تقول هذه الكلمة؟": ["How do you say this word?", "Comment dit-on ce mot ?"], "ما الردّ المناسب؟": ["What is the right reply?", "Quelle est la bonne réponse ?"], "ماذا سمعت؟": ["What did you hear?", "Qu'avez-vous entendu ?"], "اكتب الترجمة": ["Type the translation", "Écrivez la traduction"], "رتّب الكلمات لتكوين الجملة": ["Put the words in order to form the sentence", "Remettez les mots dans l'ordre"], "صِل بخط بين كل كلمة ومعناها": ["Draw a line between each word and its meaning", "Reliez chaque mot à son sens"], "اسحب بإصبعك من كلمة إلى معناها (أو اضغط الكلمة ثم معناها)": ["Drag from a word to its meaning (or tap the word, then its meaning)", "Glissez d'un mot à son sens (ou touchez le mot, puis son sens)"], "انطق هذه الكلمة بصوت عالٍ": ["Say this word out loud", "Dites ce mot à voix haute"], "تحقق": ["Check", "Vérifier"], "لا أعرف": ["I don't know", "Je ne sais pas"], "لا أستطيع التحدث الآن": ["I can't speak right now", "Je ne peux pas parler maintenant"], "متابعة": ["Continue", "Continuer"], "ممتاز": ["Excellent", "Excellent"], "رائع": ["Great", "Super"], "أحسنت": ["Well done", "Bien joué"], "صحيح": ["Correct", "Correct"], "عمل ممتاز": ["Excellent work", "Excellent travail"], "ليست الإجابة الصحيحة": ["Not the right answer", "Ce n'est pas la bonne réponse"], "الإجابة الصحيحة": ["Correct answer", "Bonne réponse"], "سمعت": ["You heard", "Vous avez entendu"], "قريب جدًا! الإملاء الصحيح": ["Very close! Correct spelling", "Très proche ! Orthographe correcte"], "هل تريد الخروج؟ سيضيع تقدّم هذا الدرس": ["Quit? You will lose this lesson's progress", "Quitter ? Vous perdrez la progression de cette leçon"], "خروج": ["Quit", "Quitter"], "متابعة التعلّم": ["Keep learning", "Continuer à apprendre"], "أحسنت، كرّر للتحسّن!": ["Well done, repeat to improve!", "Bien joué, recommencez pour progresser !"], "أداء مذهل": ["Amazing performance", "Performance incroyable"], "عمل رائع": ["Great work", "Beau travail"], "نقاط XP": ["XP points", "Points XP"], "الدقة": ["Accuracy", "Précision"], "درس آخر في هذا الموضوع": ["Another lesson on this topic", "Une autre leçon sur ce thème"], "→ السابق": ["← Previous", "← Précédent"], "التالي ←": ["Next →", "Suivant →"], "إنهاء": ["Finish", "Terminer"], "اضغط لإظهار الترجمة": ["Tap to show the translation", "Touchez pour voir la traduction"], "اكتب أي رقم حتى 999,999,999 واسمع نطقه بالـ5 لغات": ["Type any number up to 999,999,999 and hear it in 5 languages", "Tapez un nombre jusqu'à 999 999 999 et écoutez-le en 5 langues"], "اكتب رقمًا بين 0 و999,999,999": ["Type a number between 0 and 999,999,999", "Tapez un nombre entre 0 et 999 999 999"], "ابدأ التدريب": ["Start practice", "Commencer l'entraînement"], "بطاقات الدراسة": ["Study cards", "Cartes d'étude"], "قائمة الكلمات": ["Word list", "Liste de mots"], "اقرأ واستمع للحوار": ["Read and listen to the dialogue", "Lire et écouter le dialogue"], "تدريب على الحوار": ["Practice the dialogue", "S'entraîner sur le dialogue"], "بطاقات الجمل": ["Phrase cards", "Cartes de phrases"], "قائمة كل العبارات": ["List of all phrases", "Liste de toutes les phrases"], "استمع للحوار كاملا": ["Listen to the whole dialogue", "Écouter tout le dialogue"], "إخفاء الترجمة": ["Hide translation", "Masquer la traduction"], "إظهار الترجمة": ["Show translation", "Afficher la traduction"], "تدرّب على هذا الحوار": ["Practice this dialogue", "S'entraîner sur ce dialogue"], "اختر اللغة": ["Choose a language", "Choisir une langue"], "اختر موضوعًا، استمع للنطق الصحيح، ثم اضغط الميكروفون وانطق. سيعرض لك التطبيق ما سمعه وأي كلمة تحتاج تحسينًا": ["Pick a topic, listen to the correct pronunciation, then tap the microphone and speak. The app shows what it heard and which words need work", "Choisissez un thème, écoutez la bonne prononciation, puis touchez le micro et parlez. L'appli affiche ce qu'elle a entendu et les mots à améliorer"], "التعرف التلقائي على الصوت غير متاح في هذه النافذة. افتح الملف في متصفح Chrome ليعمل التصحيح التلقائي. يمكنك الآن التدرّب بتسجيل صوتك ومقارنته بالنطق الصحيح": ["Automatic speech recognition isn't available here. Open the file in Chrome for automatic correction. For now you can record yourself and compare with the correct pronunciation", "La reconnaissance vocale n'est pas disponible ici. Ouvrez le fichier dans Chrome pour la correction automatique. Vous pouvez en attendant vous enregistrer et comparer"], "اضغط وانطق الجملة": ["Tap and say the phrase", "Touchez et dites la phrase"], "اضغط لتسجيل صوتك": ["Tap to record your voice", "Touchez pour vous enregistrer"], "تخطَّ": ["Skip", "Passer"], "جارٍ الاستماع": ["Listening", "Écoute en cours"], "جارٍ الاستماع... تكلّم الآن": ["Listening... speak now", "Écoute en cours... parlez maintenant"], "لم يُسمح باستخدام الميكروفون. فعّل الإذن من إعدادات المتصفح": ["Microphone access was denied. Enable it in your browser settings", "Accès au micro refusé. Activez-le dans les réglages du navigateur"], "لم أسمع شيئًا، حاول مرة أخرى": ["I didn't hear anything, try again", "Je n'ai rien entendu, réessayez"], "تعذّر التعرف على الصوت، حاول مجددًا": ["Couldn't recognize the speech, try again", "Reconnaissance impossible, réessayez"], "تعذّر التعرف على الصوت، حاول مجددًا أو تخطَّ": ["Couldn't recognize the speech, try again or skip", "Reconnaissance impossible, réessayez ou passez"], "التعرف على الصوت غير مدعوم هنا": ["Speech recognition isn't supported here", "La reconnaissance vocale n'est pas prise en charge ici"], "نطق ممتاز": ["Excellent pronunciation", "Excellente prononciation"], "قريب جدًا، حاول مرة أخرى": ["Very close, try again", "Très proche, réessayez"], "حاول مرة أخرى بوضوح أكثر": ["Try again, more clearly", "Réessayez, plus clairement"], "سمعتك تقول": ["I heard you say", "Je vous ai entendu dire"], "أعد المحاولة": ["Try again", "Réessayer"], "اضغط وانطق مرة أخرى": ["Tap and speak again", "Touchez et parlez encore"], "قارن صوتك بالنطق الصحيح": ["Compare your voice with the correct pronunciation", "Comparez votre voix à la bonne prononciation"], "استمع لصوتك ثم اضغط 🔊 للنطق الصحيح وقارن": ["Listen to yourself, then tap 🔊 for the correct pronunciation and compare", "Écoutez-vous, puis touchez 🔊 pour la bonne prononciation et comparez"], "سجّل مجددًا": ["Record again", "Réenregistrer"], "جارٍ التسجيل... اضغط مرة أخرى للإيقاف": ["Recording... tap again to stop", "Enregistrement... touchez pour arrêter"], "تعذّر الوصول إلى الميكروفون في هذه النافذة. افتح الملف في متصفح Chrome": ["Couldn't access the microphone here. Open the file in Chrome", "Micro inaccessible ici. Ouvrez le fichier dans Chrome"], "متوسط نطقك": ["Your pronunciation average", "Votre prononciation moyenne"], "انتهت الجلسة": ["Session finished", "Session terminée"], "جلسة أخرى في الموضوع": ["Another session on this topic", "Une autre session sur ce thème"], "موضوع آخر": ["Another topic", "Un autre thème"], "المراجعة الذكية": ["Smart review", "Révision intelligente"], "ابحث بالعربية أو بأي لغة": ["Search in any language", "Rechercher dans n'importe quelle langue"], "اكتب كلمة (حرفان على الأقل) لتظهر ترجمتها بكل اللغات مع النطق": ["Type a word (at least 2 letters) to see its translation in all languages with pronunciation", "Tapez un mot (2 lettres minimum) pour voir sa traduction dans toutes les langues avec la prononciation"], "لا توجد نتائج": ["No results", "Aucun résultat"], "أيام متتالية": ["day streak", "jours d'affilée"], "كلمة تعلّمتها": ["words learned", "mots appris"], "دقة الإجابات": ["answer accuracy", "précision des réponses"], "آخر 7 أيام": ["Last 7 days", "7 derniers jours"], "تقدّمك في اللغات": ["Your progress by language", "Votre progression par langue"], "الخطوة الأولى": ["First step", "Premier pas"], "أكمل أول درس": ["Complete your first lesson", "Terminez votre première leçon"], "بلا أخطاء": ["No mistakes", "Sans faute"], "أكمل درسًا بدون أي خطأ": ["Finish a lesson with no mistakes", "Terminez une leçon sans erreur"], "3 أيام": ["3 days", "3 jours"], "سلسلة 3 أيام متتالية": ["A 3-day streak", "Une série de 3 jours"], "أسبوع كامل": ["A full week", "Une semaine complète"], "سلسلة 7 أيام": ["A 7-day streak", "Une série de 7 jours"], "شهر كامل": ["A full month", "Un mois complet"], "سلسلة 30 يومًا": ["A 30-day streak", "Une série de 30 jours"], "100 نقطة": ["100 points", "100 points"], "اجمع 100 XP": ["Earn 100 XP", "Gagnez 100 XP"], "500 نقطة": ["500 points", "500 points"], "اجمع 500 XP": ["Earn 500 XP", "Gagnez 500 XP"], "2000 نقطة": ["2000 points", "2000 points"], "اجمع 2000 XP": ["Earn 2000 XP", "Gagnez 2000 XP"], "25 كلمة": ["25 words", "25 mots"], "تعلّم 25 كلمة": ["Learn 25 words", "Apprenez 25 mots"], "100 كلمة": ["100 words", "100 mots"], "تعلّم 100 كلمة": ["Learn 100 words", "Apprenez 100 mots"], "300 كلمة": ["300 words", "300 mots"], "تعلّم 300 كلمة": ["Learn 300 words", "Apprenez 300 mots"], "متعدد اللغات": ["Polyglot", "Polyglotte"], "تدرّب على 3 لغات": ["Practice 3 languages", "Pratiquez 3 langues"], "إنجاز جديد": ["New achievement", "Nouveau succès"], "المؤثرات الصوتية": ["Sound effects", "Effets sonores"], "أصوات الإجابات والاهتزاز": ["Answer sounds and vibration", "Sons des réponses et vibration"], "لغة التطبيق": ["App language", "Langue de l'application"], "القوائم والمعاني تظهر بهذه اللغة": ["Menus and meanings appear in this language", "Les menus et les sens s'affichent dans cette langue"], "اللغة التي أتعلّمها": ["Language I'm learning", "Langue que j'apprends"], "اختر اللغة التي تريد تعلّمها": ["Choose the language you want to learn", "Choisissez la langue à apprendre"], "ألوان التطبيق": ["App colors", "Couleurs de l'application"], "اختر لونًا متدرجًا يعجبك": ["Pick a gradient you like", "Choisissez un dégradé"], "زمرد": ["Emerald", "Émeraude"], "محيط": ["Ocean", "Océan"], "غروب": ["Sunset", "Coucher de soleil"], "بنفسجي": ["Violet", "Violet"], "وردي": ["Rose", "Rose"], "نسخة احتياطية": ["Backup", "Sauvegarde"], "انسخ هذا النص واحتفظ به. يمكنك استيراده في أي جهاز لاستعادة تقدّمك": ["Copy this text and keep it. You can import it on any device to restore your progress", "Copiez ce texte et gardez-le. Vous pouvez l'importer sur n'importe quel appareil pour retrouver votre progression"], "نسخ": ["Copy", "Copier"], "استيراد": ["Import", "Importer"], "الصق هنا نسخة احتياطية للاستيراد": ["Paste a backup here to import it", "Collez ici une sauvegarde à importer"], "حذف كل التقدّم": ["Delete all progress", "Supprimer toute la progression"], "حذف كل التقدّم نهائيًا؟": ["Delete all progress permanently?", "Supprimer définitivement toute la progression ?"], "حذف": ["Delete", "Supprimer"], "إلغاء": ["Cancel", "Annuler"], "تعلّم · 5 لغات: الإنجليزية، الفرنسية، الإسبانية، الألمانية، الإيطالية": ["Learn · 5 languages: English, French, Spanish, German, Italian", "Apprendre · 5 langues : anglais, français, espagnol, allemand, italien"], "تم النسخ": ["Copied", "Copié"], "تم الاستيراد": ["Imported", "Importé"], "نص غير صالح": ["Invalid text", "Texte invalide"]};
+const TRD={"تعلّم": ["Learn", "Apprendre"], "1️⃣ من 0 إلى 99": ["1️⃣ From 0 to 99", "1️⃣ De 0 à 99"], "الرئيسية": ["Home", "Accueil"], "القاموس": ["Dictionary", "Dictionnaire"], "إنجازاتي": ["My progress", "Mes succès"], "الإعدادات": ["Settings", "Réglages"], "الأرقام": ["Numbers", "Nombres"], "الأساسيات": ["Basics", "Bases"], "حوارات قصيرة": ["Short dialogues", "Dialogues courts"], "الطعام والشراب": ["Food & drink", "Nourriture et boissons"], "السفر": ["Travel", "Voyage"], "أشياء أخرى": ["More topics", "Autres thèmes"], "تدرّب على النطق": ["Practice pronunciation", "Travailler la prononciation"], "انطق وسيصحّح لك التطبيق": ["Speak and the app will correct you", "Parlez, l'appli vous corrige"], "درسًا": ["lessons", "leçons"], "دروس": ["lessons", "leçons"], "الضمائر والملكية والإشارة": ["Pronouns & possessives", "Pronoms et possessifs"], "أنا، هو، لي، ملكي، هذا، نفسي، معي...": ["I, he, my, mine, this, myself, with me...", "je, il, mon, le mien, ce, moi-même, avec moi..."], "أفعال أساسية": ["Basic verbs", "Verbes de base"], "تصريف الأفعال": ["Verb conjugation", "Conjugaison"], "أنا أكون، أنا أملك، أنا أذهب، أنا أريد...": ["I am, I have, I go, I want...", "je suis, j'ai, je vais, je veux..."], "كلمات الاستفهام ونعم/لا": ["Question words & yes/no", "Mots interrogatifs et oui/non"], "التحيات": ["Greetings", "Salutations"], "جمل مفيدة للمحادثة": ["Useful phrases", "Phrases utiles"], "من 0 إلى 99": ["From 0 to 99", "De 0 à 99"], "الوحدات والعشرات": ["Units and tens", "Unités et dizaines"], "من 100 إلى 1000": ["From 100 to 1000", "De 100 à 1000"], "المئات وما بينها": ["Hundreds and in between", "Les centaines et entre-deux"], "اقرأ أي رقم": ["Read any number", "Lire un nombre"], "اكتب رقمًا حتى 999,999,999 واسمع نطقه بـ5 لغات": ["Type a number up to 999,999,999 and hear it in 5 languages", "Tapez un nombre jusqu'à 999 999 999 et écoutez-le en 5 langues"], "الفواكه": ["Fruits", "Fruits"], "الخضروات والأعشاب": ["Vegetables & herbs", "Légumes et herbes"], "اللحوم والأسماك": ["Meat & fish", "Viandes et poissons"], "الألبان والبيض": ["Dairy & eggs", "Produits laitiers et œufs"], "الخبز والحبوب": ["Bread & grains", "Pain et céréales"], "التوابل والصلصات": ["Spices & sauces", "Épices et sauces"], "الحلويات والمكسرات": ["Sweets & nuts", "Desserts et noix"], "المشروبات": ["Drinks", "Boissons"], "في المطعم": ["At the restaurant", "Au restaurant"], "المطار والطائرة": ["Airport & plane", "Aéroport et avion"], "الفندق والإقامة": ["Hotel & stay", "Hôtel et séjour"], "المواصلات": ["Transport", "Transports"], "الاتجاهات والأماكن": ["Directions & places", "Directions et lieux"], "المال والتسوق": ["Money & shopping", "Argent et achats"], "الوثائق والجمارك": ["Documents & customs", "Documents et douane"], "الطوارئ والصحة": ["Emergencies & health", "Urgences et santé"], "الألوان": ["Colors", "Couleurs"], "أيام الأسبوع والأشهر": ["Days & months", "Jours et mois"], "الوقت": ["Time", "Temps"], "العائلة والناس": ["Family & people", "Famille et gens"], "صفات شائعة": ["Common adjectives", "Adjectifs courants"], "الطقس والفصول": ["Weather & seasons", "Météo et saisons"], "أعضاء الجسم": ["Body parts", "Parties du corps"], "التعارف": ["Introductions", "Présentations"], "أول لقاء بين شخصين": ["A first meeting between two people", "Une première rencontre"], "طلب الطعام ودفع الحساب": ["Ordering food and paying", "Commander et payer"], "في المطار": ["At the airport", "À l'aéroport"], "تسجيل الوصول قبل الرحلة": ["Checking in before the flight", "Enregistrement avant le vol"], "في الفندق": ["At the hotel", "À l'hôtel"], "الوصول وتسجيل الدخول": ["Arriving and checking in", "Arrivée et enregistrement"], "في المتجر": ["At the shop", "Au magasin"], "السؤال عن السعر والمقاس والدفع": ["Asking about price, size and payment", "Prix, taille et paiement"], "في سيارة الأجرة": ["In a taxi", "En taxi"], "الذهاب إلى الفندق": ["Going to the hotel", "Aller à l'hôtel"], "السؤال عن الطريق": ["Asking for directions", "Demander son chemin"], "الوصول إلى المحطة": ["Getting to the station", "Aller à la gare"], "عند الطبيب": ["At the doctor", "Chez le médecin"], "وصف الألم وأخذ الدواء": ["Describing pain and taking medicine", "Décrire la douleur et prendre un médicament"], "في الصيدلية": ["At the pharmacy", "À la pharmacie"], "شراء دواء للزكام": ["Buying cold medicine", "Acheter un médicament contre le rhume"], "في البنك": ["At the bank", "À la banque"], "صرف العملة": ["Exchanging currency", "Changer de l'argent"], "في المقهى": ["At the café", "Au café"], "طلب القهوة والحلوى": ["Ordering coffee and dessert", "Commander café et dessert"], "في محطة القطار": ["At the train station", "À la gare"], "شراء تذكرة سفر": ["Buying a ticket", "Acheter un billet"], "عند الشرطة": ["At the police station", "Au commissariat"], "الإبلاغ عن ضياع حقيبة": ["Reporting a lost bag", "Signaler un bagage perdu"], "تأجير سيارة": ["Renting a car", "Louer une voiture"], "حجز سيارة ليومين": ["Booking a car for two days", "Réserver une voiture pour deux jours"], "مكالمة هاتفية": ["A phone call", "Un appel téléphonique"], "الاتصال بالفندق": ["Calling the hotel", "Appeler l'hôtel"], "وجبة سريعة": ["Fast food", "Restauration rapide"], "طلب وجبة برغر": ["Ordering a burger meal", "Commander un menu burger"], "على الشاطئ": ["At the beach", "À la plage"], "الاستجمام والسباحة": ["Relaxing and swimming", "Détente et baignade"], "طلب المساعدة": ["Asking for help", "Demander de l'aide"], "أنا ضائع في المدينة": ["I'm lost in the city", "Je suis perdu en ville"], "تغيير الحجز": ["Changing a booking", "Modifier une réservation"], "تعديل موعد الرحلة": ["Changing the flight date", "Modifier la date du vol"], "التعارف في العمل": ["Meeting at work", "Rencontre au travail"], "لقاء زميل جديد": ["Meeting a new colleague", "Rencontrer un nouveau collègue"], "الإنجليزية": ["English", "Anglais"], "الفرنسية": ["French", "Français"], "الإسبانية": ["Spanish", "Espagnol"], "الألمانية": ["German", "Allemand"], "الإيطالية": ["Italian", "Italien"], "عبارة": ["phrases", "phrases"], "عنصرًا": ["items", "éléments"], "متقنة": ["mastered", "maîtrisés"], "كلمة": ["words", "mots"], "مرّت بك": ["seen", "vus"], "متتالية": ["in a row", "d'affilée"], "نقطة": ["points", "points"], "نقطة للمستوى": ["points to level", "points pour le niveau"], "المستوى": ["Level", "Niveau"], "الأوسمة": ["Badges", "Badges"], "أي رقم هذا؟": ["Which number is this?", "Quel est ce nombre ?"], "ما معنى هذه الكلمة؟": ["What does this word mean?", "Que signifie ce mot ?"], "كيف يُكتب هذا الرقم؟": ["How is this number written?", "Comment écrit-on ce nombre ?"], "كيف تقول هذه الكلمة؟": ["How do you say this word?", "Comment dit-on ce mot ?"], "ما الردّ المناسب؟": ["What is the right reply?", "Quelle est la bonne réponse ?"], "ماذا سمعت؟": ["What did you hear?", "Qu'avez-vous entendu ?"], "اكتب الترجمة": ["Type the translation", "Écrivez la traduction"], "رتّب الكلمات لتكوين الجملة": ["Put the words in order to form the sentence", "Remettez les mots dans l'ordre"], "صِل بخط بين كل كلمة ومعناها": ["Draw a line between each word and its meaning", "Reliez chaque mot à son sens"], "اسحب بإصبعك من كلمة إلى معناها (أو اضغط الكلمة ثم معناها)": ["Drag from a word to its meaning (or tap the word, then its meaning)", "Glissez d'un mot à son sens (ou touchez le mot, puis son sens)"], "انطق هذه الكلمة بصوت عالٍ": ["Say this word out loud", "Dites ce mot à voix haute"], "تحقق": ["Check", "Vérifier"], "لا أعرف": ["I don't know", "Je ne sais pas"], "لا أستطيع التحدث الآن": ["I can't speak right now", "Je ne peux pas parler maintenant"], "متابعة": ["Continue", "Continuer"], "ممتاز": ["Excellent", "Excellent"], "رائع": ["Great", "Super"], "أحسنت": ["Well done", "Bien joué"], "صحيح": ["Correct", "Correct"], "عمل ممتاز": ["Excellent work", "Excellent travail"], "ليست الإجابة الصحيحة": ["Not the right answer", "Ce n'est pas la bonne réponse"], "الإجابة الصحيحة": ["Correct answer", "Bonne réponse"], "سمعت": ["You heard", "Vous avez entendu"], "قريب جدًا! الإملاء الصحيح": ["Very close! Correct spelling", "Très proche ! Orthographe correcte"], "هل تريد الخروج؟ سيضيع تقدّم هذا الدرس": ["Quit? You will lose this lesson's progress", "Quitter ? Vous perdrez la progression de cette leçon"], "خروج": ["Quit", "Quitter"], "متابعة التعلّم": ["Keep learning", "Continuer à apprendre"], "أحسنت، كرّر للتحسّن!": ["Well done, repeat to improve!", "Bien joué, recommencez pour progresser !"], "أداء مذهل": ["Amazing performance", "Performance incroyable"], "عمل رائع": ["Great work", "Beau travail"], "نقاط XP": ["XP points", "Points XP"], "الدقة": ["Accuracy", "Précision"], "درس آخر في هذا الموضوع": ["Another lesson on this topic", "Une autre leçon sur ce thème"], "→ السابق": ["← Previous", "← Précédent"], "التالي ←": ["Next →", "Suivant →"], "إنهاء": ["Finish", "Terminer"], "اضغط لإظهار الترجمة": ["Tap to show the translation", "Touchez pour voir la traduction"], "اكتب أي رقم حتى 999,999,999 واسمع نطقه بالـ5 لغات": ["Type any number up to 999,999,999 and hear it in 5 languages", "Tapez un nombre jusqu'à 999 999 999 et écoutez-le en 5 langues"], "اكتب رقمًا بين 0 و999,999,999": ["Type a number between 0 and 999,999,999", "Tapez un nombre entre 0 et 999 999 999"], "ابدأ التدريب": ["Start practice", "Commencer l'entraînement"], "بطاقات الدراسة": ["Study cards", "Cartes d'étude"], "قائمة الكلمات": ["Word list", "Liste de mots"], "اقرأ واستمع للحوار": ["Read and listen to the dialogue", "Lire et écouter le dialogue"], "تدريب على الحوار": ["Practice the dialogue", "S'entraîner sur le dialogue"], "بطاقات الجمل": ["Phrase cards", "Cartes de phrases"], "قائمة كل العبارات": ["List of all phrases", "Liste de toutes les phrases"], "استمع للحوار كاملا": ["Listen to the whole dialogue", "Écouter tout le dialogue"], "إخفاء الترجمة": ["Hide translation", "Masquer la traduction"], "إظهار الترجمة": ["Show translation", "Afficher la traduction"], "تدرّب على هذا الحوار": ["Practice this dialogue", "S'entraîner sur ce dialogue"], "اختر اللغة": ["Choose a language", "Choisir une langue"], "اختر موضوعًا، استمع للنطق الصحيح، ثم اضغط الميكروفون وانطق. سيعرض لك التطبيق ما سمعه وأي كلمة تحتاج تحسينًا": ["Pick a topic, listen to the correct pronunciation, then tap the microphone and speak. The app shows what it heard and which words need work", "Choisissez un thème, écoutez la bonne prononciation, puis touchez le micro et parlez. L'appli affiche ce qu'elle a entendu et les mots à améliorer"], "التعرف التلقائي على الصوت غير متاح في هذه النافذة. افتح التطبيق في متصفح Chrome ليعمل التصحيح التلقائي. يمكنك الآن التدرّب بتسجيل صوتك ومقارنته بالنطق الصحيح": ["Automatic speech recognition isn't available here. Open the app in Chrome for automatic correction. For now you can record yourself and compare with the correct pronunciation", "La reconnaissance vocale n'est pas disponible ici. Ouvrez l'application dans Chrome pour la correction automatique. Vous pouvez en attendant vous enregistrer et comparer"], "اضغط وانطق الجملة": ["Tap and say the phrase", "Touchez et dites la phrase"], "اضغط لتسجيل صوتك": ["Tap to record your voice", "Touchez pour vous enregistrer"], "تخطَّ": ["Skip", "Passer"], "جارٍ الاستماع": ["Listening", "Écoute en cours"], "جارٍ الاستماع... تكلّم الآن": ["Listening... speak now", "Écoute en cours... parlez maintenant"], "لم يُسمح باستخدام الميكروفون. فعّل الإذن من إعدادات المتصفح": ["Microphone access was denied. Enable it in your browser settings", "Accès au micro refusé. Activez-le dans les réglages du navigateur"], "لم أسمع شيئًا، حاول مرة أخرى": ["I didn't hear anything, try again", "Je n'ai rien entendu, réessayez"], "تعذّر التعرف على الصوت، حاول مجددًا": ["Couldn't recognize the speech, try again", "Reconnaissance impossible, réessayez"], "تعذّر التعرف على الصوت، حاول مجددًا أو تخطَّ": ["Couldn't recognize the speech, try again or skip", "Reconnaissance impossible, réessayez ou passez"], "التعرف على الصوت غير مدعوم هنا": ["Speech recognition isn't supported here", "La reconnaissance vocale n'est pas prise en charge ici"], "نطق ممتاز": ["Excellent pronunciation", "Excellente prononciation"], "قريب جدًا، حاول مرة أخرى": ["Very close, try again", "Très proche, réessayez"], "حاول مرة أخرى بوضوح أكثر": ["Try again, more clearly", "Réessayez, plus clairement"], "سمعتك تقول": ["I heard you say", "Je vous ai entendu dire"], "أعد المحاولة": ["Try again", "Réessayer"], "اضغط وانطق مرة أخرى": ["Tap and speak again", "Touchez et parlez encore"], "قارن صوتك بالنطق الصحيح": ["Compare your voice with the correct pronunciation", "Comparez votre voix à la bonne prononciation"], "استمع لصوتك ثم اضغط 🔊 للنطق الصحيح وقارن": ["Listen to yourself, then tap 🔊 for the correct pronunciation and compare", "Écoutez-vous, puis touchez 🔊 pour la bonne prononciation et comparez"], "سجّل مجددًا": ["Record again", "Réenregistrer"], "جارٍ التسجيل... اضغط مرة أخرى للإيقاف": ["Recording... tap again to stop", "Enregistrement... touchez pour arrêter"], "تعذّر الوصول إلى الميكروفون في هذه النافذة. افتح التطبيق في متصفح Chrome": ["Couldn't access the microphone here. Open the app in Chrome", "Micro inaccessible ici. Ouvrez l'application dans Chrome"], "متوسط نطقك": ["Your pronunciation average", "Votre prononciation moyenne"], "انتهت الجلسة": ["Session finished", "Session terminée"], "جلسة أخرى في الموضوع": ["Another session on this topic", "Une autre session sur ce thème"], "موضوع آخر": ["Another topic", "Un autre thème"], "المراجعة الذكية": ["Smart review", "Révision intelligente"], "ابحث بالعربية أو بأي لغة": ["Search in any language", "Rechercher dans n'importe quelle langue"], "اكتب كلمة (حرفان على الأقل) لتظهر ترجمتها بكل اللغات مع النطق": ["Type a word (at least 2 letters) to see its translation in all languages with pronunciation", "Tapez un mot (2 lettres minimum) pour voir sa traduction dans toutes les langues avec la prononciation"], "لا توجد نتائج": ["No results", "Aucun résultat"], "أيام متتالية": ["day streak", "jours d'affilée"], "كلمة تعلّمتها": ["words learned", "mots appris"], "دقة الإجابات": ["answer accuracy", "précision des réponses"], "آخر 7 أيام": ["Last 7 days", "7 derniers jours"], "تقدّمك في اللغات": ["Your progress by language", "Votre progression par langue"], "الخطوة الأولى": ["First step", "Premier pas"], "أكمل أول درس": ["Complete your first lesson", "Terminez votre première leçon"], "بلا أخطاء": ["No mistakes", "Sans faute"], "أكمل درسًا بدون أي خطأ": ["Finish a lesson with no mistakes", "Terminez une leçon sans erreur"], "3 أيام": ["3 days", "3 jours"], "سلسلة 3 أيام متتالية": ["A 3-day streak", "Une série de 3 jours"], "أسبوع كامل": ["A full week", "Une semaine complète"], "سلسلة 7 أيام": ["A 7-day streak", "Une série de 7 jours"], "شهر كامل": ["A full month", "Un mois complet"], "سلسلة 30 يومًا": ["A 30-day streak", "Une série de 30 jours"], "100 نقطة": ["100 points", "100 points"], "اجمع 100 XP": ["Earn 100 XP", "Gagnez 100 XP"], "500 نقطة": ["500 points", "500 points"], "اجمع 500 XP": ["Earn 500 XP", "Gagnez 500 XP"], "2000 نقطة": ["2000 points", "2000 points"], "اجمع 2000 XP": ["Earn 2000 XP", "Gagnez 2000 XP"], "25 كلمة": ["25 words", "25 mots"], "تعلّم 25 كلمة": ["Learn 25 words", "Apprenez 25 mots"], "100 كلمة": ["100 words", "100 mots"], "تعلّم 100 كلمة": ["Learn 100 words", "Apprenez 100 mots"], "300 كلمة": ["300 words", "300 mots"], "تعلّم 300 كلمة": ["Learn 300 words", "Apprenez 300 mots"], "متعدد اللغات": ["Polyglot", "Polyglotte"], "تدرّب على 3 لغات": ["Practice 3 languages", "Pratiquez 3 langues"], "إنجاز جديد": ["New achievement", "Nouveau succès"], "المؤثرات الصوتية": ["Sound effects", "Effets sonores"], "أصوات الإجابات والاهتزاز": ["Answer sounds and vibration", "Sons des réponses et vibration"], "لغة التطبيق": ["App language", "Langue de l'application"], "القوائم والمعاني تظهر بهذه اللغة": ["Menus and meanings appear in this language", "Les menus et les sens s'affichent dans cette langue"], "اللغة التي أتعلّمها": ["Language I'm learning", "Langue que j'apprends"], "اختر اللغة التي تريد تعلّمها": ["Choose the language you want to learn", "Choisissez la langue à apprendre"], "ألوان التطبيق": ["App colors", "Couleurs de l'application"], "اختر لونًا متدرجًا يعجبك": ["Pick a gradient you like", "Choisissez un dégradé"], "زمرد": ["Emerald", "Émeraude"], "محيط": ["Ocean", "Océan"], "غروب": ["Sunset", "Coucher de soleil"], "بنفسجي": ["Violet", "Violet"], "وردي": ["Rose", "Rose"], "نسخة احتياطية": ["Backup", "Sauvegarde"], "انسخ هذا النص واحتفظ به. يمكنك استيراده في أي جهاز لاستعادة تقدّمك": ["Copy this text and keep it. You can import it on any device to restore your progress", "Copiez ce texte et gardez-le. Vous pouvez l'importer sur n'importe quel appareil pour retrouver votre progression"], "نسخ": ["Copy", "Copier"], "استيراد": ["Import", "Importer"], "الصق هنا نسخة احتياطية للاستيراد": ["Paste a backup here to import it", "Collez ici une sauvegarde à importer"], "حذف كل التقدّم": ["Delete all progress", "Supprimer toute la progression"], "حذف كل التقدّم نهائيًا؟": ["Delete all progress permanently?", "Supprimer définitivement toute la progression ?"], "حذف": ["Delete", "Supprimer"], "إلغاء": ["Cancel", "Annuler"], "تعلّم · 5 لغات: الإنجليزية، الفرنسية، الإسبانية، الألمانية، الإيطالية": ["Learn · 5 languages: English, French, Spanish, German, Italian", "Apprendre · 5 langues : anglais, français, espagnol, allemand, italien"], "تم النسخ": ["Copied", "Copié"], "تم الاستيراد": ["Imported", "Importé"], "نص غير صالح": ["Invalid text", "Texte invalide"]};
 const RX=[[/^أخطأت في (\d+) — سنعيد هذه الكلمات لاحقًا$/,["You missed $1 — we'll repeat these words later","Vous avez fait $1 erreur(s) — nous reverrons ces mots plus tard"]]];
 const UIL=[{id:0,n:"العربية"},{id:1,n:"English"},{id:2,n:"Français"}];
 const THEMES=[{n:"زمرد",c:"#16a34a",g:["#22c55e","#0d9488"]},{n:"محيط",c:"#2563eb",g:["#38bdf8","#2563eb"]},{n:"غروب",c:"#f97316",g:["#fbbf24","#ec4899"]},{n:"بنفسجي",c:"#7c3aed",g:["#a78bfa","#d946ef"]},{n:"وردي",c:"#e11d74",g:["#fb7185","#be123c"]}];
@@ -6896,7 +6896,7 @@ let PN=null;
 function openPron(){
   const cs=CATS.filter(c=>!c.num&&!c.reader&&!c.gen&&catOk(c));
   const sup=!!SR;
-  ov().innerHTML=`<div class="wrap">${studyTop("🎤 تدرّب على النطق")}<div class="card pnote">${sup?"اختر موضوعًا، استمع للنطق الصحيح، ثم اضغط الميكروفون وانطق. سيعرض لك التطبيق ما سمعه وأي كلمة تحتاج تحسينًا.":"التعرف التلقائي على الصوت غير متاح في هذه النافذة. افتح الملف في متصفح Chrome ليعمل التصحيح التلقائي. يمكنك الآن التدرّب بتسجيل صوتك ومقارنته بالنطق الصحيح."}</div><div class="pgrid">${cs.map(c=>`<button class="ptile" onclick="pronStart('${c.key}')"><span>${c.icon}</span><b>${esc(c.title)}</b></button>`).join("")}</div></div>`;
+  ov().innerHTML=`<div class="wrap">${studyTop("🎤 تدرّب على النطق")}<div class="card pnote">${sup?"اختر موضوعًا، استمع للنطق الصحيح، ثم اضغط الميكروفون وانطق. سيعرض لك التطبيق ما سمعه وأي كلمة تحتاج تحسينًا.":"التعرف التلقائي على الصوت غير متاح في هذه النافذة. افتح التطبيق في متصفح Chrome ليعمل التصحيح التلقائي. يمكنك الآن التدرّب بتسجيل صوتك ومقارنته بالنطق الصحيح."}</div><div class="pgrid">${cs.map(c=>`<button class="ptile" onclick="pronStart('${c.key}')"><span>${c.icon}</span><b>${esc(c.title)}</b></button>`).join("")}</div></div>`;
   openOv();
 }
 function pronStart(key){
@@ -6971,7 +6971,7 @@ async function pronRecord(w){
       $("pnext").onclick=()=>{addXP(1);pronNext(null);};
     };
     mr.start();$("pmic").classList.add("live");hint.textContent="جارٍ التسجيل... اضغط مرة أخرى للإيقاف";
-  }catch(e){hint.textContent="تعذّر الوصول إلى الميكروفون في هذه النافذة. افتح الملف في متصفح Chrome.";}
+  }catch(e){hint.textContent="تعذّر الوصول إلى الميكروفون في هذه النافذة. افتح التطبيق في متصفح Chrome.";}
 }
 function pronEnd(){
   const sc=PN.sc,avg=sc.length?Math.round(sc.reduce((a,b)=>a+b,0)/sc.length):0;
