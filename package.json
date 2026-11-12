@@ -1,0 +1,11 @@
+{
+  "name": "taallam",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Taallam language learning app",
+  "dependencies": {
+    "@capacitor/android": "latest",
+    "@capacitor/cli": "latest",
+    "@capacitor/core": "latest"
+  }
+}

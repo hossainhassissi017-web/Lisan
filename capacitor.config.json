@@ -1,0 +1,6 @@
+{
+  "appId": "com.hossainhassissi.taallam",
+  "appName": "تعلّم",
+  "webDir": "www",
+  "server": { "androidScheme": "https" }
+}
