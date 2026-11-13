@@ -12,13 +12,6 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<script>
-function __show(m){try{var d=document.getElementById("__err");if(!d){d=document.createElement("pre");d.id="__err";d.style.cssText="position:fixed;z-index:99999;left:0;right:0;top:0;max-height:70%;overflow:auto;margin:0;padding:10px;background:#7f1d1d;color:#fff;font:12px/1.4 monospace;white-space:pre-wrap;direction:ltr;text-align:left";(document.body||document.documentElement).appendChild(d);}d.textContent+=m+"\n";}catch(e){}}
-window.addEventListener("error",function(e){__show("ERR "+e.message+" @"+(e.lineno||"")+":"+(e.colno||""));});
-window.addEventListener("unhandledrejection",function(e){__show("REJ "+(e.reason&&e.reason.message||e.reason));});
-setTimeout(function(){var m=document.getElementById("main");if(!m||!m.innerHTML.trim())__show("EMPTY PAGE | "+navigator.userAgent);},4000);
-</script>
-<script>if("serviceWorker" in navigator&&location.protocol.startsWith("http")){addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 <style>
 :root{--bg:#f4f7fb;--card:#fff;--ink:#1d2939;--mute:#6b7a90;--main:#16a34a;--mainD:#117a38;--blue:#2563eb;--blueD:#1b46b3;--bad:#e5484d;--badD:#b92f34;--line:#dfe6ef;--gold:#f5a524;--soft:#edf2f9;--okbg:#dcf7e4;--badbg:#fde4e4}
 @media (prefers-color-scheme:dark){:root{--bg:#0f1620;--card:#18222f;--ink:#edf2f8;--mute:#93a3b8;--line:#2a3849;--soft:#1f2b3a;--okbg:#0f3a20;--badbg:#431a1c;--mainD:#0d5d2b}}
@@ -6554,7 +6547,7 @@ function distract(it,n){
   }
   return out;
 }
-const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+const SR=null; /* speech recognition removed: no microphone use */
 function makeEx(it,b,seen){
   if(it.cat.dlg){const i=it.cat.words.indexOf(it.w);if(i>0&&i<it.cat.nd&&tw(it.cat.words[i-1])&&Math.random()<.45)return {type:"reply",it,prev:it.cat.words[i-1]};}
   const t=tw(it.w),toks=orderTokens(t);
@@ -7180,7 +7173,7 @@ function viewHome(){
   h+=`<div class="gg">`+GROUPS.map(([g,t],i)=>{
     const cs=CATS.filter(c=>c.group===g&&catOk(c));if(!cs.length)return"";
     return `<button class="gt c${i}" onclick="openGroup('${g}')"><span class="gi">${GICON[g]}</span><span class="gn">${t}</span><small>${cs.length} ${cs.length>10?"درسًا":"دروس"}</small></button>`;
-  }).join("")+`<button class="gt wide c5" onclick="openChal()"><span class="gi">🎯</span><span class="gn">${T3("التحديات","Challenges","Défis")}</span><small>${T3("25 مستوى من الكلمات إلى الجمل","25 levels from words to sentences","25 niveaux, des mots aux phrases")}</small></button><button class="gt wide c7" onclick="openStories()"><span class="gi">📚</span><span class="gn">القصص</span><small>قصص قصيرة للقراءة والاستماع</small></button><button class="gt wide c6" onclick="openPron()"><span class="gi">🎤</span><span class="gn">تدرّب على النطق</span><small>انطق وسيصحّح لك التطبيق</small></button></div>`;
+  }).join("")+`<button class="gt wide c5" onclick="openChal()"><span class="gi">🎯</span><span class="gn">${T3("التحديات","Challenges","Défis")}</span><small>${T3("25 مستوى من الكلمات إلى الجمل","25 levels from words to sentences","25 niveaux, des mots aux phrases")}</small></button><button class="gt wide c7" onclick="openStories()"><span class="gi">📚</span><span class="gn">القصص</span><small>قصص قصيرة للقراءة والاستماع</small></button></div>`;
   return h;
 }
 function openGroup(g){GRP=g;renderMain();window.scrollTo(0,0);}
@@ -7910,5 +7903,6 @@ checkBadges();
 renderMain();
 
 </script>
+<script>if("serviceWorker" in navigator&&location.protocol.startsWith("http")){addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 </body>
 </html>
