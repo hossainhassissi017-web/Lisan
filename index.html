@@ -293,9 +293,9 @@ body,.ov{background-color:var(--bg);background-image:radial-gradient(130% 60% at
 .gt{min-height:104px;padding:12px 6px 10px;border-radius:22px;gap:3px;box-shadow:0 5px 0 var(--sh),0 8px 14px rgba(0,0,0,.16)}
 .gt .gi{font-size:36px}.gt .gn{font-size:16px}.gt small{font-size:11px}
 .gt.wide{min-height:68px;padding:8px 14px}.gt.wide .gi{font-size:32px}.gt.wide .gn{font-size:17px}
-.adslot{display:flex;align-items:center;justify-content:center;height:60px;margin:2px 0 10px;border:1.5px dashed var(--line);border-radius:14px;color:var(--mute);font-size:12px;letter-spacing:.08em;direction:ltr}
-body{padding-top:env(safe-area-inset-top,0px)}
-.ov{padding-top:env(safe-area-inset-top,0px)}
+.adslot{display:none!important}.adslot-old{display:flex;align-items:center;justify-content:center;height:60px;margin:2px 0 10px;border:1.5px dashed var(--line);border-radius:14px;color:var(--mute);font-size:12px;letter-spacing:.08em;direction:ltr}
+body{padding-top:calc(env(safe-area-inset-top,0px) + var(--adh,0px))}
+.ov{padding-top:calc(env(safe-area-inset-top,0px) + var(--adh,0px))}
 
 /* translate tab */
 .trrow{display:flex;gap:8px;align-items:center;margin-bottom:10px}
@@ -7143,6 +7143,25 @@ function chEnd(){
   <button class="btn sec" onclick="chMap()">${T3("كل المستويات","All levels","Tous les niveaux")}</button></div>`;
 }
 
+/* ---------- AdMob banner (only inside the Android app; settings come from admob.json) ---------- */
+(async()=>{
+  try{
+    const C=window.Capacitor;if(!(C&&C.isNativePlatform&&C.isNativePlatform()))return;
+    document.documentElement.classList.add("native");
+    const cfg=await (await fetch("admob.json")).json();
+    if(!cfg||!cfg.banner)return;
+    const A=C.registerPlugin("AdMob");
+    try{const i=await A.requestConsentInfo();if(i&&i.isConsentFormAvailable&&i.status==="REQUIRED")await A.showConsentForm();}catch(e){}
+    await A.initialize({initializeForTesting:!!cfg.testing});
+    const h0=window.innerHeight;
+    try{A.addListener("bannerAdSizeChanged",sz=>{setTimeout(()=>{
+      /* if the banner overlays the page, push the page down; if the plugin already shrank the WebView, do nothing */
+      const pushed=(h0-window.innerHeight)>=Math.round((sz.height||50)/2);
+      document.documentElement.style.setProperty("--adh",pushed?"0px":(sz.height||50)+"px");
+    },400);});}catch(e){}
+    await A.showBanner({adId:cfg.banner,adSize:"ADAPTIVE_BANNER",position:"TOP_CENTER",margin:0,isTesting:!!cfg.testing});
+  }catch(e){}
+})();
 let TAB="home";
 function setTab(t){TAB=t;if(t==="home")GRP=null;renderMain();window.scrollTo(0,0);}
 function renderMain(){
